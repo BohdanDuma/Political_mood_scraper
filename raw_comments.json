@@ -1,0 +1,3411 @@
+{
+    "kind": "youtube#commentThreadListResponse",
+    "etag": "uqpsFsAcB0vdJgrho69uRNdSduQ",
+    "nextPageToken": "Z2V0X25ld2VzdF9maXJzdC0tQ2dnSWdBUVZGN2ZST0JJRkNJa2dHQUFTQlFpSUlCZ0FFZ1VJcUNBWUFCSUZDSWNnR0FBU0JRaWRJQmdCSWcwS0N3anhnOVBQQmhEb3RkWjM=",
+    "pageInfo": {
+        "totalResults": 100,
+        "resultsPerPage": 100
+    },
+    "items": [
+        {
+            "kind": "youtube#commentThread",
+            "etag": "LgQfKl-mhgDOhxV0NdyQvIlMa24",
+            "id": "UgyXYXmlrjcQhMLvPRF4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "IqCcPDxbDQFyI08hWMZad4Po2AE",
+                    "id": "UgyXYXmlrjcQhMLvPRF4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "➡ Ставайте спонсором нашого каналу: https://www.youtube.com/channel/UChparf_xrUZ_CJGQY5g4aEg/join\r\n\r\n➡ Вступайте в Клуб Української правди: https://club.pravda.com.ua/?utm_source=youtube&utm_medium=social&utm_campaign=tkach",
+                        "textOriginal": "➡ Ставайте спонсором нашого каналу: https://www.youtube.com/channel/UChparf_xrUZ_CJGQY5g4aEg/join\r\n\r\n➡ Вступайте в Клуб Української правди: https://club.pravda.com.ua/?utm_source=youtube&utm_medium=social&utm_campaign=tkach",
+                        "authorDisplayName": "@УкраїнськаПравда",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/r4Bd5oAEOVX3hB5po9s54FJsbGMqZw4AxuO_qOnx-e8-s4Vcv3VTv98CyCv8_r3UcD6doQZQFA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A3%D0%BA%D1%80%D0%B0%D1%97%D0%BD%D1%81%D1%8C%D0%BA%D0%B0%D0%9F%D1%80%D0%B0%D0%B2%D0%B4%D0%B0",
+                        "authorChannelId": {
+                            "value": "UChparf_xrUZ_CJGQY5g4aEg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 191,
+                        "publishedAt": "2026-04-28T20:54:36Z",
+                        "updatedAt": "2026-04-28T20:54:36Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 33,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Hd8MJL8SAB8SlzjBBAoFXAQkqrs",
+            "id": "UgyZlrsx3s9tIO-m_JR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "iar_uhkbfFVtpvtZRIJcGg56S1s",
+                    "id": "UgyZlrsx3s9tIO-m_JR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Не задавись слюной",
+                        "textOriginal": "Не задавись слюной",
+                        "authorDisplayName": "@ВалентинаРубаник",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_m312tDqn6ZUoDAra76xK70Ml7hzTQB-qD59vcY59KSVYF75kMY5SsYgVJThjug40RSKGA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%B0%D0%BB%D0%B5%D0%BD%D1%82%D0%B8%D0%BD%D0%B0%D0%A0%D1%83%D0%B1%D0%B0%D0%BD%D0%B8%D0%BA",
+                        "authorChannelId": {
+                            "value": "UCn_dFIdTXy8i_20grv2Zidg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T08:16:10Z",
+                        "updatedAt": "2026-05-02T08:16:10Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "M5P__4c_P225Z2k09OaUoNGblfM",
+            "id": "UgwoYCuUnHoIC1CPbE54AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "X1WPQzJ4L3KdQQOWs-cVAXUXcE4",
+                    "id": "UgwoYCuUnHoIC1CPbE54AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Служби слухали та писали завжди усіх. Що зараз, під час повномасштабного вторгнення, що в часи АТО при іншій владі, що у так звані \"мирні\" часи. Корупція в Україні була й є. Це не секрет. Питання в тому коли, хто і як вкидує потроху інформацію на широкий загал для пересічного українця. З якою метою та хто це ініціює та проплачує (і тут зовнішній міжнародний інтерес теж має дуже великий, якщо не вирішальний вплив) Майте холодний розум, якщо бажаєте наводити лад та не зашкодити Україні.",
+                        "textOriginal": "Служби слухали та писали завжди усіх. Що зараз, під час повномасштабного вторгнення, що в часи АТО при іншій владі, що у так звані \"мирні\" часи. Корупція в Україні була й є. Це не секрет. Питання в тому коли, хто і як вкидує потроху інформацію на широкий загал для пересічного українця. З якою метою та хто це ініціює та проплачує (і тут зовнішній міжнародний інтерес теж має дуже великий, якщо не вирішальний вплив) Майте холодний розум, якщо бажаєте наводити лад та не зашкодити Україні.",
+                        "authorDisplayName": "@sergshar6169",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_loj5BuRM2onrwhEHWCghiQb3pvRPeO0nslTV77cwk=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@sergshar6169",
+                        "authorChannelId": {
+                            "value": "UCNw8MbF6LYpds-fsQaZnn_Q"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T08:03:16Z",
+                        "updatedAt": "2026-05-02T08:05:26Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "bme9mvFRjPST5m5WTOsU47tcJ-g",
+            "id": "Ugx0m_EpQCYNC4Ss5Hl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "3tUJS4OKaZDdF9u-7ZW6cpZ_bEQ",
+                    "id": "Ugx0m_EpQCYNC4Ss5Hl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ой ведучий ...вас потрібно на фронт відправити ...такий зрадник як потрібен сидіти в тюрмі...а ваші плівки миндича це брехня вашого олігарха Порошенко !!",
+                        "textOriginal": "Ой ведучий ...вас потрібно на фронт відправити ...такий зрадник як потрібен сидіти в тюрмі...а ваші плівки миндича це брехня вашого олігарха Порошенко !!",
+                        "authorDisplayName": "@viktoriakaneva4261",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ev3b2XOxrgqekXZ_u3iAcbTLtwtiENxYX0WtxyKuaZywnrDqM2FMMeb3Tc1zT0OZV5sVIxMX0g=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@viktoriakaneva4261",
+                        "authorChannelId": {
+                            "value": "UCdFzSVZxJ1gI7XBwaLGapDw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T08:01:09Z",
+                        "updatedAt": "2026-05-02T08:01:09Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "JjJ4TR7zfFQVXxzNrQcvMI3Y3WE",
+            "id": "UgznkrT3chvGn4wvrwt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "r3A-g84RDFVg60ZNXXc2B1SpLhU",
+                    "id": "UgznkrT3chvGn4wvrwt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Де тут про зелю? Є чи не має?",
+                        "textOriginal": "Де тут про зелю? Є чи не має?",
+                        "authorDisplayName": "@ВіталійГузь-б5я",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kD152EaZ9XiaUoNySLjzK5cZmhJ-qCpzgk6_r5dBHSYg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D1%96%D1%82%D0%B0%D0%BB%D1%96%D0%B9%D0%93%D1%83%D0%B7%D1%8C-%D0%B15%D1%8F",
+                        "authorChannelId": {
+                            "value": "UCK1MWJfUYMhIcMXF_xs5EJw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:59:51Z",
+                        "updatedAt": "2026-05-02T07:59:51Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "yAjMjYRfrL52djOCUHAlJgZLUMI",
+            "id": "UgzF-0ITmPDgWuhYNv54AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "hT5QVWZpERpBdMaMIWaUHBrUVRU",
+                    "id": "UgzF-0ITmPDgWuhYNv54AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Снова 95 квартал дал в РОТ своему народу ....",
+                        "textOriginal": "Снова 95 квартал дал в РОТ своему народу ....",
+                        "authorDisplayName": "@goshapley",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_l26s-aLn8JSzLjObbHil97qKRFwosTankE6tUoQwMycosLyDBzOhi54c5TRUCQE9Udeg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@goshapley",
+                        "authorChannelId": {
+                            "value": "UCKiKsNeHhCQYfkvJXx0BuxQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:40:03Z",
+                        "updatedAt": "2026-05-02T07:40:03Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "9Hv6ceCupAxsxjjrXq6asSPp5cQ",
+            "id": "UgyQcbAwlQG7q5GEIpZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "ZosAlLhUyxtwyJNewU2zzT6dKis",
+                    "id": "UgyQcbAwlQG7q5GEIpZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Перемога",
+                        "textOriginal": "Перемога",
+                        "authorDisplayName": "@tatty_fefe6924",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/uCNB0ivl2VD5bEaCKb3JhNC3-foK3NXgNRwHJSmlZ-VgySRqGQCTrY2JfgvOjr_0L9RG499MKA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@tatty_fefe6924",
+                        "authorChannelId": {
+                            "value": "UCsLHenp8xyV5vMIkwvkeNIw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:26:16Z",
+                        "updatedAt": "2026-05-02T07:26:16Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "wDPaEfujwBTSS1fl936C0mMIrPo",
+            "id": "UgzeSencc6_n2cQTq7l4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "8NS6ydVOZhzkEP2UABaCUS5AipQ",
+                    "id": "UgzeSencc6_n2cQTq7l4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Як я можу поважати свого президента...,скільки наших дітей загинуло на війні, скільки населення залишилося без житла...",
+                        "textOriginal": "Як я можу поважати свого президента...,скільки наших дітей загинуло на війні, скільки населення залишилося без житла...",
+                        "authorDisplayName": "@Lida-jr6wz",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nxMusYOshjCAeD1E5cB-v8_HTbCHBiZVsl7OXhGTyxmWSWQ5RBwYvERFVkc_fUGtejGA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Lida-jr6wz",
+                        "authorChannelId": {
+                            "value": "UC53Fma-bJpjwXgnGuQZaOjw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:25:03Z",
+                        "updatedAt": "2026-05-02T07:25:03Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "O5R8EyipkAg3jH72RJJtt7YJ_98",
+            "id": "UgxnN98kkJpRzQt4oqV4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "9lHUgpGW3GERf50fd3LiMaQR5II",
+                    "id": "UgxnN98kkJpRzQt4oqV4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "73%😂😂",
+                        "textOriginal": "73%😂😂",
+                        "authorDisplayName": "@serhii2173",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_l_cdb12iEvfbconWqKW89iqSh69jL-NdmjZIuXCkr9Yg3iLzKFdf8SG32lYrR3AmrM9A=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@serhii2173",
+                        "authorChannelId": {
+                            "value": "UCN9iNNMk5AFqEWE8-x2h1NA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:16:09Z",
+                        "updatedAt": "2026-05-02T07:16:09Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "kHH9BqERpkkN_5X9tOAmGNxnSqE",
+            "id": "UgzeG2eA6lq4PKaeP_14AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "t_5QLGD5N7ounpexFiEZYBnjrU8",
+                    "id": "UgzeG2eA6lq4PKaeP_14AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ну ,і далі ,що ?,запахло смаженим-виїхав...",
+                        "textOriginal": "Ну ,і далі ,що ?,запахло смаженим-виїхав...",
+                        "authorDisplayName": "@Alex-x7b9q",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_li0yM6cYLIOWjD11MRFrJBTyO1UpGuxl0HXyI_Shaix_AohWC1X6iVYA2plRVEmtsyaw=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Alex-x7b9q",
+                        "authorChannelId": {
+                            "value": "UCv2ZAVZR2Qt2W7R36nOjyxg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:15:50Z",
+                        "updatedAt": "2026-05-02T07:15:50Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "hCt0-a2ViITV4EkEof4qCOhRDK4",
+            "id": "Ugyscv9x1qFGjA5_h454AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "nWaUT3XMQcz2NKgKadv-QNhR_vo",
+                    "id": "Ugyscv9x1qFGjA5_h454AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А знаете почему миндич всем рулил ???? Потому что он зять Коломойского!!! А он бенефициар этого цирка , чисто для отвода глаз ляпнул 📢 та какой миндич: у него два класса образования😂",
+                        "textOriginal": "А знаете почему миндич всем рулил ???? Потому что он зять Коломойского!!! А он бенефициар этого цирка , чисто для отвода глаз ляпнул 📢 та какой миндич: у него два класса образования😂",
+                        "authorDisplayName": "@LudovicusXIV",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/2y_kea43nxqxJ0HF6ILk5iT2Wyx1iYI_OWVfYv279NcQEmZyhTn6_5i5iuPZsDkdiN8r6Uq4yeI=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@LudovicusXIV",
+                        "authorChannelId": {
+                            "value": "UCjnbtbdLgiRMIJjEsN2V6IQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T07:01:59Z",
+                        "updatedAt": "2026-05-02T07:01:59Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 1,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "wrQI72Yvlt-KBk4G-gFQZZX6deQ",
+            "id": "UgzoQ8DEbFMAh4T9Tr94AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "RzL3XCC8OAjfl2wUITGoQNfZJto",
+                    "id": "UgzoQ8DEbFMAh4T9Tr94AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Нема місця для шоку нема слів просто піпець яка гидота....",
+                        "textOriginal": "Нема місця для шоку нема слів просто піпець яка гидота....",
+                        "authorDisplayName": "@brettexua",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_m39hbtaf3xwywEdnYfUSYuzZBdsoiAp-DDXtoEfYsRFxp_=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@brettexua",
+                        "authorChannelId": {
+                            "value": "UCWtfgjnMxCDM5jMkhGagCJA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T06:38:14Z",
+                        "updatedAt": "2026-05-02T06:38:14Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "VScsF4--kvufMFyM08twsjWKOUQ",
+            "id": "Ugw0vvVm3kMpHfixOnx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "T0uEhlpJw2P197cALZ-jl4njmHQ",
+                    "id": "Ugw0vvVm3kMpHfixOnx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А для піськойграючого хоч сці в очі а він каже  - дощ їде ! Бо зелені горобці  народжуються з ампутованою совістю 😢 ! Піаніст син свого тата , який не має совісті , та онук свого діда нквд , який мав досвід катувати людей .",
+                        "textOriginal": "А для піськойграючого хоч сці в очі а він каже  - дощ їде ! Бо зелені горобці  народжуються з ампутованою совістю 😢 ! Піаніст син свого тата , який не має совісті , та онук свого діда нквд , який мав досвід катувати людей .",
+                        "authorDisplayName": "@ТаняКузьмина-ш1г",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kJ_SN3dFayN7UBRJtKCOzMXj_gENpclVNyYvQR1G5KRVnFkPSnlUhXuAzp1tcTj_2UCM4=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A2%D0%B0%D0%BD%D1%8F%D0%9A%D1%83%D0%B7%D1%8C%D0%BC%D0%B8%D0%BD%D0%B0-%D1%881%D0%B3",
+                        "authorChannelId": {
+                            "value": "UClKe9YaE2w1Itwws2SSNJMA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T06:32:32Z",
+                        "updatedAt": "2026-05-02T06:32:32Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Q7FIIZuTyeARjqPJyP3fLEhlE7Q",
+            "id": "Ugxa2GuZ5s99YElm4jl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "J5A0ZI1hDviegM9G5usjfpGvXKs",
+                    "id": "Ugxa2GuZ5s99YElm4jl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Дякую команді УП і особисто Михайлу Ткачу за розслідування.\nПитання: Чи є серед ефективних менеджерів Зеленського хоча б один пристойний чоловік- не злодій, неухилянт? \nНемає.\nТоді хто ж сам Зеленський?",
+                        "textOriginal": "Дякую команді УП і особисто Михайлу Ткачу за розслідування.\nПитання: Чи є серед ефективних менеджерів Зеленського хоча б один пристойний чоловік- не злодій, неухилянт? \nНемає.\nТоді хто ж сам Зеленський?",
+                        "authorDisplayName": "@NVS1996r",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nv8CUIQDdwQReKARt8EO2hJzLBVG6vYlndMtqrPLAbhErysRDW9CwEbhllNhAXVn-3gQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@NVS1996r",
+                        "authorChannelId": {
+                            "value": "UCOZpM4b8iJXTVi7HE-7ekvQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T06:29:54Z",
+                        "updatedAt": "2026-05-02T06:29:54Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "F2rz6-V7ElZZn68f6PC4Uzq3DeU",
+            "id": "Ugyd8ek4cwMHzD6E5fB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "H7jVIx6Y1xSJWcwAnLg8qRDjezk",
+                    "id": "Ugyd8ek4cwMHzD6E5fB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Жд вбивці украінців  мирних і військових",
+                        "textOriginal": "Жд вбивці украінців  мирних і військових",
+                        "authorDisplayName": "@oksanalupey2740",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kThUMezCBJ04lPBpOjkuMLLK1dhZUcSA1YdOa3WVQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@oksanalupey2740",
+                        "authorChannelId": {
+                            "value": "UCbhoJkMvEr-tBvTa18obndg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T06:17:14Z",
+                        "updatedAt": "2026-05-02T06:17:14Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "PleB3jPEPnemxW6xcSKq4RKe_8w",
+            "id": "UgzXKLxD0PIMplqw6gV4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "tjq_DhJHtHSNptX3KD9scImDkxA",
+                    "id": "UgzXKLxD0PIMplqw6gV4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Вова нічого незнав",
+                        "textOriginal": "Вова нічого незнав",
+                        "authorDisplayName": "@dimabojko5214",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kVxSBFD2L02OUxh3QDhicp1yuF7FGJJou0gcVn9qk=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@dimabojko5214",
+                        "authorChannelId": {
+                            "value": "UCy4UbLt7qW3vA-aG6IL302g"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T06:16:17Z",
+                        "updatedAt": "2026-05-02T06:16:17Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "UuD9IsW2CxqGr15qg6UceQugukA",
+            "id": "UgyEaJy19WL_Nn1p7tB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "G5_LVMqbrpGU7US_Bbl7fWfZdeM",
+                    "id": "UgyEaJy19WL_Nn1p7tB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Бред собачий. Хватит  людям  мозги  пудрой  засыпать . Дом  строил...И  что ????? Где  здесь  преступления ? Про деньги разговоры ..И   что с того ?????  Ты  дома  Порошенко  и  Януковича  и Кучмы  покажи. На  Сардинии...... И  Пинчука  и  Ахметова  имущество  покажи. И  Коломойского  и  Фирташа....   И  всех  председателей  Фонда госимущества  и  фонда  гарантирования  вкладов.....    И налоговиков  главных  покажи  и главных  таможенников  за  последние  30  лет.......  Придурки !",
+                        "textOriginal": "Бред собачий. Хватит  людям  мозги  пудрой  засыпать . Дом  строил...И  что ????? Где  здесь  преступления ? Про деньги разговоры ..И   что с того ?????  Ты  дома  Порошенко  и  Януковича  и Кучмы  покажи. На  Сардинии...... И  Пинчука  и  Ахметова  имущество  покажи. И  Коломойского  и  Фирташа....   И  всех  председателей  Фонда госимущества  и  фонда  гарантирования  вкладов.....    И налоговиков  главных  покажи  и главных  таможенников  за  последние  30  лет.......  Придурки !",
+                        "authorDisplayName": "@Olga-i8b9q",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_l9jaN2DSCtxDxrwsf0C9s7kZypukJ6RDO4hmBP0i96PKF4kMCghS8kcBN7rq3a0W9btg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Olga-i8b9q",
+                        "authorChannelId": {
+                            "value": "UCGZNqHWFbH6Cs_7r9tJk9rg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T05:59:46Z",
+                        "updatedAt": "2026-05-02T06:06:07Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "TG6UDmVCJQmenTzf2Y6epbijUFI",
+            "id": "UgynVuNAuD9WdeDoFVt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "w-iuEcWiMY5wDrHRcCl2ychY-Y0",
+                    "id": "UgynVuNAuD9WdeDoFVt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "бла бла бла бла бла ВОВА бла бла бла бла. Як червоною ганчіркою помахали. Молодці УП, так тримати, направили людей куди треба...",
+                        "textOriginal": "бла бла бла бла бла ВОВА бла бла бла бла. Як червоною ганчіркою помахали. Молодці УП, так тримати, направили людей куди треба...",
+                        "authorDisplayName": "@Yevhen-dp",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lkS4NkYDPxpXMLOTvW_bOpplePpIGFECKWIQepBRhJE70=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Yevhen-dp",
+                        "authorChannelId": {
+                            "value": "UCZC758h1Z8AJAQZWG5pBKfg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T05:54:34Z",
+                        "updatedAt": "2026-05-02T05:54:34Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 1,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "rBUpHcQflC9xY0mvcTcqD9qPEAQ",
+            "id": "UgwVxf93FBzSCbEkWHl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Z4bFzZIvZsQBYT2cZM-RL1lr2LE",
+                    "id": "UgwVxf93FBzSCbEkWHl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Чому попередні аудіозаписи спокійно виклали, а тут якийсь дядько зачитує текст із картинками? Я не заперечую всю ту корупцію в країні на всіх рівнях, але без аудіозаписів це просто «хайпожорство» заради більшої популярності.",
+                        "textOriginal": "Чому попередні аудіозаписи спокійно виклали, а тут якийсь дядько зачитує текст із картинками? Я не заперечую всю ту корупцію в країні на всіх рівнях, але без аудіозаписів це просто «хайпожорство» заради більшої популярності.",
+                        "authorDisplayName": "@Kuroi_Hana.2",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_k7Gj6cssuUHHewp-kRqqp_-ByvgJoczJEisOX6kWkEzrs=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Kuroi_Hana.2",
+                        "authorChannelId": {
+                            "value": "UCC4mhDeNAPAzmgipL1cvYhA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T05:30:45Z",
+                        "updatedAt": "2026-05-02T05:30:45Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "FlwfT60KiSHTCLNL4iV5iXuht-w",
+            "id": "Ugyt2wP6pvx4UkKpP1N4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "2AWqcoQMpVLRxn5oiz8fNvqjFb8",
+                    "id": "Ugyt2wP6pvx4UkKpP1N4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Януковича перескочили. Немає слів. \nДякую УП. Ви найкращі",
+                        "textOriginal": "Януковича перескочили. Немає слів. \nДякую УП. Ви найкращі",
+                        "authorDisplayName": "@romankravchenko8519",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lH-xhpmje_OlvtQPg5Y1Oz6SLlBwua-cgA4YY3yb2ETHI=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@romankravchenko8519",
+                        "authorChannelId": {
+                            "value": "UCmdq_DRKEgIgahAxatlT9bA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T05:27:01Z",
+                        "updatedAt": "2026-05-02T05:27:01Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "na7y-5JZYbLHfTmM7UJCoa4M8DQ",
+            "id": "UgwNqoas2kAT7OgJwUt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "mcpuWr4ebaG-s73KbnL13v-AqoQ",
+                    "id": "UgwNqoas2kAT7OgJwUt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Разговоры  разговоры и только пора судить миндичзельц",
+                        "textOriginal": "Разговоры  разговоры и только пора судить миндичзельц",
+                        "authorDisplayName": "@ИннаКорольова-ы3м",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lwl1-rmylZxNqyaI3BVdjQCy_NDCz3i9O2jHFQORo=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D0%BD%D0%BD%D0%B0%D0%9A%D0%BE%D1%80%D0%BE%D0%BB%D1%8C%D0%BE%D0%B2%D0%B0-%D1%8B3%D0%BC",
+                        "authorChannelId": {
+                            "value": "UCowgFcUAKagbGETNnnC-52A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-02T04:42:28Z",
+                        "updatedAt": "2026-05-02T04:42:28Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "8jYJhVCrTwhuRSS5sSJhGwKTWHA",
+            "id": "UgxIxFvqY1pKJM-4L-B4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "7g8A0YJX2X0Fm1fVWx8_bjsrJFQ",
+                    "id": "UgxIxFvqY1pKJM-4L-B4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Спрут",
+                        "textOriginal": "Спрут",
+                        "authorDisplayName": "@РусланСкидан-т4и",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nUMyjiryXZyRR8Lt8rGIlRveurNQS5UhmPjXV7zdM=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A0%D1%83%D1%81%D0%BB%D0%B0%D0%BD%D0%A1%D0%BA%D0%B8%D0%B4%D0%B0%D0%BD-%D1%824%D0%B8",
+                        "authorChannelId": {
+                            "value": "UCPmKZvtzsTS-MTCZrqGpoXg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T04:22:43Z",
+                        "updatedAt": "2026-05-02T04:22:43Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "WQRvudlG0JhKZQkrz_L2yf3OANU",
+            "id": "Ugxc8yS4M-qh4rJ9Pgd4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "mAc6GdIM-fZXjeqhdjmCL7XkU7o",
+                    "id": "Ugxc8yS4M-qh4rJ9Pgd4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Дякую журналістам за цю роботу. Про цих морд навіть згадувати не хочеться",
+                        "textOriginal": "Дякую журналістам за цю роботу. Про цих морд навіть згадувати не хочеться",
+                        "authorDisplayName": "@КатеринаМельник-р1с",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kSwC0ETPDznd-EDHCnvz1SGlp_7Eu-SmCFrNDokDhwwr4=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9A%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%BD%D0%B0%D0%9C%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA-%D1%801%D1%81",
+                        "authorChannelId": {
+                            "value": "UCJ1qGOmo_B6SzbUP0vSfAfg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T04:06:23Z",
+                        "updatedAt": "2026-05-02T04:06:23Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "9pXmuNsAKDPtSq-EOa0THW59r3c",
+            "id": "Ugxnia5KSqKuHZfvbVJ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "pHjqu8nPevfz1QxWfenoIsP_THc",
+                    "id": "Ugxnia5KSqKuHZfvbVJ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Люди шо должно ще произойти шоб мы выходили на улицы!!! Пол страны разбомбили, разворовали, истребили половину населения! Тцк-могидизация! Короче кошмарный ужас хуже некуда такое не придумать!!! В 2014 майдан   прыгали только из за неподписания евроинтеграции!!! А тут уже всех родных поубивали и мы сидим молчим!!! Нам хоть на голову сри! Мы будем это терпеть!!! К сожалению весь цвет нации перебили(((некому уже отстоять нашу волю!!! С такими гадами еврейскими и врагов не надо!!! Отдельное спасибо Мишане и его команде!!! За такую сильную и крутую работу!!! Просто лучший!!! Честь вам и хвала, спасибо что вы у нас есть!!! Ангела хранителя сильного вам и нам!!! Люди пора уже вставать и отстаивать нашу неньку!!! Главное скинуть эту погань, а там договоримся!!! Правда скорее всего от части территории надо будет отказаться! ((",
+                        "textOriginal": "Люди шо должно ще произойти шоб мы выходили на улицы!!! Пол страны разбомбили, разворовали, истребили половину населения! Тцк-могидизация! Короче кошмарный ужас хуже некуда такое не придумать!!! В 2014 майдан   прыгали только из за неподписания евроинтеграции!!! А тут уже всех родных поубивали и мы сидим молчим!!! Нам хоть на голову сри! Мы будем это терпеть!!! К сожалению весь цвет нации перебили(((некому уже отстоять нашу волю!!! С такими гадами еврейскими и врагов не надо!!! Отдельное спасибо Мишане и его команде!!! За такую сильную и крутую работу!!! Просто лучший!!! Честь вам и хвала, спасибо что вы у нас есть!!! Ангела хранителя сильного вам и нам!!! Люди пора уже вставать и отстаивать нашу неньку!!! Главное скинуть эту погань, а там договоримся!!! Правда скорее всего от части территории надо будет отказаться! ((",
+                        "authorDisplayName": "@Миша-ь4б7о",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lSr7SPLrSG25RRoephE4CK_spAUSgKEKSZxov3sLzgDh484Xu9YUCgO779jEaPCZP0ktM=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9C%D0%B8%D1%88%D0%B0-%D1%8C4%D0%B17%D0%BE",
+                        "authorChannelId": {
+                            "value": "UCEGOR99wVSjASDOilMWS9Gw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-02T03:54:12Z",
+                        "updatedAt": "2026-05-02T03:54:12Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "iHJR_U6dxZX9dZLNQzYGRkFmuyE",
+            "id": "Ugxux3edoZt1hf1xj1V4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "APkvBGE-adFzAud3LzKHRQ0lQcw",
+                    "id": "Ugxux3edoZt1hf1xj1V4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А хочете неочікувану інформацію якої вам не розкажуть ? За всі часи, в усіх народів, ніколи не було - і не буде (!!!) президента який реально нічого не крав. Такого президента увесь земний світ ніколи не бачив - і ніколи не побаче. Але натомість, різні президенти або робили різні справи - або нічого не робили для людей. Так от якщо розглянути діяльність Зеленського на 100% без упереджень, на 100% з усіх сторін, то за період нашої \"незалежності\"  - він найнародніший президент. Все багно яке вилилося на нього зараз - льється не тому що він самий негідний, а тому що попався. Тому що не професійно заховався. Багато речей можна зрозуміти із їх порівняння. Давайте поруч із Зеленським поставемо юлю та її газовий договорняк із путіном, чи може \"пітуха кукуріковича\", чи ми забули як задумано свідомо обнулили нашу армію. На замовлення зовнішніх політиків створили в Україні заплановну кризу аби набратися боргів, унеможливити утримання армії, втомити людей (заставити їх воювати насмерть за 30 тисяч гривень яких вони ніколи не заробляли) ... Цей список незкінченно довгий .... І поруч із цим списком - поставте Зеленського. Відчуваєте різницю ? Але ні У.П. ні їхні друзі партнери, вам таку зважену оцінку озвучувати не будуть ні за яких умов. А як гадаєте - чому ?! А тому що така озвучка залишить їх без грошей які їм платять \"за роботу\" (за вибірковий хейт діючої влади).\n\nПригадайте президента (будь якої країни буль яких років) який просто роздавав людім грошові підтримки. Пригадайте президента який втілив цифрові державні сервіси на тому рівні що сьогодні. Пригадайте президента при якому оновилося стільки доріг. Як гадаєте - скіки іще модна продовжувати цей список іншої стороні, який озвучувати в У.П. ніхто ніколи не буде ... ? І врахуйте той нюанс, що левова доля усіх змін, була далеко задовго до початку усього хейту та гейту. Б3де вам розказувати таку правду У.П. чи інші дружні канали ... ?! Ні - ні за яких обставин !!! Задумайтеся - чому (якщо є чим думати). \n\nps. Любе дійство - комусь вигідне.",
+                        "textOriginal": "А хочете неочікувану інформацію якої вам не розкажуть ? За всі часи, в усіх народів, ніколи не було - і не буде (!!!) президента який реально нічого не крав. Такого президента увесь земний світ ніколи не бачив - і ніколи не побаче. Але натомість, різні президенти або робили різні справи - або нічого не робили для людей. Так от якщо розглянути діяльність Зеленського на 100% без упереджень, на 100% з усіх сторін, то за період нашої \"незалежності\"  - він найнародніший президент. Все багно яке вилилося на нього зараз - льється не тому що він самий негідний, а тому що попався. Тому що не професійно заховався. Багато речей можна зрозуміти із їх порівняння. Давайте поруч із Зеленським поставемо юлю та її газовий договорняк із путіном, чи може \"пітуха кукуріковича\", чи ми забули як задумано свідомо обнулили нашу армію. На замовлення зовнішніх політиків створили в Україні заплановну кризу аби набратися боргів, унеможливити утримання армії, втомити людей (заставити їх воювати насмерть за 30 тисяч гривень яких вони ніколи не заробляли) ... Цей список незкінченно довгий .... І поруч із цим списком - поставте Зеленського. Відчуваєте різницю ? Але ні У.П. ні їхні друзі партнери, вам таку зважену оцінку озвучувати не будуть ні за яких умов. А як гадаєте - чому ?! А тому що така озвучка залишить їх без грошей які їм платять \"за роботу\" (за вибірковий хейт діючої влади).\n\nПригадайте президента (будь якої країни буль яких років) який просто роздавав людім грошові підтримки. Пригадайте президента який втілив цифрові державні сервіси на тому рівні що сьогодні. Пригадайте президента при якому оновилося стільки доріг. Як гадаєте - скіки іще модна продовжувати цей список іншої стороні, який озвучувати в У.П. ніхто ніколи не буде ... ? І врахуйте той нюанс, що левова доля усіх змін, була далеко задовго до початку усього хейту та гейту. Б3де вам розказувати таку правду У.П. чи інші дружні канали ... ?! Ні - ні за яких обставин !!! Задумайтеся - чому (якщо є чим думати). \n\nps. Любе дійство - комусь вигідне.",
+                        "authorDisplayName": "@snptk",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/d6cs7pJvTUzSmHLYr5a_WVID7oDwwnUH7SubBVvthiDkjUhBBUpdafjnaUYEVFd6YaGA2UjhKw=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@snptk",
+                        "authorChannelId": {
+                            "value": "UCYHXJOj1N_Mg1ydxOTABm5w"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T03:44:56Z",
+                        "updatedAt": "2026-05-02T03:44:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "uFffYpXeB3O1kFczSUpBVgUJcv8",
+            "id": "UgxmxbUjVOkjS-Y-4Ih4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "pM7yNF1rHjlmpZNPfH_UUR7pzV0",
+                    "id": "UgxmxbUjVOkjS-Y-4Ih4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "бабусі біля підїзду роблять абсолютно теж саме весь день - обсірають сусідів, гостей сусідів, просто всіх.\nАле від бабусь немає толку, а від таких \"розслідувань\" Україні морозять поставки зброї, дронів, одним словом роблять усе, щоб наші бійці залишились без зброї.\nІ це їх головна мета. Їх \"пани-хозяєва\" вимагають від цих \"тіпа журналістів\" саме таких дій.\nДумайте головою. Цього аматора на відео після війни чекає зустріч з багатьма героями. Вони навіть зараз хотят цю гидоту прибрати, яка працює на ворогів, соросів, проросійських набістів. \nНас гарно на**али, а ми підтримуємо. Як каже одна людина, яка дуже хоче стати журналістом, але став недоблогером бігаючим за людьми - \"Якщо ти і я — це ми. А якщо ми — то це всіх\". Ось і хоче усіх... і робить це щотижня. Думайте",
+                        "textOriginal": "бабусі біля підїзду роблять абсолютно теж саме весь день - обсірають сусідів, гостей сусідів, просто всіх.\nАле від бабусь немає толку, а від таких \"розслідувань\" Україні морозять поставки зброї, дронів, одним словом роблять усе, щоб наші бійці залишились без зброї.\nІ це їх головна мета. Їх \"пани-хозяєва\" вимагають від цих \"тіпа журналістів\" саме таких дій.\nДумайте головою. Цього аматора на відео після війни чекає зустріч з багатьма героями. Вони навіть зараз хотят цю гидоту прибрати, яка працює на ворогів, соросів, проросійських набістів. \nНас гарно на**али, а ми підтримуємо. Як каже одна людина, яка дуже хоче стати журналістом, але став недоблогером бігаючим за людьми - \"Якщо ти і я — це ми. А якщо ми — то це всіх\". Ось і хоче усіх... і робить це щотижня. Думайте",
+                        "authorDisplayName": "@Starlukas",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mbP5XpkApAwO4QL5PoLE_9Ny0tiFBiWtkWKD1mbwzLdg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Starlukas",
+                        "authorChannelId": {
+                            "value": "UCPXFcbG9hpzyBRoJ2Jje_sw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T03:31:32Z",
+                        "updatedAt": "2026-05-02T03:31:32Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "IcFUSTlsfty9DVN_oo5hWGuRX3U",
+            "id": "UgxSuOWb8A1ifOiJ9gZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "SelkZgXE6j9RmqDrtcAuxsL9ySA",
+                    "id": "UgxSuOWb8A1ifOiJ9gZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "І ці узкорилі керують країною,думаєте вони хоч щось про українське зробили?для держави,нації\nПопулізм,відосики,марафон і крадуть на крові",
+                        "textOriginal": "І ці узкорилі керують країною,думаєте вони хоч щось про українське зробили?для держави,нації\nПопулізм,відосики,марафон і крадуть на крові",
+                        "authorDisplayName": "@user-cm7yd1yo8g",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/OkcwRUa297eZVD250awAP3Ow2uo-RPp2UaLdk3UFs9F40QWFd2XSonQVDbFa14GPMHmK-8kQ2g=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@user-cm7yd1yo8g",
+                        "authorChannelId": {
+                            "value": "UC_btZGxpdOqvdFRzhEQmooQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T03:14:14Z",
+                        "updatedAt": "2026-05-02T03:14:14Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "FYBtLtdCZq1krKNkNqoPM97lCgc",
+            "id": "Ugzh20_wo2VdbzA7P3x4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "txgPWyjVLSIvjLr9F_1CovQ9D9w",
+                    "id": "Ugzh20_wo2VdbzA7P3x4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ткач - герой России.",
+                        "textOriginal": "Ткач - герой России.",
+                        "authorDisplayName": "@_vankina8530",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/9PPhvEdC1BsvsLSNGl2yYB_aRbRFtyM0NSnG8oLq-Z8rIlgDuFnQdHY4kb4PT5c53z3vOJQs0h0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@_vankina8530",
+                        "authorChannelId": {
+                            "value": "UCfvSa80JnGaMAtdp3gUwjuQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T02:16:14Z",
+                        "updatedAt": "2026-05-02T02:16:14Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Hv_KO6swvmwLtuZmaA09xhTyGPk",
+            "id": "UgxPOdqFLgty7wp5tvp4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "nYnPDOIwpDFwDKuE4M2iMUUcP5c",
+                    "id": "UgxPOdqFLgty7wp5tvp4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Нужно мавиками сделать скиды по этим объектам! Войну разожгли, бабки своровали, людей закрыли и отправили на фронт. По этому пусть забывают о домиках!",
+                        "textOriginal": "Нужно мавиками сделать скиды по этим объектам! Войну разожгли, бабки своровали, людей закрыли и отправили на фронт. По этому пусть забывают о домиках!",
+                        "authorDisplayName": "@dima-gf9eg",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mxqZ60CoTaZ550rBJH0hvhrbaC0iuw84oyzXUrc3hXOZCE71UQV7uZ9OQ7lQlywKYGYg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@dima-gf9eg",
+                        "authorChannelId": {
+                            "value": "UC5HYFreasvO496-77xY0krg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-02T01:03:37Z",
+                        "updatedAt": "2026-05-02T01:04:08Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "4x6SnJzYd2OJwQkmEF3LgwIQwG4",
+            "id": "Ugw0d82oJLibNxeLR554AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "TB6KrNFcvGiSZzW4HGEnKh7JMgQ",
+                    "id": "Ugw0d82oJLibNxeLR554AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "В СБУ расскажи , а мы внимательно послушаем , на кого ты работаешь и зачем  пытаешься  вредить  обороноспособности Украины  !    Тебе уже никто не верит , не уважаемый Ткач !      Твоя работа на агрессора  стала  сильно   заметна  и  провальна ,  теперь только СБУ должно  разбираться  с тобой и заказчиками  данного дела , твоими  кураторами  и агентами ФСБ РФ , которым  не  выгодна  сильная  Украина  !",
+                        "textOriginal": "В СБУ расскажи , а мы внимательно послушаем , на кого ты работаешь и зачем  пытаешься  вредить  обороноспособности Украины  !    Тебе уже никто не верит , не уважаемый Ткач !      Твоя работа на агрессора  стала  сильно   заметна  и  провальна ,  теперь только СБУ должно  разбираться  с тобой и заказчиками  данного дела , твоими  кураторами  и агентами ФСБ РФ , которым  не  выгодна  сильная  Украина  !",
+                        "authorDisplayName": "@Esthete-k4q",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kIlEeQ4OACNIy4MLudGsL9DTagn5RKE7hatI9E0_FFdCTBbMQSp-RsS-u8gOIa7AM2aQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Esthete-k4q",
+                        "authorChannelId": {
+                            "value": "UCW58vTN7fjHQALS-RslbdJw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T23:24:24Z",
+                        "updatedAt": "2026-05-01T23:24:24Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "JWSOf4-vvmg3yAPq7iYfAefEp_0",
+            "id": "UgwRWB2t1ZA_hamjqEZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "-div_DCGSbwU9K-dNYEyc5-hrqI",
+                    "id": "UgwRWB2t1ZA_hamjqEZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Наркомани з УП відробляють трампівські грошики",
+                        "textOriginal": "Наркомани з УП відробляють трампівські грошики",
+                        "authorDisplayName": "@zaldak9025",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kG94CUAANZ18kHDtWci7j-tzRrkDCBkjvMcqYjOOLta_5neXXFX5kJiARpoRm_Aoew-IU=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@zaldak9025",
+                        "authorChannelId": {
+                            "value": "UCngIUzqyvrHv4jHOoyT3RVw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T23:11:26Z",
+                        "updatedAt": "2026-05-01T23:11:26Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "ldHV_dZYuBAvAFWnnOqPVj7Xk5U",
+            "id": "UgyEWDOJr504agTe3JR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "lOONQymRTAQBgH7Dl_oBePtjdgA",
+                    "id": "UgyEWDOJr504agTe3JR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Словами Зе: \"Ідіть у сраку\"",
+                        "textOriginal": "Словами Зе: \"Ідіть у сраку\"",
+                        "authorDisplayName": "@svitlanababych4051",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nEp7H_DxvBYxKynmqxw5D3k9DIWrbMciBU0MrzRBo=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@svitlanababych4051",
+                        "authorChannelId": {
+                            "value": "UCKLE6yBJVwf5e0gfu-viuXA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T22:50:57Z",
+                        "updatedAt": "2026-05-01T22:50:57Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "B8o1k-DZeBC0N26xZqhJP_PKUxQ",
+            "id": "UgwfGD4RsXYXoqeEWyR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "NjrQ_DGaib9XiJkAGRQafQQ7ixw",
+                    "id": "UgwfGD4RsXYXoqeEWyR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "За такі речі коли країна у ВІЙНІ, «розстріл» без суду і слідства !!! Якщо шавки навіть втечуть, думаю з часом український «мосад» їх дожене і справу зробить ) Нема їм місця безпечного на землі ..",
+                        "textOriginal": "За такі речі коли країна у ВІЙНІ, «розстріл» без суду і слідства !!! Якщо шавки навіть втечуть, думаю з часом український «мосад» їх дожене і справу зробить ) Нема їм місця безпечного на землі ..",
+                        "authorDisplayName": "@kozaknazar1844",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_ma587wUkMuwclFnkkr4pzQrjyxWyu3-2Z2U6bGLXP8mfs=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@kozaknazar1844",
+                        "authorChannelId": {
+                            "value": "UCTrV_-Foin1a7qBN4TPL6IQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T22:48:12Z",
+                        "updatedAt": "2026-05-01T22:48:12Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "qmRL4K6UI4gPp5KB_DhClcww-q8",
+            "id": "Ugy9axSraT-FcKS6yfh4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "tjmnVXhWMtuQ0MM8BfGKo9rugco",
+                    "id": "Ugy9axSraT-FcKS6yfh4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ніхуа не поняв\nМіндіч хотів гроші щоб зробити нашу балістику яка круче і дешевше американської ? В чому тоді проблема ?))",
+                        "textOriginal": "Ніхуа не поняв\nМіндіч хотів гроші щоб зробити нашу балістику яка круче і дешевше американської ? В чому тоді проблема ?))",
+                        "authorDisplayName": "@yaroslavlopushanskyi7702",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nWCW1v8oEKJBs66Uu5b9R4-g2vuU-v8_vf_FskgvY=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@yaroslavlopushanskyi7702",
+                        "authorChannelId": {
+                            "value": "UCy2JpV8pLv6-lg4ZrWTRTvg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T22:24:07Z",
+                        "updatedAt": "2026-05-01T22:24:07Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "LybSKJJGoyUKX4asNLSfyqaLQXY",
+            "id": "Ugy-_T7YBUF1_LTk0014AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "VOBj0je3Au0-vK0c7HlkqS-OnaY",
+                    "id": "Ugy-_T7YBUF1_LTk0014AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Чекаємо 2  серію .дякую за вашу працю👏👏🔥. Згинуть наші вороженьки  🙏🤢🤮🤮",
+                        "textOriginal": "Чекаємо 2  серію .дякую за вашу працю👏👏🔥. Згинуть наші вороженьки  🙏🤢🤮🤮",
+                        "authorDisplayName": "@natalitudan8177",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_liSC6Xy5JNAFyzig1Aj46Hgja32NDxzg77TeHNuPM=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@natalitudan8177",
+                        "authorChannelId": {
+                            "value": "UCKmWjz36OL_txtLx-ZaAZAA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T22:23:05Z",
+                        "updatedAt": "2026-05-01T22:23:05Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "idq_6VnZSsye035RR83Ct89G240",
+            "id": "UgyYDGg_a2UF4UBtTlZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "setDVRaOKe0lJYeRQNxJ1B2JvPM",
+                    "id": "UgyYDGg_a2UF4UBtTlZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Как вы надоели своими бла бла что поменялось от того что вы говорите ничего не поменяется если вы будете говорить какая разница на каком языке люди говорят русскоговорящих так же воюют при очень много а вы за дайки говорите противно",
+                        "textOriginal": "Как вы надоели своими бла бла что поменялось от того что вы говорите ничего не поменяется если вы будете говорить какая разница на каком языке люди говорят русскоговорящих так же воюют при очень много а вы за дайки говорите противно",
+                        "authorDisplayName": "@АняШапира",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nlx0iYxhayqYazLyS6luPaxSblC-jHOdKjIe0PiOteGTZlPudeNSCAjexVvjgvpdILvSs=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%90%D0%BD%D1%8F%D0%A8%D0%B0%D0%BF%D0%B8%D1%80%D0%B0",
+                        "authorChannelId": {
+                            "value": "UCgF6tH1mQMysHnt7z3m9sEg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T22:18:57Z",
+                        "updatedAt": "2026-05-01T22:18:57Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Z5X7Oyq2D9xCXvp_DgdJZJkpUto",
+            "id": "Ugx9a-rqxqS5WOOgItB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Arzk3ygDf_8wf-Pki_7ehlJvQrw",
+                    "id": "Ugx9a-rqxqS5WOOgItB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Дуже, дуже, дуже дякуємо Українській Правді.",
+                        "textOriginal": "Дуже, дуже, дуже дякуємо Українській Правді.",
+                        "authorDisplayName": "@ВолодимирМиколойовичБартош",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/Nw87-tUhKwtvti1POUcOlIx8GVKqfdWn6bM3N-Inheawi5zPLKwAuFPw9X_V6yQWad2DTpxie54=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE%D0%B9%D0%BE%D0%B2%D0%B8%D1%87%D0%91%D0%B0%D1%80%D1%82%D0%BE%D1%88",
+                        "authorChannelId": {
+                            "value": "UCQjGC3urwuoraRntLWsX92g"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T21:24:12Z",
+                        "updatedAt": "2026-05-01T21:24:12Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "XgpVxAOBHF91dsI4WaYKC6pTaM4",
+            "id": "UgwvqhS6mL4LXt5eaE14AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "IZINhBV_SN6bYqfw_4XzA5fbyKA",
+                    "id": "UgwvqhS6mL4LXt5eaE14AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "😮😮😮❤",
+                        "textOriginal": "😮😮😮❤",
+                        "authorDisplayName": "@olekbotcman9742",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nUZhw-3DE4HsWYlFNn9z2acucYzCX4fjQzLtg1u1s=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@olekbotcman9742",
+                        "authorChannelId": {
+                            "value": "UCm7VSIr9ycico1aWvPMt4MA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T21:11:42Z",
+                        "updatedAt": "2026-05-01T21:11:42Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "h_LE270AzNQBVe6ikRf_rhzvcEE",
+            "id": "Ugze6C_Bs8_4N42BfIl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "nkzY38BNlSsa1fbYigoyGwx9Zz4",
+                    "id": "Ugze6C_Bs8_4N42BfIl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "❤❤❤",
+                        "textOriginal": "❤❤❤",
+                        "authorDisplayName": "@olekbotcman9742",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nUZhw-3DE4HsWYlFNn9z2acucYzCX4fjQzLtg1u1s=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@olekbotcman9742",
+                        "authorChannelId": {
+                            "value": "UCm7VSIr9ycico1aWvPMt4MA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T21:11:33Z",
+                        "updatedAt": "2026-05-01T21:11:33Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "pcr9Pwa4FKbKmRR54OY9_LYpt58",
+            "id": "Ugxj4WL8Chy8TwD7KzF4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "SLlVwMUr-apPMs0YqZJxytminCs",
+                    "id": "Ugxj4WL8Chy8TwD7KzF4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Імпічмент Зеленському.",
+                        "textOriginal": "Імпічмент Зеленському.",
+                        "authorDisplayName": "@ВолодимирМиколойовичБартош",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/Nw87-tUhKwtvti1POUcOlIx8GVKqfdWn6bM3N-Inheawi5zPLKwAuFPw9X_V6yQWad2DTpxie54=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%BE%D0%BB%D0%BE%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%9C%D0%B8%D0%BA%D0%BE%D0%BB%D0%BE%D0%B9%D0%BE%D0%B2%D0%B8%D1%87%D0%91%D0%B0%D1%80%D1%82%D0%BE%D1%88",
+                        "authorChannelId": {
+                            "value": "UCQjGC3urwuoraRntLWsX92g"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T20:57:49Z",
+                        "updatedAt": "2026-05-01T20:57:49Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "SCfhQyCCdnwsj9tJI03gfu4qYW4",
+            "id": "UgxyJ0jGuxJJHYrzgoZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "KgSl0A3NEqMIp3Syh5RidafyYDk",
+                    "id": "UgxyJ0jGuxJJHYrzgoZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "😂",
+                        "textOriginal": "😂",
+                        "authorDisplayName": "@Fobosrom",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mfKJOwosKAUAaeGcvOj7KhZnCGZa0RffrOh5VNJBoG_T4JLSFL0codu1keVkOWiAlVpl8=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Fobosrom",
+                        "authorChannelId": {
+                            "value": "UC8MBvTcIXYka8h4Iux6os9w"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T20:54:51Z",
+                        "updatedAt": "2026-05-01T20:54:51Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "1kSx8N0J25nBew0b2i4y7v42RmE",
+            "id": "UgzxI742ClyCQDoVReR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "ZMBs3vmkGIhGgQ1R7KUW05eePjg",
+                    "id": "UgzxI742ClyCQDoVReR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Які круті у нас журналісти, НАБУ І САП! ДЯКУЄМО ВАМ ЗА РОБОТУ.",
+                        "textOriginal": "Які круті у нас журналісти, НАБУ І САП! ДЯКУЄМО ВАМ ЗА РОБОТУ.",
+                        "authorDisplayName": "@eded9477",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_n4TQecqCDM1JtEoqJgx4_sWvzIdeFVXkGd0fXavv1Gmj4=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@eded9477",
+                        "authorChannelId": {
+                            "value": "UCtaOJDo-OOizMBNPT1TmRWA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T20:47:35Z",
+                        "updatedAt": "2026-05-01T20:47:35Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 2,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "HonGqrq4UiV80TEYgcplQZjCbYs",
+            "id": "UgyQSqhe9CPAnEjmbdR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "twLD5-unqPK2rpRzF4mRwB-oxCY",
+                    "id": "UgyQSqhe9CPAnEjmbdR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "1:00:15 і стає зрозумілий накат ЦПК і ко на Штіллермана",
+                        "textOriginal": "1:00:15 і стає зрозумілий накат ЦПК і ко на Штіллермана",
+                        "authorDisplayName": "@ОлександрЗапоточний-ч6о",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lpZzCPQ66hGuPNX5gcxN8dRehzzU-NrqYWrp1g4oE=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9E%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%97%D0%B0%D0%BF%D0%BE%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%B9-%D1%876%D0%BE",
+                        "authorChannelId": {
+                            "value": "UCW0rvaAB5hhEM3kfMTRsc0w"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T20:38:47Z",
+                        "updatedAt": "2026-05-01T20:38:47Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "yxyGDFrCbLy6oWv93lfqsBaGWXo",
+            "id": "Ugx7rAjVFEBLOf_nRFl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "GwPySanGG8Hthc5GvcFSBjcjYrU",
+                    "id": "Ugx7rAjVFEBLOf_nRFl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "00:00 початок \n02:24 Міндіч і Шефір про підозру Чернишову\n05:32 Міндіч і Шефір про заставу за Чернишова \n10:21 Міндіч і Шефір про повернення Чернишова в Україну \n14:20 Міндіч і Шефір про депутатів Кисіля та Сову?\n16:00 Міндіч і Шефір про адвокатів Чернишова та про Єрмака \n18:35 Міндіч і Шефір про НАБУ\n20:00 Міндіч і Шефір про свої відносини та про Татарова\n22:06 Міндіч і Шефір про Кабмін та свої вподобання серед ЗМІ \n23:16 чому Міндіча та Шефіра турбує застава за Чернишова? \n\n26:14 Міндіч та Наталія про «консерванцію» імовірного кооператива «Династія»\n30:00 Міндіч та Наталія про будівництво на ділянці Міндіча\n35:26 Міндіч та Наталія про підставу від Чернишова \n36:25 Міндіч та Наталія про журналістів, які стежили за будівництвом кооперативу \n37:55 власники 3 будинків - Міндіч, Чернишов і Андрій? \n40:42 Хто такий «Вова» і кому належить 4 будинок в кооперативі «Династія»?\n44:13 Міндіч і Наталія про оформлення маєтків та фінансування \n\n48:08 Міндіч та Умєров про Шмигаля \n50:12 Міндіч та Умєров про Firepoint\n59:10 Міндіч та Умєров про державні контракти на мільйони гривень\n01:04:09 Міндіч та Умєров про Марію Доценко?\n01:07:23 Міндіч та Умєров про Спейс Центр в Америці \n01:07:48 висновки з плівок",
+                        "textOriginal": "00:00 початок \n02:24 Міндіч і Шефір про підозру Чернишову\n05:32 Міндіч і Шефір про заставу за Чернишова \n10:21 Міндіч і Шефір про повернення Чернишова в Україну \n14:20 Міндіч і Шефір про депутатів Кисіля та Сову?\n16:00 Міндіч і Шефір про адвокатів Чернишова та про Єрмака \n18:35 Міндіч і Шефір про НАБУ\n20:00 Міндіч і Шефір про свої відносини та про Татарова\n22:06 Міндіч і Шефір про Кабмін та свої вподобання серед ЗМІ \n23:16 чому Міндіча та Шефіра турбує застава за Чернишова? \n\n26:14 Міндіч та Наталія про «консерванцію» імовірного кооператива «Династія»\n30:00 Міндіч та Наталія про будівництво на ділянці Міндіча\n35:26 Міндіч та Наталія про підставу від Чернишова \n36:25 Міндіч та Наталія про журналістів, які стежили за будівництвом кооперативу \n37:55 власники 3 будинків - Міндіч, Чернишов і Андрій? \n40:42 Хто такий «Вова» і кому належить 4 будинок в кооперативі «Династія»?\n44:13 Міндіч і Наталія про оформлення маєтків та фінансування \n\n48:08 Міндіч та Умєров про Шмигаля \n50:12 Міндіч та Умєров про Firepoint\n59:10 Міндіч та Умєров про державні контракти на мільйони гривень\n01:04:09 Міндіч та Умєров про Марію Доценко?\n01:07:23 Міндіч та Умєров про Спейс Центр в Америці \n01:07:48 висновки з плівок",
+                        "authorDisplayName": "@Zhdanovism",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kBUQOmaPvAnm5MH7ju2hNnOz28w2WpnakQVyLpGYk88x0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Zhdanovism",
+                        "authorChannelId": {
+                            "value": "UCbtJbs35NffIvoR-NVBzJmg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T20:33:59Z",
+                        "updatedAt": "2026-05-01T20:33:59Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "rnxeCDI9cs2fgO8x2YO5OuzyldE",
+            "id": "UgyUJ5VqoTIYgbf8QZt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "_dfEclxLCKa6w1Bqkb-8Y4IQf2E",
+                    "id": "UgyUJ5VqoTIYgbf8QZt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Якщо винести за дужки недоброчесну конкуренцію, то ці люди просто красавчики-налагодили виробництво необхідної Державі зброї, залучили інвестора. Держава підтримала підприємців, допомогла з розвитком. А на будинки впевнений у них і до 2019 року були гроші.",
+                        "textOriginal": "Якщо винести за дужки недоброчесну конкуренцію, то ці люди просто красавчики-налагодили виробництво необхідної Державі зброї, залучили інвестора. Держава підтримала підприємців, допомогла з розвитком. А на будинки впевнений у них і до 2019 року були гроші.",
+                        "authorDisplayName": "@oleksiimatiushenko1642",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kqtFBKSAAczC4C-oN50-jhIxtjFDkj_TLoIPk0YrMjaQEe=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@oleksiimatiushenko1642",
+                        "authorChannelId": {
+                            "value": "UC1wd3r9SFf1roBEqNEZ7lDA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T20:22:15Z",
+                        "updatedAt": "2026-05-01T20:22:15Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Ewaoq_SZoKHPjB19cG8q7PmNTYA",
+            "id": "Ugzw8tPBtF1Fh5xbFOl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "bS_j5VnQ91kPfV7TATMueN8fqHw",
+                    "id": "Ugzw8tPBtF1Fh5xbFOl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Про бронежилеты, которые не принимают - это те, которые насквозь простреливаются? И Миндич требует, чтоб Умеров одним звоноком это решил, чтоб не попасть на деньги?",
+                        "textOriginal": "Про бронежилеты, которые не принимают - это те, которые насквозь простреливаются? И Миндич требует, чтоб Умеров одним звоноком это решил, чтоб не попасть на деньги?",
+                        "authorDisplayName": "@Navang-y5k3z",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kL7daW0mm9R_yCcc_-7ACB2lV35Z9XJTxD7SZFJYjPcFkWqZ4sFO5qPsN-v2vqL0FIzQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Navang-y5k3z",
+                        "authorChannelId": {
+                            "value": "UC4BA8gpKU5WwOeG_9FrWeMA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T20:04:12Z",
+                        "updatedAt": "2026-05-01T20:07:07Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "AjULS6uDkOyg-jzcHqGhVDG4Lkw",
+            "id": "Ugxt3Hspb-SzBmlS-qt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "etCBfy2-8JrxCpNCvgUfMOkKlac",
+                    "id": "Ugxt3Hspb-SzBmlS-qt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Жесть",
+                        "textOriginal": "Жесть",
+                        "authorDisplayName": "@5goraify",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lEyLPhpY4C65Du0VPUNvZ2tFdUa3q6MbU6g5ARQB0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@5goraify",
+                        "authorChannelId": {
+                            "value": "UCgZCo5Kf9SZ2bX-UVIiVmKQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:59:49Z",
+                        "updatedAt": "2026-05-01T19:59:49Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "ZpT3fRRIr2YDKTiBS5QgB5lcZ3c",
+            "id": "UgxFg29duDNJAqaIjup4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "TkgZgufjAeCS7cPpFyXcxh7GzlE",
+                    "id": "UgxFg29duDNJAqaIjup4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Жесть, це просто жесть",
+                        "textOriginal": "Жесть, це просто жесть",
+                        "authorDisplayName": "@Натик08",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/-oPy4xbREFf-soP3JNMUph6VR0edIQJhAy_Db4ps_tWAmqZNfZgf-xMac5XqbkfZVqA4Fk268NE=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9D%D0%B0%D1%82%D0%B8%D0%BA08",
+                        "authorChannelId": {
+                            "value": "UCG4POP5T3T3H-xJgjNdL8zg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:55:23Z",
+                        "updatedAt": "2026-05-01T19:55:23Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "KxpKJUycj5zHG5fE4LnFx-vahFA",
+            "id": "UgzBrRKv0k__f90DUCV4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "U95VKE15HnWEZmZ_hq03NaA8tEY",
+                    "id": "UgzBrRKv0k__f90DUCV4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ze диктатора геть, ІМПІЧМЕНТ!",
+                        "textOriginal": "Ze диктатора геть, ІМПІЧМЕНТ!",
+                        "authorDisplayName": "@Mmaaata",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/85dfxDkxGWM3REY1yha8a4KIky2BZuHM2faevcrloZ3AHNjL8J0iZeY4AvXxk0ByobMczBYugAQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Mmaaata",
+                        "authorChannelId": {
+                            "value": "UCv9yWxBsgJkjlfyutFAn4dg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:40:02Z",
+                        "updatedAt": "2026-05-01T19:40:02Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Rbb7wdPKhfpP2o5F767usXl7R5w",
+            "id": "Ugx0t-D-f_DH7S8b_ip4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "WTOI5XfZpphj-MtLUUWIwTg1rM0",
+                    "id": "Ugx0t-D-f_DH7S8b_ip4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Ze диктатора геть, ІМПІЧМЕНТ!",
+                        "textOriginal": "Ze диктатора геть, ІМПІЧМЕНТ!",
+                        "authorDisplayName": "@Mmaaata",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/85dfxDkxGWM3REY1yha8a4KIky2BZuHM2faevcrloZ3AHNjL8J0iZeY4AvXxk0ByobMczBYugAQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Mmaaata",
+                        "authorChannelId": {
+                            "value": "UCv9yWxBsgJkjlfyutFAn4dg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:39:56Z",
+                        "updatedAt": "2026-05-01T19:39:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "xN-L_bGj2X5mxIOvdf9SN5S7vD0",
+            "id": "Ugx5q-4geqz8zzT7Qld4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "vsdKZPI3i_5Vp0Ba_Dj3ZdXWC3c",
+                    "id": "Ugx5q-4geqz8zzT7Qld4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Они извиняются за русский, а не за коррупционеров/убийц во власти… 😅",
+                        "textOriginal": "Они извиняются за русский, а не за коррупционеров/убийц во власти… 😅",
+                        "authorDisplayName": "@RuskiVixen",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/f_BgQ_nYmo7G6l9-2cIzrsFedOGWN_hmYdnXlYkBox7EXcYhhDF_pAtTWCY_QGH9hNBgISME=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@RuskiVixen",
+                        "authorChannelId": {
+                            "value": "UC1OUEIgYpvFYZDui2nQM8Qw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:37:12Z",
+                        "updatedAt": "2026-05-01T19:38:26Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "26Ls0jXL3u-ixtOgsYGIe5pyP8k",
+            "id": "UgwTez2QCfv02FMJLjt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "JPQA-tdzQCoWnWE2Y0T_QnnUx0k",
+                    "id": "UgwTez2QCfv02FMJLjt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Всіх вернути і покарати, а інакше задайте собі питання за що вмирають ваші діти, чоловіки? За отаких мразот через яких військові виживають і недоотримують фінансування?",
+                        "textOriginal": "Всіх вернути і покарати, а інакше задайте собі питання за що вмирають ваші діти, чоловіки? За отаких мразот через яких військові виживають і недоотримують фінансування?",
+                        "authorDisplayName": "@bobbob-rd7yz",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lW2iYquv5OI0Ecq1pNB9B2KvOZi3J-F2a6xe4Qzs0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@bobbob-rd7yz",
+                        "authorChannelId": {
+                            "value": "UCsWuxInDuqrmK3i4853Ml0A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:32:06Z",
+                        "updatedAt": "2026-05-01T19:33:16Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "_loEU384f7pRCF4rMe4uv_C8lzs",
+            "id": "UgxJdIOYHFgmM-G0okF4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "YSDZ3M7I0HQ55hurAvszaJesRdA",
+                    "id": "UgxJdIOYHFgmM-G0okF4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Президент не знав, президент досі цим всім керує, вершина піраміди.",
+                        "textOriginal": "Президент не знав, президент досі цим всім керує, вершина піраміди.",
+                        "authorDisplayName": "@choboltovski",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lchOR43F3lTm3PVJ-zofDjuLZGCip2N5O6KlgOGIi0Mfg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@choboltovski",
+                        "authorChannelId": {
+                            "value": "UCXt5zXlci1Ckgwdxrls00sQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:29:06Z",
+                        "updatedAt": "2026-05-01T19:29:06Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "VDLGgfHw8wNhz9eluOZbaRio25Y",
+            "id": "UgyRBrvSEwT7OGvzpWp4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "ggmZZnkgom5Q_hs-KJ1nGhxy6zM",
+                    "id": "UgyRBrvSEwT7OGvzpWp4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Миша, сподіааюсь адвокати доведуть все до логічного твого кінця😂",
+                        "textOriginal": "Миша, сподіааюсь адвокати доведуть все до логічного твого кінця😂",
+                        "authorDisplayName": "@ЮлияБолотова-т7ч",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kDvksbxPgVKw5ugdWPTqUVcg4j2eNlMYpDEOl4NDFpH9g=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%AE%D0%BB%D0%B8%D1%8F%D0%91%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B2%D0%B0-%D1%827%D1%87",
+                        "authorChannelId": {
+                            "value": "UCOc5dIvM5Dvbg1SHqY2G8xw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:23:00Z",
+                        "updatedAt": "2026-05-01T19:23:00Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Apv8_gk9BkFiijeUPH2qsQ5FD2I",
+            "id": "UgynZknoB_kapbSlH_p4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "NhvnSw6BbpTQKwO5gl44J4rPRYA",
+                    "id": "UgynZknoB_kapbSlH_p4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Шо грошики не пахнуть Миша",
+                        "textOriginal": "Шо грошики не пахнуть Миша",
+                        "authorDisplayName": "@ЮлияБолотова-т7ч",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kDvksbxPgVKw5ugdWPTqUVcg4j2eNlMYpDEOl4NDFpH9g=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%AE%D0%BB%D0%B8%D1%8F%D0%91%D0%BE%D0%BB%D0%BE%D1%82%D0%BE%D0%B2%D0%B0-%D1%827%D1%87",
+                        "authorChannelId": {
+                            "value": "UCOc5dIvM5Dvbg1SHqY2G8xw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:20:46Z",
+                        "updatedAt": "2026-05-01T19:20:46Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 1,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "DtceO_E5nWy4MgKUbiEx9WPOUfQ",
+            "id": "Ugw-HUy3tYLA-8D7IVp4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "gUzPqFVEZ4rI_o_85x52aABWYUE",
+                    "id": "Ugw-HUy3tYLA-8D7IVp4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Облицювальний камінь, дерева, бесідки",
+                        "textOriginal": "Облицювальний камінь, дерева, бесідки",
+                        "authorDisplayName": "@hugolena111",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_md9bNTcMyFbY6MZqP3XxhjgS6zp9rtnJ2mj8y4PYg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@hugolena111",
+                        "authorChannelId": {
+                            "value": "UCvdXW0wqYOKaqhrlgDfibrA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:08:25Z",
+                        "updatedAt": "2026-05-01T19:08:25Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "V0eC8fBJMp-JPagwnoh43qrZWHI",
+            "id": "UgwvKGm9McoHFj_Sdf94AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "OhUIeXM_LJR2BopZb-9ridJq8gI",
+                    "id": "UgwvKGm9McoHFj_Sdf94AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "+",
+                        "textOriginal": "+",
+                        "authorDisplayName": "@Андрій-у3у1ш",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kaGwBIO01nC2LnZ2u9kYivGZG78leLZD4Iv1NPpq5r_PTE4cy9fjyY8FrsfF_pSpin8sb3TQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%90%D0%BD%D0%B4%D1%80%D1%96%D0%B9-%D1%833%D1%831%D1%88",
+                        "authorChannelId": {
+                            "value": "UCnYP85mAzIWYtCzHokZ-Irg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:04:21Z",
+                        "updatedAt": "2026-05-01T19:04:21Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "XfjHRncJWnN26wnXUg8mCZcSoyQ",
+            "id": "Ugyf5-CGQH2YEXuFWlx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "WDCoC2TXTFi913spWP8gqOicd_s",
+                    "id": "Ugyf5-CGQH2YEXuFWlx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Таке враження що українці в окопах захищають країну, а іудеї в цей час грабують її і виводять міліарди з України.",
+                        "textOriginal": "Таке враження що українці в окопах захищають країну, а іудеї в цей час грабують її і виводять міліарди з України.",
+                        "authorDisplayName": "@ИнгаИванова-б9ц",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mhAgtAaRrX__FJFowV11-Jkot4jTt-9wXwaR5iGt8bLMAGSFMtZ4E0JQYMx20TAMGonkU=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D0%BD%D0%B3%D0%B0%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%D0%B0-%D0%B19%D1%86",
+                        "authorChannelId": {
+                            "value": "UCKzyEoCYPHPhLaWm5TUUiaA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T19:01:50Z",
+                        "updatedAt": "2026-05-01T19:01:50Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "UAJfSH5dnzM2cZluJGZEftroVzU",
+            "id": "UgzNQty9HXLe0QGinhx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "RL6CbMweJ6kAVlY883n5vBwNdG0",
+                    "id": "UgzNQty9HXLe0QGinhx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Дякую Українській правді і Михайлу Ткачу за висвітлення такої інформації. Боже- боже, в такий нелегкий час наживатися на горі людей, нема слів...😮😢",
+                        "textOriginal": "Дякую Українській правді і Михайлу Ткачу за висвітлення такої інформації. Боже- боже, в такий нелегкий час наживатися на горі людей, нема слів...😮😢",
+                        "authorDisplayName": "@Юлія-й2м9е",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lS59TVydob5EOq2NOI5c--ZZUYW-CxrDzMMObuBmddZVq5quSlnoLa2ezSV72gFY7x8Wc=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%AE%D0%BB%D1%96%D1%8F-%D0%B92%D0%BC9%D0%B5",
+                        "authorChannelId": {
+                            "value": "UCwG5GurLgh7pq9M5nMazlBw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:39:58Z",
+                        "updatedAt": "2026-05-01T18:39:58Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "rQFLtwCpKfBIhGz0hvBnREOWCkc",
+            "id": "Ugya442zhpZptE26P3J4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "NzHseIIzmtQFSV-QSCtcqObMHgI",
+                    "id": "Ugya442zhpZptE26P3J4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Щиро дякую за тяжку роботу",
+                        "textOriginal": "Щиро дякую за тяжку роботу",
+                        "authorDisplayName": "@olenapetrishin1915",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kUpev3UoxeMEST6HoCvjFH_DgpCCzbrQK_oNUjTkthH2-WV5A-n1zN2EavYE8xZ7xOFQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@olenapetrishin1915",
+                        "authorChannelId": {
+                            "value": "UCmIWhWaKpHgrEO7oUTBjzjg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:39:10Z",
+                        "updatedAt": "2026-05-01T18:39:10Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "qP2S9VtQbZ9f0ea8AQdkiGTviSc",
+            "id": "Ugyim0YAV8dLYSG1o2J4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "_XL0cTThhqZEY_J-EK-EpcmHVGw",
+                    "id": "Ugyim0YAV8dLYSG1o2J4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "То якась туфта, а не розслідування. Що Ткач, що саме видання нікчемні, які працюють в інтересах ворога.",
+                        "textOriginal": "То якась туфта, а не розслідування. Що Ткач, що саме видання нікчемні, які працюють в інтересах ворога.",
+                        "authorDisplayName": "@olehvoitsekhovskyi6601",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nfAfZD8nD9IP4sazlWVLHK6NT7XtvamVPKIYMxijE=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@olehvoitsekhovskyi6601",
+                        "authorChannelId": {
+                            "value": "UC5oAti-SVBHWmHBXDcV-qvg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:28:30Z",
+                        "updatedAt": "2026-05-01T18:28:30Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "zlsca5psa_iQeR9dnwLxgZ8NdwE",
+            "id": "UgyiB7QUi92xznXUjvB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "LUeiPvBFrxQtzsBL0im4pL7VLR0",
+                    "id": "UgyiB7QUi92xznXUjvB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Андрій - це Андрій Шевченко😅",
+                        "textOriginal": "Андрій - це Андрій Шевченко😅",
+                        "authorDisplayName": "@yevhenbilan",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/YqygJUxwl25aiWIz3XcQsbf0MLi8AASeIiTVmCoXvt7QXVWomskwQ-RbyN1NweUTy5tTQuEa5Q=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@yevhenbilan",
+                        "authorChannelId": {
+                            "value": "UCCbKIaabW1la93gBM-A5_KQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:23:11Z",
+                        "updatedAt": "2026-05-01T18:23:11Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "th44920JC11utVKeZfPOTcomupQ",
+            "id": "UgyzCOpCq8Gz3ES_aYV4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "91fawx1wbjES9eQFPwZnLG-ZJiQ",
+                    "id": "UgyzCOpCq8Gz3ES_aYV4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Романа Сусюк, про яку капітуляцію йде? Зеленському американці пропонують зберегти життя тисячів українців, українську державність, території, армію, та ще його нікчемну владу. Це що, капітуляція? Капітуляція буде  коли з переляку віддадуть владу та втечуть.",
+                        "textOriginal": "Романа Сусюк, про яку капітуляцію йде? Зеленському американці пропонують зберегти життя тисячів українців, українську державність, території, армію, та ще його нікчемну владу. Це що, капітуляція? Капітуляція буде  коли з переляку віддадуть владу та втечуть.",
+                        "authorDisplayName": "@Alessandro-r8c3t",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_meYAh6NPkc3qZ9RQbztfozX2jknUqc69hcasQTLZa7CCWY6MHmzRI1I6I59gYFhEiQXA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Alessandro-r8c3t",
+                        "authorChannelId": {
+                            "value": "UC7x2cU6zjQJOf0NP1c0yLmA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:18:34Z",
+                        "updatedAt": "2026-05-01T18:24:58Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "loHAFudZEc7-Blc5FKs8Ox6FYOs",
+            "id": "Ugwhb5efWuzH5VosDIN4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "rIQINh1F1a0SpFTgbcLt3a5u4Ps",
+                    "id": "Ugwhb5efWuzH5VosDIN4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Боже захисти і збережи Україну і захисти наших войнів і людей Від тих Бандитів І ВІД такого президентів.",
+                        "textOriginal": "Боже захисти і збережи Україну і захисти наших войнів і людей Від тих Бандитів І ВІД такого президентів.",
+                        "authorDisplayName": "@olenapetrishin1915",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kUpev3UoxeMEST6HoCvjFH_DgpCCzbrQK_oNUjTkthH2-WV5A-n1zN2EavYE8xZ7xOFQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@olenapetrishin1915",
+                        "authorChannelId": {
+                            "value": "UCmIWhWaKpHgrEO7oUTBjzjg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:12:37Z",
+                        "updatedAt": "2026-05-01T18:12:37Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "_jQJElHJXdDBU0Aag2ZlORRjI6k",
+            "id": "UgxYUS5sq95M31SUnIl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "9EmG8an9FHJFzxDmWcXE8VTk9vI",
+                    "id": "UgxYUS5sq95M31SUnIl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Михайло Ткач, покажить нам свій прайс. Ми назбираємо грошей і ви оприлюдните компромат на Фіалу, Кличка, Железняка чи ще когось. \nСпочатку ви зриваєте поставки зброї іноземного походження в Україну, оприлюднив, начебто завищені ціни на неї, а зараз підриваєте власне виробництво зброї. Ганьба!!!",
+                        "textOriginal": "Михайло Ткач, покажить нам свій прайс. Ми назбираємо грошей і ви оприлюдните компромат на Фіалу, Кличка, Железняка чи ще когось. \nСпочатку ви зриваєте поставки зброї іноземного походження в Україну, оприлюднив, начебто завищені ціни на неї, а зараз підриваєте власне виробництво зброї. Ганьба!!!",
+                        "authorDisplayName": "@ОленаБабенко-к9т",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_n8Qwbopua3ZxnYavHPBbnug6kMIZpgkEb5QZ5vCS44gpU_pDZLyBY-bxlx9sRB3_qYR7U=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9E%D0%BB%D0%B5%D0%BD%D0%B0%D0%91%D0%B0%D0%B1%D0%B5%D0%BD%D0%BA%D0%BE-%D0%BA9%D1%82",
+                        "authorChannelId": {
+                            "value": "UCLJitZ3oSCitDfaA4LF6otw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:11:19Z",
+                        "updatedAt": "2026-05-01T18:11:19Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "vgCMlMG_78uK7CY46nvkiJs4WPs",
+            "id": "UgxCuhOGADq91at74gt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "LMmzYC9XhcZz_ZEtW6lchbqE1L8",
+                    "id": "UgxCuhOGADq91at74gt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "😅 УКРАЇНСЬКА ПРАДА друзі БЕЖІТЬ СЕБЕ здоров'я ПРАВДА за ВАМИ",
+                        "textOriginal": "😅 УКРАЇНСЬКА ПРАДА друзі БЕЖІТЬ СЕБЕ здоров'я ПРАВДА за ВАМИ",
+                        "authorDisplayName": "@Нина-ш8щ",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nGwhUbOQlMcAilvvPmRYpCQonn-mjEFgaBM3rqBgTLa_3uROQOClDg8RLAwh8UXbDw_SM=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9D%D0%B8%D0%BD%D0%B0-%D1%888%D1%89",
+                        "authorChannelId": {
+                            "value": "UCRUeYvMHb4BWlD1YMDwc6WQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:07:10Z",
+                        "updatedAt": "2026-05-01T18:07:10Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "y58kuqHVadum82MAdN37WaJ8Wfc",
+            "id": "UgyS4vRnzflphbpfoJR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "P-nEHqIJvdzIlb0WuW0jiuwHGcM",
+                    "id": "UgyS4vRnzflphbpfoJR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Конечно, знал и в доле! Львиной доле!\nС нетерпением жду, когда получит полное вознаграждение за все свои преступления!\nКраще б вони всі втікли... Мародеры!",
+                        "textOriginal": "Конечно, знал и в доле! Львиной доле!\nС нетерпением жду, когда получит полное вознаграждение за все свои преступления!\nКраще б вони всі втікли... Мародеры!",
+                        "authorDisplayName": "@ИринаВоробьёва-и1ч",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kW1ao_tHSXP4OgP94HhjRMXIDq-fGMbDE7nnfhoLY=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D1%80%D0%B8%D0%BD%D0%B0%D0%92%D0%BE%D1%80%D0%BE%D0%B1%D1%8C%D1%91%D0%B2%D0%B0-%D0%B81%D1%87",
+                        "authorChannelId": {
+                            "value": "UC50vq_6sn2fZEoQnkC_VntQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:06:12Z",
+                        "updatedAt": "2026-05-01T20:11:06Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "MC1O4nBYCuj58CcJ187zp43khkI",
+            "id": "Ugwb9ngvxzp5OItVG1t4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "rn03Cy_kKjevlFJ90Bly2JkSXNg",
+                    "id": "Ugwb9ngvxzp5OItVG1t4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Хватит умолить эту тему прошло пол года а вы никак не успокоитель хватит врать кто вам дал пленки миндича ?что там купите",
+                        "textOriginal": "Хватит умолить эту тему прошло пол года а вы никак не успокоитель хватит врать кто вам дал пленки миндича ?что там купите",
+                        "authorDisplayName": "@Игорь-и7с2б",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kSs_XndnioiZnnBHH_WRDFBwi4MQwN0Kwxby-fZaNFdwjQzPsF51Bkw8aC7_zlAyBy0OQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D0%B3%D0%BE%D1%80%D1%8C-%D0%B87%D1%812%D0%B1",
+                        "authorChannelId": {
+                            "value": "UCd_zO6hDEsg7-kVfNdy5OYQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T18:05:43Z",
+                        "updatedAt": "2026-05-01T18:05:43Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "PUtOYmrcn4DrjlmGpW_My1NbixM",
+            "id": "UgxmSIKVmULGvN0yH1B4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "9bbfz-MfV0Pzwzlo9_OoKLA34oo",
+                    "id": "UgxmSIKVmULGvN0yH1B4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "дякую 73% дегенератів, дякую від щирого серця",
+                        "textOriginal": "дякую 73% дегенератів, дякую від щирого серця",
+                        "authorDisplayName": "@andriihaiduk5143",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lcKj8rSf94EUFcZBmbWdWMc01xNMFs8h0V0hy08K5ywHu0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@andriihaiduk5143",
+                        "authorChannelId": {
+                            "value": "UCChl84stxp9QsZSUtWKXhIg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T17:59:35Z",
+                        "updatedAt": "2026-05-01T17:59:35Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "NCkc1XzIx0sjuf8XHvV0XIEm1NA",
+            "id": "UgxTs7mJJYY5M3NOGhN4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "QKlyBsBxd8rPxumGGIZh0O28nUY",
+                    "id": "UgxTs7mJJYY5M3NOGhN4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "😅😅😅😅почитали якусь маячню і на що розрахунок? На таких як рсня,яка вірить телЄвізАру? 🤣🤣🤣🤣, це жах🤣🤣🤣,я маю\n \" повірити\" якомусь чєлу,який щось читає🤦‍♀️🤣🤦‍♀️🤦‍♀️🤦‍♀️",
+                        "textOriginal": "😅😅😅😅почитали якусь маячню і на що розрахунок? На таких як рсня,яка вірить телЄвізАру? 🤣🤣🤣🤣, це жах🤣🤣🤣,я маю\n \" повірити\" якомусь чєлу,який щось читає🤦‍♀️🤣🤦‍♀️🤦‍♀️🤦‍♀️",
+                        "authorDisplayName": "@Оленка7",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mw6Oorj4rpz9agc1NYCeyP0UbKW5ZPg3DIDttg0kkzTUCPtGf0iPoW3fmKv1tTRW-CBO8=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9E%D0%BB%D0%B5%D0%BD%D0%BA%D0%B07",
+                        "authorChannelId": {
+                            "value": "UCiZe2nvXqD_Ipf9fbfZR2jg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:54:24Z",
+                        "updatedAt": "2026-05-01T17:55:00Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "nGSZyMB9Y14XHHsPWDkdxugV04k",
+            "id": "Ugxxgr5z02oPVGD9Qx94AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "QHVFGz2SjGnruZ79k9pjV92vHSk",
+                    "id": "Ugxxgr5z02oPVGD9Qx94AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А шО ?? Случілася??? Не було в 19му відомо ,що зє-чмо-кодла.\nАле конкретно ви виступаєте ЗАРАЗ НА СТОРОНІ ВОРОГІВ, ЩОБ ЗАСТАВИТИ зєльку КАПІТУЛЮВАТИ і ЗДАТИ УКРАЇНУ. Ви посібники ворогів.",
+                        "textOriginal": "А шО ?? Случілася??? Не було в 19му відомо ,що зє-чмо-кодла.\nАле конкретно ви виступаєте ЗАРАЗ НА СТОРОНІ ВОРОГІВ, ЩОБ ЗАСТАВИТИ зєльку КАПІТУЛЮВАТИ і ЗДАТИ УКРАЇНУ. Ви посібники ворогів.",
+                        "authorDisplayName": "@РоманаСусюк",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kKhkk84C1x2y7dcPMzfRV-VO0JGPwg6K-4Ki-ETbs=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A0%D0%BE%D0%BC%D0%B0%D0%BD%D0%B0%D0%A1%D1%83%D1%81%D1%8E%D0%BA",
+                        "authorChannelId": {
+                            "value": "UCk3rH2Se50r161cXQbNvk7g"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:51:42Z",
+                        "updatedAt": "2026-05-01T17:51:42Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "TgY0cBMICcSdm9HmwBIGmDVAja4",
+            "id": "UgwBv5_Dds2dqo5Uw_l4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "8j2WDdtaXAD5-V55V4zZqAWaS40",
+                    "id": "UgwBv5_Dds2dqo5Uw_l4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А можеш щоб я сам ці плівки послухав, без сурдо перекладача?",
+                        "textOriginal": "А можеш щоб я сам ці плівки послухав, без сурдо перекладача?",
+                        "authorDisplayName": "@ВасилийОвчинников-ш2т",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_myy1b0owyJ1gaGFExq4IxfC74_eBz_Up42OGkBJrE=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D0%B8%D0%B9%D0%9E%D0%B2%D1%87%D0%B8%D0%BD%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D1%882%D1%82",
+                        "authorChannelId": {
+                            "value": "UCv5S21EOQSxIl270utwRKMA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:50:07Z",
+                        "updatedAt": "2026-05-01T17:50:07Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "kmr477Q3IBbQB3nw6J2soRv-Dlg",
+            "id": "Ugz2nEx8D5IyZl9NUSZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "_vfPC1ddHF4NH08irZBIFhvspw0",
+                    "id": "Ugz2nEx8D5IyZl9NUSZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Мидас это зеля???",
+                        "textOriginal": "Мидас это зеля???",
+                        "authorDisplayName": "@cossack.vatacut",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/9qmFFxOhXJJCpj7vNYCDl8CC8fZTUaPBM_JHhlJTBT3DJRbxqaXwciR1gSq_tbmabDY5-dvf4A=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@cossack.vatacut",
+                        "authorChannelId": {
+                            "value": "UCo6euVTgMqnK5A1TMOCvEeg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:46:58Z",
+                        "updatedAt": "2026-05-01T17:46:58Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "f4mlzPLz23CMLBH8QTaZe5Pf84I",
+            "id": "UgyXoCC2s9BqEQBBRvl4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "FcIWxgFarjI7bTAu000reUh7hB8",
+                    "id": "UgyXoCC2s9BqEQBBRvl4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "молодцы",
+                        "textOriginal": "молодцы",
+                        "authorDisplayName": "@АлексейБ-о7у",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kBAnYTowxIwIZwXjZpT5JNCGBlgu9QjZquLSZfu7s=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B5%D0%B9%D0%91-%D0%BE7%D1%83",
+                        "authorChannelId": {
+                            "value": "UCnjZCIcKaYu8C-Lj__vpcsQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:41:13Z",
+                        "updatedAt": "2026-05-01T17:41:13Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "reK4P47XWLFhNRyGtIvcPGiLNzs",
+            "id": "UgxuLybCxjI1ow8wpMx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "pOdxKsg0SEJc6CIah3X64nofLYE",
+                    "id": "UgxuLybCxjI1ow8wpMx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Балаболы",
+                        "textOriginal": "Балаболы",
+                        "authorDisplayName": "@13flirmonto40",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lDbPA3AdsJo_ytTd2kUyLKeBbBuSv5LgPV6jRJpxlqT_FbErQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@13flirmonto40",
+                        "authorChannelId": {
+                            "value": "UC_OqiOnU39SlFmuZVrmVcJQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:39:22Z",
+                        "updatedAt": "2026-05-01T17:39:22Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "cAU6KKVA0C_ixaZ85f_By9svD2U",
+            "id": "Ugz5MC4TJXJybiiCSNB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "cfJ2C7Bh3gxGmRWXUkjPVHugeTY",
+                    "id": "Ugz5MC4TJXJybiiCSNB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Будьте  Богом  бережені п. Михайле.\nДякую  за  титанічну  працю.\nЗдов'я  Вам  і  витримки.",
+                        "textOriginal": "Будьте  Богом  бережені п. Михайле.\nДякую  за  титанічну  працю.\nЗдов'я  Вам  і  витримки.",
+                        "authorDisplayName": "@ТамараДанилова-э7ц",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_llVIJn8cBlIFzi46iKMpNJ3uwhokAulgpxWsYHOWhWzjasYNnQWrFIqPF-4ldxEu6ypAs=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A2%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%D0%94%D0%B0%D0%BD%D0%B8%D0%BB%D0%BE%D0%B2%D0%B0-%D1%8D7%D1%86",
+                        "authorChannelId": {
+                            "value": "UCqgPyw5Tnd35UbJlU0DvMHg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T17:38:57Z",
+                        "updatedAt": "2026-05-01T17:38:57Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 1,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "9qHHm4hGFeQ3gADWoZHFZDa1HbE",
+            "id": "UgywAAzi2LOtuUqnfJZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "T4m8FmteMvmCrwPlBpfGnirkIg4",
+                    "id": "UgywAAzi2LOtuUqnfJZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Чому у українській журналістиці є стандарт - говорити таким голосом як рагуль? Таке враження що у журналістів когнітивні дисфункції",
+                        "textOriginal": "Чому у українській журналістиці є стандарт - говорити таким голосом як рагуль? Таке враження що у журналістів когнітивні дисфункції",
+                        "authorDisplayName": "@MyroslavKryzhanivskyi",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lwBBPaJrIgaYvG91T5Foo7qUs--sl475GZv_lkeHWPpQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@MyroslavKryzhanivskyi",
+                        "authorChannelId": {
+                            "value": "UC_4jGHKYqxKABefb1axNvBA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:34:39Z",
+                        "updatedAt": "2026-05-01T17:34:39Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "jvgYvJYt3WGATkZXnDUPum_RVtw",
+            "id": "UgzJyppBzPdmJz_jbmp4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "J3G0_FUQvRthzAlWoLJ6rSZTaq4",
+                    "id": "UgzJyppBzPdmJz_jbmp4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Слів нема…",
+                        "textOriginal": "Слів нема…",
+                        "authorDisplayName": "@andrechko1",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/fs7aWax1KlDGQug5KscceuW7Ip0odue8ebyt2jmW4kF3eyeUnLLh1DHrsNbuJWpFf7qzhuzX_eY=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@andrechko1",
+                        "authorChannelId": {
+                            "value": "UCxWAwE_ZRjOn6fB0xlX8S4A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:23:56Z",
+                        "updatedAt": "2026-05-01T17:23:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "5jEDigVNaNVd4-3odZ5RqrKGoSA",
+            "id": "UgwN8QD0kSDDrjYmCgF4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "5Bm2OtoOrHG0VGR76sf8xcCmDKs",
+                    "id": "UgwN8QD0kSDDrjYmCgF4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Йшов би ти в дупу.\nВи не українська і не правда, а потвори, яеі наносять величезну шкоду Україні.",
+                        "textOriginal": "Йшов би ти в дупу.\nВи не українська і не правда, а потвори, яеі наносять величезну шкоду Україні.",
+                        "authorDisplayName": "@ВіраЗаславська",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lz-MYJuMNtr3y6-ZIT7ZKToyAyKGbuDL1Qn3rB4pbcB5On5xB5uUZqxPZ_naOolLvwg8w=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D1%96%D1%80%D0%B0%D0%97%D0%B0%D1%81%D0%BB%D0%B0%D0%B2%D1%81%D1%8C%D0%BA%D0%B0",
+                        "authorChannelId": {
+                            "value": "UCLE0rRWlW0O-oGEmSXvlWhA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:23:52Z",
+                        "updatedAt": "2026-05-01T17:23:52Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "nsZKDupoNMJhtE8qGunUbDnaQMA",
+            "id": "UgzWg7Ts234GQDhU8jZ4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "YI2oixfMee4phzR1tY_1tU8YDWk",
+                    "id": "UgzWg7Ts234GQDhU8jZ4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Чому не називаєте - ЗЄМіндіч?",
+                        "textOriginal": "Чому не називаєте - ЗЄМіндіч?",
+                        "authorDisplayName": "@ВикторРад-г6ь",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lcElQR1hl082m9ejKKwbUhdZZnQioAsO2JWuEwSFM7yQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%B8%D0%BA%D1%82%D0%BE%D1%80%D0%A0%D0%B0%D0%B4-%D0%B36%D1%8C",
+                        "authorChannelId": {
+                            "value": "UCDO5G6ak12qs6o28ilat91g"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:06:04Z",
+                        "updatedAt": "2026-05-01T17:06:04Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "WFLmskIHMDTAI6XY1WCKER8uQC0",
+            "id": "UgwKzWuL6BWKZShCEJ94AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Nvq35I_VI3jM1scN7RPnzQEN9kE",
+                    "id": "UgwKzWuL6BWKZShCEJ94AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Вже нікому не цікава ця туфта! Де докази? Доведіть хоч одну справу до суду. Прсадіть хоч одного корупціонера.",
+                        "textOriginal": "Вже нікому не цікава ця туфта! Де докази? Доведіть хоч одну справу до суду. Прсадіть хоч одного корупціонера.",
+                        "authorDisplayName": "@VitaliyKysil",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_kDVsj9hLvoBQOLzjE2nL1bDBX9GW_KSmsdaKSmAdiuJmsO7Wk2UinkxnzouI6qS8O9Pg=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@VitaliyKysil",
+                        "authorChannelId": {
+                            "value": "UCaQ6uATrzkLRGyP8u9852ZA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T17:01:03Z",
+                        "updatedAt": "2026-05-01T17:01:03Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Ph1iJrDhubbCB3GCD4fslKfO808",
+            "id": "UgwT0f5NAvLTiGXzD3F4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "vxBhhqrjcHAaP-UDLG75fpl_8ms",
+                    "id": "UgwT0f5NAvLTiGXzD3F4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Теперь понимаете почему война , зеля имеет на ней сумасшедшие деньги , и все они их делят между собой , команда же бл, ть",
+                        "textOriginal": "Теперь понимаете почему война , зеля имеет на ней сумасшедшие деньги , и все они их делят между собой , команда же бл, ть",
+                        "authorDisplayName": "@ТатьянаВладимировна-п2х",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/P_3mcleLN5JX1WtLyQBfslHebh8BZi75LuFCyCWhQNwPNnEvRHbnmk2K_RRH_7HskgLZFFjo=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%A2%D0%B0%D1%82%D1%8C%D1%8F%D0%BD%D0%B0%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%BD%D0%B0-%D0%BF2%D1%85",
+                        "authorChannelId": {
+                            "value": "UCn8i5ppgiZyJh1tLqujE53A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:58:27Z",
+                        "updatedAt": "2026-05-01T16:58:27Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "kmDO82bPF1gNpae2zapXtzj1bAg",
+            "id": "UgxzYLEqy63gdIs_02l4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "_FeHZJdQmKzlctBG_KdoQXT5qE4",
+                    "id": "UgxzYLEqy63gdIs_02l4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Господи, какая чушь! сидит парнишка и что-то читает, то неразборчиво, то за кого-то, почему мы должны верить, а почему нам не представить настоящие плёнки, чтобы мы могли сами послушать, и даже то, что он читает ничего криминального нет, мало ли о чём люди говорят, говорят про Алёшу - это точно Гончаренко😅",
+                        "textOriginal": "Господи, какая чушь! сидит парнишка и что-то читает, то неразборчиво, то за кого-то, почему мы должны верить, а почему нам не представить настоящие плёнки, чтобы мы могли сами послушать, и даже то, что он читает ничего криминального нет, мало ли о чём люди говорят, говорят про Алёшу - это точно Гончаренко😅",
+                        "authorDisplayName": "@Santa-qw25L",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/s-l4yy9qJJb7m3ty5d_vIbMEJv3_SZq3SiddK4CnTQE05pGtJ73g2C5Wi5vktHYYmwCuyh-AaA=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Santa-qw25L",
+                        "authorChannelId": {
+                            "value": "UCQ_LliELZannszfQeiE5K9A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:52:56Z",
+                        "updatedAt": "2026-05-01T16:52:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "7pud6wwsSQWuxpS0bPc6CWsVZjg",
+            "id": "Ugz0_2W1PrXhetaBPnh4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "i1XffThq0ohEAdVsVTooi7xZCrA",
+                    "id": "Ugz0_2W1PrXhetaBPnh4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "на аватарці ліца української національнсті)))))",
+                        "textOriginal": "на аватарці ліца української національнсті)))))",
+                        "authorDisplayName": "@artem-20d",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lOup7BqiI_GeY9EIp-urNX_WnOcD3vp3gKPcSnVQU=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@artem-20d",
+                        "authorChannelId": {
+                            "value": "UC3bfxh-VJFVwCp2z0jfBihw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:48:56Z",
+                        "updatedAt": "2026-05-01T16:48:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "6PAOdk-9R5dCviQybhnPwlFiSSg",
+            "id": "UgxnIpCT-kjt11hXgGh4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "zPAwG8mqw77FBnZ7ePU4UJU2ens",
+                    "id": "UgxnIpCT-kjt11hXgGh4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "теперь шутки, что к власти привели 95 квартал, уже перестали быть шутками. и кто-то ещё удивляется, что много ухылянтов не хотят защищать результаты правления Зе",
+                        "textOriginal": "теперь шутки, что к власти привели 95 квартал, уже перестали быть шутками. и кто-то ещё удивляется, что много ухылянтов не хотят защищать результаты правления Зе",
+                        "authorDisplayName": "@tim-80",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/F0sglyCW97Gu4hKtntGvQthHP3Po3Oe_qVPM3n1Fc6ncWuQSRB8G-4l9NKm_KfwBJKxhmN02=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@tim-80",
+                        "authorChannelId": {
+                            "value": "UCRLgNG0BH_Q7e7LsIbzyGKQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:47:04Z",
+                        "updatedAt": "2026-05-01T16:47:04Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "fDz5tJzJZ3OridGmiFNAq-rcqw8",
+            "id": "UgyslZVJCZsAuTQNDl54AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "J1bFwZDLW8rXlFlsk4u33Pwt-WM",
+                    "id": "UgyslZVJCZsAuTQNDl54AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "За шо дякую???? Чому ці люді не на фронті??? Здорові гарні та сильні)))\nНа яку державу вони працюють?",
+                        "textOriginal": "За шо дякую???? Чому ці люді не на фронті??? Здорові гарні та сильні)))\nНа яку державу вони працюють?",
+                        "authorDisplayName": "@НиколайСтряхилев-э4о",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lWinGZhCk0RHTJfF2e44kr-7JAMY7jcSZVOpqs8KE=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9%D0%A1%D1%82%D1%80%D1%8F%D1%85%D0%B8%D0%BB%D0%B5%D0%B2-%D1%8D4%D0%BE",
+                        "authorChannelId": {
+                            "value": "UCG81aQ5HktaOyCrY2RpmYTA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:40:59Z",
+                        "updatedAt": "2026-05-01T16:40:59Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "3Mkr2TGyBRTJPdoJiXeZzRqJoCg",
+            "id": "UgxjIOdmMxIsPigsOEN4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "0lhD9Pi9hwaI948WFq5Mn5bFYQ4",
+                    "id": "UgxjIOdmMxIsPigsOEN4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "А мій коментар такий,\"так це було вже\",вже 35 років, що нового???Після Зеленського буде  новий Президент і буде те саме тому,що в нас павутина,як порветься то посиплеться все,а так один одного піддержують ,вони не пропадуть,на жаль ми живемо в такій країні,не може ніхто викорінити корупцію😢",
+                        "textOriginal": "А мій коментар такий,\"так це було вже\",вже 35 років, що нового???Після Зеленського буде  новий Президент і буде те саме тому,що в нас павутина,як порветься то посиплеться все,а так один одного піддержують ,вони не пропадуть,на жаль ми живемо в такій країні,не може ніхто викорінити корупцію😢",
+                        "authorDisplayName": "@Дарія-х4г",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_mK454c2HEbcP9fC5e5z5HExeKuxEI3vx137DraHloDW5-36l4JMT-7tAVmhDAnsqEd-NM=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%94%D0%B0%D1%80%D1%96%D1%8F-%D1%854%D0%B3",
+                        "authorChannelId": {
+                            "value": "UClSc0P6MQgDRJFPBytQ_fBw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:18:16Z",
+                        "updatedAt": "2026-05-01T16:18:16Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "HPXU4C5NkR_9dbkQf7KhHr9ISow",
+            "id": "UgzAcRGYkfn0LkqSfdx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "hNJOQEjbeuorR-SrxV11v0a5pq8",
+                    "id": "UgzAcRGYkfn0LkqSfdx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Який гарний буде санаторій для реабілітації воїнів ЗСУ, кожний клрпус буде мати назву \"ПОТУЖНИХ ІНВЕСТОРІВ\"  - від \"ВОВИ\" ; \"МІНДІЧА\", \"ЧЕРНИШОВА\"; \"АНДРІЯ\"",
+                        "textOriginal": "Який гарний буде санаторій для реабілітації воїнів ЗСУ, кожний клрпус буде мати назву \"ПОТУЖНИХ ІНВЕСТОРІВ\"  - від \"ВОВИ\" ; \"МІНДІЧА\", \"ЧЕРНИШОВА\"; \"АНДРІЯ\"",
+                        "authorDisplayName": "@raisaraisa6213",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_n1HKVRTWDPBXnPmkRccJxsHutFQXjxOXPnB-XrHRsfhKI=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@raisaraisa6213",
+                        "authorChannelId": {
+                            "value": "UCM9pqrgI7KpqHiVfHaDbQ0Q"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:06:05Z",
+                        "updatedAt": "2026-05-01T16:06:05Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "Gw9-JpIapEFkpDHDl8mNq0mrCv4",
+            "id": "UgxP85zkQeKXKwdUT654AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "3hmPEPfxRvJZZkQrvr_ejk4O0GI",
+                    "id": "UgxP85zkQeKXKwdUT654AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Що за вкид, який Міша читає з папірчиків? На кого це розраховано? Сподіваюсь Міша ткач вміє робити ракети і дрони в достатніх обсягах. А не тільки читати з листочка якусь незрозумілу поєбєнь.",
+                        "textOriginal": "Що за вкид, який Міша читає з папірчиків? На кого це розраховано? Сподіваюсь Міша ткач вміє робити ракети і дрони в достатніх обсягах. А не тільки читати з листочка якусь незрозумілу поєбєнь.",
+                        "authorDisplayName": "@oksana2638",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lgrYTAiPhR8ZGp2KHvHQu3r6ACYqADJ-fhty7WrmI=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@oksana2638",
+                        "authorChannelId": {
+                            "value": "UCTGJnPXF__8bDJD0D5sgQBA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T16:00:45Z",
+                        "updatedAt": "2026-05-01T16:00:45Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "sPvdOl1hYoIOTPspDAsWNMCEByA",
+            "id": "UgxqLsQyDEmK70XfCn14AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "mH3SfpPqQyTB6U0ztTvPhAtkvso",
+                    "id": "UgxqLsQyDEmK70XfCn14AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Піпець",
+                        "textOriginal": "Піпець",
+                        "authorDisplayName": "@ВераЗубарева-э8к",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lIpO1itEBB6iEehpjHwmx1kjnbN-Ol_GVD5d9NDSlJVp88fIYg1a1obtkjX7crW6Nevm0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%B5%D1%80%D0%B0%D0%97%D1%83%D0%B1%D0%B0%D1%80%D0%B5%D0%B2%D0%B0-%D1%8D8%D0%BA",
+                        "authorChannelId": {
+                            "value": "UC6_KKahqDRRH-EWz-nKKG1A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T15:53:14Z",
+                        "updatedAt": "2026-05-01T15:53:14Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 1,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "8EpwTgqef0TdsYSDVSTg1QR3FcI",
+            "id": "Ugy9Cboc9miDCYNva4h4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "KCIuxuCpHD93Pa0i3NI2evJUw1g",
+                    "id": "Ugy9Cboc9miDCYNva4h4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "ШО опять ",
+                        "textOriginal": "ШО опять ",
+                        "authorDisplayName": "@ИванВасильконов-е7д",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_n-2aVIhj6MbIGCqr1SlDIIZTydOfnZRsDMHd9Q9QgXWlawIqTVw2aOsa9tCkmn8wRWLfI=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D0%B2%D0%B0%D0%BD%D0%92%D0%B0%D1%81%D0%B8%D0%BB%D1%8C%D0%BA%D0%BE%D0%BD%D0%BE%D0%B2-%D0%B57%D0%B4",
+                        "authorChannelId": {
+                            "value": "UCLScqHSqCuNG_DhqoSnRhJQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T15:48:59Z",
+                        "updatedAt": "2026-05-01T15:48:59Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "KE4SkzZj8ZzCoHcydgU2wxZpFRQ",
+            "id": "Ugw74ODbhe3M7C7N5zB4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "QAlwr82aY5Syao0HVdqwzVTCcaQ",
+                    "id": "Ugw74ODbhe3M7C7N5zB4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "мдаа",
+                        "textOriginal": "мдаа",
+                        "authorDisplayName": "@Иван-0_01",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/1Cud76HsFKMtpa_lFaSOBpa6pY0PrFneZlx7ZicENw-Nl0dQk_G-OZb_GuJEqRmnaD_dIn3krQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%98%D0%B2%D0%B0%D0%BD-0_01",
+                        "authorChannelId": {
+                            "value": "UCOM-etsQovAK4rudWgAOC1Q"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T15:47:01Z",
+                        "updatedAt": "2026-05-01T15:47:01Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "nSo3syaQZ_WtmYqXgqidKu8xjMQ",
+            "id": "UgxUh2miXlkyLbcOFJF4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "l54adDb5nacRUgeEZwc6488wjiI",
+                    "id": "UgxUh2miXlkyLbcOFJF4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Можна представити , як ті щабатники реготали , коли 73відсотки обрали зелю президентом😮😅😊\nпочинаючи з бєні і цієї сволоти , що повтікали ітої , що ще в Україні ...",
+                        "textOriginal": "Можна представити , як ті щабатники реготали , коли 73відсотки обрали зелю президентом😮😅😊\nпочинаючи з бєні і цієї сволоти , що повтікали ітої , що ще в Україні ...",
+                        "authorDisplayName": "@valerijnilsen1624",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lf4V_AhJf5vBctyJrnTInpITiLhsZGNcsWgHOzTd0=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@valerijnilsen1624",
+                        "authorChannelId": {
+                            "value": "UCM0EZSy2F0zFuh3SttZpVnw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 3,
+                        "publishedAt": "2026-05-01T15:39:24Z",
+                        "updatedAt": "2026-05-01T15:39:24Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "QCjsTwytXFK_HQaFAB2SNLxmIKo",
+            "id": "UgxFybNzm5JvP14i_x14AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Ua1sD9T7pkxtevpsVM3BQ60QKio",
+                    "id": "UgxFybNzm5JvP14i_x14AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "І що далі, де підозри, відставки, імпічмент? \nХлопці на фронті, де ваша думка і дії?",
+                        "textOriginal": "І що далі, де підозри, відставки, імпічмент? \nХлопці на фронті, де ваша думка і дії?",
+                        "authorDisplayName": "@darsvet-o8n",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lLanP9P909h8I-3vNRnc0DAkkIZ-2G11LzJMqepuo3uWf_xQ0NFbk7x0sUSxzoyDss0g=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@darsvet-o8n",
+                        "authorChannelId": {
+                            "value": "UCyhGDicQ5OPTwtcRmQF51pQ"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 2,
+                        "publishedAt": "2026-05-01T15:27:36Z",
+                        "updatedAt": "2026-05-01T15:27:36Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "gkClHgkucaZIfFRZ4H8h83c99Gk",
+            "id": "UgyPlMvb3xWRs7ijp4Z4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "zWnOn8YXf3mRWNRFk8stiaM3aoA",
+                    "id": "UgyPlMvb3xWRs7ijp4Z4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Міша, чому читаєш якийсь текст, де записи? Зная як ти ставишся до президента, то скльопать брехню для тебе нічого не варто.",
+                        "textOriginal": "Міша, чому читаєш якийсь текст, де записи? Зная як ти ставишся до президента, то скльопать брехню для тебе нічого не варто.",
+                        "authorDisplayName": "@smartssmarts5705",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nxyz4Ky-tClMILn_pJGsJwuVj_0m0jF4IWCKY7lR4=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@smartssmarts5705",
+                        "authorChannelId": {
+                            "value": "UCi_oE-UWgwsnO77tjgzWl1A"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 3,
+                        "publishedAt": "2026-05-01T15:23:11Z",
+                        "updatedAt": "2026-05-01T15:23:11Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "kb8rftw1wpQMOlEI_skCyQ1cPAU",
+            "id": "UgwOBQHVQRKOENxCQZt4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "sdCf26d7vXagcnlI98vyirdg6VE",
+                    "id": "UgwOBQHVQRKOENxCQZt4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Это должен увидеть каждый гражданин Украины 😢",
+                        "textOriginal": "Это должен увидеть каждый гражданин Украины 😢",
+                        "authorDisplayName": "@dilanebyde",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lmz3HUd9b4cvZIjOPZIRhsZdpItsuvuFRWjQHX3Mw=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@dilanebyde",
+                        "authorChannelId": {
+                            "value": "UCWESvCo-qyytS6Md36oPVRA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T15:21:42Z",
+                        "updatedAt": "2026-05-01T15:21:42Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "5RIfqmoY-mip_muiYee9_Q6EhP4",
+            "id": "UgwX-e3TTi5-jJBJQfx4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "ExrqcN2gnbdYSMchVv_3Opl9JOA",
+                    "id": "UgwX-e3TTi5-jJBJQfx4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "Пропутінська УП робить усе щоб,в Україні перестали виготовляти нашу зброю. Після успіхів ЗСУ на фронті,успіхів президента на міжнародних відносин, у путлєра пригоріло і він задіяв своїх агентів, продажних шавок,які розповсюджують фейки.Я рахую,що треба притягнути до відповідальності усіх хто поливає владу і президента лайном в угоду путлєру.Хто заказав і проплатив бездоказові бла,бла,бла? Коли ткач став маріонеткою зрадників України,які задумали знищити Україну із середини. Краще тисячу ворогів ззовні, ніж одна продажна гнида всередині.",
+                        "textOriginal": "Пропутінська УП робить усе щоб,в Україні перестали виготовляти нашу зброю. Після успіхів ЗСУ на фронті,успіхів президента на міжнародних відносин, у путлєра пригоріло і він задіяв своїх агентів, продажних шавок,які розповсюджують фейки.Я рахую,що треба притягнути до відповідальності усіх хто поливає владу і президента лайном в угоду путлєру.Хто заказав і проплатив бездоказові бла,бла,бла? Коли ткач став маріонеткою зрадників України,які задумали знищити Україну із середини. Краще тисячу ворогів ззовні, ніж одна продажна гнида всередині.",
+                        "authorDisplayName": "@gudokgudok6776",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_lnnqzXEB5YoM6YIqlN8Gg-GgI4xfJDa-2WVLAl-PLX4SL08LlOSPCZoilDvYHVThuyjQ=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@gudokgudok6776",
+                        "authorChannelId": {
+                            "value": "UCO_sWl8oqsreC4JFBmaiBaA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 1,
+                        "publishedAt": "2026-05-01T15:21:29Z",
+                        "updatedAt": "2026-05-01T15:21:29Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "ckxUtQkdfs6mvOzjvZfS17D_FBo",
+            "id": "UgyTZzoAoTT9gN8yPRR4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Xdzd3GqscCPgbKUCxoGR_v07JCk",
+                    "id": "UgyTZzoAoTT9gN8yPRR4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "будто соплями давитесь , когда что то говорить пытаетесь !",
+                        "textOriginal": "будто соплями давитесь , когда что то говорить пытаетесь !",
+                        "authorDisplayName": "@ВладимирПавлюченко-д9и",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_ntypycIK28ByN9PnGHeeo3xkNHOkPSYpQyfTjSWx8=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80%D0%9F%D0%B0%D0%B2%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%BA%D0%BE-%D0%B49%D0%B8",
+                        "authorChannelId": {
+                            "value": "UC90W1oB-WppObkBRShkhaXw"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T15:17:35Z",
+                        "updatedAt": "2026-05-01T15:17:35Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "0UsyAvaA792cKIaviogLh2sSKJU",
+            "id": "Ugy05v-t-WKWQ3gJk4N4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "bUldpO_wGyClbyqsEYQRVD3nE0M",
+                    "id": "Ugy05v-t-WKWQ3gJk4N4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "КТо такой леша",
+                        "textOriginal": "КТо такой леша",
+                        "authorDisplayName": "@kirillbrand666",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/ytc/AIdro_nBD73_MmVINIcSRCcLmlYEE59D9i7gI0mxomx6N-9VZys=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@kirillbrand666",
+                        "authorChannelId": {
+                            "value": "UCYdus7_yXPdlA-FMhleM4HA"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 0,
+                        "publishedAt": "2026-05-01T15:09:09Z",
+                        "updatedAt": "2026-05-01T15:09:09Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        },
+        {
+            "kind": "youtube#commentThread",
+            "etag": "b0U-7oNwm0d9fWY3kPlHnzueX8M",
+            "id": "UgzYFAy3wEMdfy6hE2l4AaABAg",
+            "snippet": {
+                "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                "videoId": "neYVUCDg100",
+                "topLevelComment": {
+                    "kind": "youtube#comment",
+                    "etag": "Ih55xIZm1QphykG9nCNltnEyuQo",
+                    "id": "UgzYFAy3wEMdfy6hE2l4AaABAg",
+                    "snippet": {
+                        "channelId": "UChparf_xrUZ_CJGQY5g4aEg",
+                        "videoId": "neYVUCDg100",
+                        "textDisplay": "УП і Ткач думають що війна має бути в білих рукавичках? Задайте собі питання чи хочете ви бути живими в корумпованій країні чи хочете бути знищені в країні без корупції? Невже ви не розумієте що не можна наразі ламати те що б'є ворота навіть завдяки схематозам? УП і Ткач на кого ви працюєте? На паРашці вам зараз аплодують всі скабеєви і соловйови стоячи . Ох ви ж і закінчені ідіоти! І, до речі, читання з папірця незрозумілої розмови з серйозним є-лицем не є істина в останній інстанції.",
+                        "textOriginal": "УП і Ткач думають що війна має бути в білих рукавичках? Задайте собі питання чи хочете ви бути живими в корумпованій країні чи хочете бути знищені в країні без корупції? Невже ви не розумієте що не можна наразі ламати те що б'є ворота навіть завдяки схематозам? УП і Ткач на кого ви працюєте? На паРашці вам зараз аплодують всі скабеєви і соловйови стоячи . Ох ви ж і закінчені ідіоти! І, до речі, читання з папірця незрозумілої розмови з серйозним є-лицем не є істина в останній інстанції.",
+                        "authorDisplayName": "@Artur_UA07",
+                        "authorProfileImageUrl": "https://yt3.ggpht.com/7AF0J3HMv1mr2rsqiyGb0LPDXWNRS9l1xYHCpYjLkX7zXFCn26IiKdQxG1PGicH7M2AgKIVz=s48-c-k-c0x00ffffff-no-rj",
+                        "authorChannelUrl": "http://www.youtube.com/@Artur_UA07",
+                        "authorChannelId": {
+                            "value": "UCv0bwvaoxP56Lup7f4VlDsg"
+                        },
+                        "canRate": true,
+                        "viewerRating": "none",
+                        "likeCount": 2,
+                        "publishedAt": "2026-05-01T15:08:33Z",
+                        "updatedAt": "2026-05-01T15:10:56Z"
+                    }
+                },
+                "canReply": true,
+                "totalReplyCount": 0,
+                "isPublic": true
+            }
+        }
+    ]
+}
