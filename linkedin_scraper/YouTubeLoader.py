@@ -28,11 +28,10 @@ class YoutubeLoader:
         maxResults=100,
         textFormat="plainText"
     )
-            response = request.execute()
-            with open('raw_comments.json', 'w', encoding='utf-8') as f:
-                json.dump(response,f,ensure_ascii=False,indent=4)
-            logging.info('Youtube json loaded to row_comments.json')
+            self.response = request.execute()
             logging.info('Youtube service connected')
         except Exception as e:
             print(e)
+    def fetch_comment(self):
+        return self.response
 new_ex = YoutubeLoader('neYVUCDg100')
