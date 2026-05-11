@@ -54,6 +54,6 @@ class DataTransformer:
         
     def print_df_head(self):
            print(self.df.head(10))
-    #тут логіка додавання визначення настрою    
+          
 new = DataTransformer(data)
 new.print_df_head()
