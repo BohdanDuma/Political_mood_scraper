@@ -12,7 +12,18 @@ except:
     '''
 from sqlalchemy import create_engine
 
-def save_to_db():
-    engine = create_engine("sqlite+pysqlite:///:memory:", echo=True)
-    print('done')
+class Datebase:
+    def __init__(self,df):
+        self.df = df
+    def stat_calc(self):
+        self.df     
+    def save_to_db(db):
+        engine = create_engine("sqlite+pysqlite:///:memory:", echo=True)
+        texts = db['text'].astype(str).tolist()
+        print('done')
+    def get_last_sycn(self):
+        pass
+    def update_video_stats(self):
+        pass
+    
 save_to_db()

@@ -53,7 +53,7 @@ class DataTransformer:
         self.df['mood'] = [res['label'] for res in results]
         
     def print_df_head(self):
-           print(self.df.head(10))
+           print(self.df.columns)
           
 new = DataTransformer(data)
 new.print_df_head()
