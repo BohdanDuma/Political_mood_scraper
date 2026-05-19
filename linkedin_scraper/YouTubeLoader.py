@@ -1,6 +1,6 @@
 
 import requests
-from parsel import Selector 
+
 import sys
 import logging 
 import json
