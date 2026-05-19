@@ -18,7 +18,37 @@ class Datebase:
         self.engine = create_engine("sqlite+pysqlite:///{db_path}", echo=True)
         self.create_tables()
     def create_tables(self):
-        query = 'CREATE TABLE IF NOT EXISTS video_stats (video_id TEXT PRIMARY KEY, video_title TEXT, pos_count INTEGER DEFAULT 0, neg_count INTEGER DEFAULT 0,neu_count INTEGER DEFAULT 0, total_likes INTEGER DEFAULT 0, last_sync_date DATETIME);'    
+        query_video_info = """
+        CREATE TABLE IF NOT EXISTS video_info (
+            video_id TEXT PRIMARY KEY,
+            video_title TEXT,
+            date_publication DATETIME,
+            total_comments_analyzed INTEGER DEFAULT 0
+        );
+        """
+        
+        # 2. Довідник моделей (інформація про моделі)
+        query_model_info = """
+        CREATE TABLE IF NOT EXISTS model_info (
+            model_id TEXT PRIMARY KEY,
+            model_name TEXT,
+            date_first_connection DATETIME
+        );
+        """
+        
+        # 3. Агрегована статистика (зв'язує відео та модель через складений ключ)
+        query_video_stats = """
+        CREATE TABLE IF NOT EXISTS video_stats (
+            video_id TEXT,
+            model_id TEXT,
+            pos_count INTEGER DEFAULT 0,
+            neg_count INTEGER DEFAULT 0,
+            neu_count INTEGER DEFAULT 0,
+            total_likes INTEGER DEFAULT 0,
+            last_sync_date DATETIME,
+            PRIMARY KEY (video_id, model_id)
+        );
+        """
         with self.engine.connect() as conn:
             conn.execute(text(query))
             conn.commit()
