@@ -4,6 +4,8 @@ from googleapiclient.discovery import build
 from dotenv import load_dotenv
 import os
 from pathlib import Path
+import pandas as pd
+import json
 logging 
 class YoutubeLoader:
     def __init__(self):
@@ -17,13 +19,13 @@ class YoutubeLoader:
         API_KEY=os.getenv('YOUTUBE_MY_API_KEY')
         try:
             self.service = build('youtube','v3', developerKey=API_KEY) 
-            logging.INFO('You tube connected!')
+            logging.info('You tube connected!')
         except Exception as e:
             print(e)
             logging.error(f'{e} YouTube not connection ')
             logging.info('Youtube service connected')
         
-    def fetch_comment(self):
+    def fetch_comment(self, video_id):
         if not self.service:
             logging.error("YouTube service not connected")
             return pd.DataFrame()
@@ -32,18 +34,32 @@ class YoutubeLoader:
 
         while True:
             try:
+                cache_file = Path(f'cache_{video_id}.json')
+                if cache_file.exists():
+                    with open(cache_file,'r', encoding="utf-8") as f:
+                        return json.load(f)
                 request = self.service.commentThreads().list(
         part="snippet",
         videoId=video_id,
         maxResults=100,
-        textFormat="plainText"
+        order='time',
+        textFormat="plainText",
+        pageToken=next_page_tosken
     )
-            response = request.execute()
-            stop_fetching = False
-            items = response.get('items',[])
+                response = request.execute()
+                with open(cache_file, 'w', encoding="utf-8") as f:
+                    json.dump(response,f,indent=4,ensure_ascii=False)
+                stop_fetching = False
 
-            if not items:
-                break
-            
+                '''items = response.get('items',[])
 
-new_ex = YoutubeLoader('neYVUCDg100')
+                if not items:
+                    break
+                for item in items:
+                    snippet = item['topLevelComment']['snippet']
+                print(items)'''
+                return response
+            except Exception as e:
+                print('promlem')
+new_ex = YoutubeLoader()
+new_ex.fetch_comment('neYVUCDg100' )
