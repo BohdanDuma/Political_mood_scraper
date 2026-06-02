@@ -12,9 +12,18 @@ import os
 from pathlib import Path
 import jmespath
 from transformers import pipeline
-model_name = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
-sentiment_pipeline = pipeline('sentiment-analysis', model=model_name, device=-1)
-logging.basicConfig(
+
+
+class DataTransformer:
+    
+    def __init__(self, raw_data):
+        self.raw_data = raw_data
+        self._base()
+        self._preparation_data()
+        self._mood_set()
+    model_name = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
+    sentiment_pipeline = pipeline('sentiment-analysis', model=model_name, device=-1)
+    logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s%(levelname)s%(message)s',
     handlers=[
@@ -22,15 +31,6 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-with open('raw_comments.json', 'r', encoding='utf-8') as f:
-               data = json.load(f)
-
-class DataTransformer:
-    def __init__(self, raw_data):
-        self.raw_data = raw_data
-        self._base()
-        self._preparation_data()
-        self._mood_set()
     def _base(self):
             #тут використати import jmespath для того щоб витянути ті дані які потрібно
             try:
@@ -55,5 +55,3 @@ class DataTransformer:
     def print_df_head(self):
            print(self.df.columns)
           
-new = DataTransformer(data)
-new.print_df_head()

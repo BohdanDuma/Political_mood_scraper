@@ -1,8 +1,11 @@
 from DataTransform import DataTransformer 
-from 
+from YouTubeLoader import YoutubeLoader
+from DatabaseConnector import Database
 
 
 def main():
-    print('Hello world')
+    #create obj YouTubeLoader class
+    loader = YoutubeLoader()
+    db = Database("politics_monitor.db")
 if __name__ == "__main__":
     main

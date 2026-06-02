@@ -1,18 +1,7 @@
-'''import pymysql
-import os
-try:
-    connection = pymysql.connect(
-        host=os.getenv('DB_HOST'),
-        user=os.getenv('DB_USER'),
-        password=os.getenv('DB_PASS'),
-        database=os.getenv('DB_NAME')
-    )
-except:
-    print('couldnt connect to db')
-    '''
+
 from sqlalchemy import create_engine, text
 
-class Datebase:
+class Database:
     def __init__(self,df,db_path):
         self.df = df
         self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=True)
@@ -99,20 +88,3 @@ INSERT OR IGNORE INTO video_info(video_id, channel_id, video_title) VALUES (:v_i
                 "ldate": new_last_date
             })
             conn.commit()
-# Тестовий запуск
-db = Datebase(None, "debug_test.db")
-
-# КРОК 1: Перевірка реєстрації
-print("Тестуємо додавання відео...")
-# Додаємо спочатку канал вручну або через розширений метод
-db.register_video("vid_123", "chan_789", "Зеленський: аналіз", "Новини UA")
-
-# КРОК 2: Перевірка першого запису статистики
-print("Тестуємо перший запис статистики...")
-stats_v1 = {'pos': 5, 'neg': 2, 'neu': 3, 'likes': 50}
-db.update_video_stats("vid_123", "transformer_v2", stats_v1, "2026-06-01T10:00:00Z")
-
-# КРОК 3: Перевірка UPSERT (інкрементальне додавання)
-print("Тестуємо інкрементальне оновлення (+5 позитивних)...")
-stats_v2 = {'pos': 5, 'neg': 0, 'neu': 0, 'likes': 10}
-db.update_video_stats("vid_123", "transformer_v2", stats_v2, "2026-06-01T12:00:00Z")
