@@ -24,7 +24,32 @@ class YoutubeLoader:
             print(e)
             logging.error(f'{e} YouTube not connection ')
             logging.info('Youtube service connected')
-        
+    def discover_videos_by_keyword(self, query_text='Зеленський', max_results = 5):
+        if not self.service:
+            return []
+        try:
+            request = self.service.search().list(
+                part="snippet",
+                q=query_text,
+                maxResults=max_results,
+                order="date",
+                type="video",
+                relevanceLanguage="uk"
+            )
+            response=request.execute()
+            discovered = []
+            for item in response.get('items', []):
+                discovered.append({
+                    'video_id': item['id']['videoId'],
+                    'title': item['snippet']['title'],
+                    'channel_id': item['snippet']['channelId'],
+                    'channel_name': item['snippet']['channelTitle'],
+                    'published_at': item['snippet']['publishedAt']
+                })
+            return discovered
+        except Exception as e:
+            logging.error(f"Search error:{e}")
+            return []
     def fetch_comment(self, video_id, last_fetched=None, max_pages=3):
         #if there are no comments from this video in the database
         cache_path = Path(f'cache_{video_id}.parquet')
@@ -83,6 +108,3 @@ class YoutubeLoader:
             df_final.to_parquet(cache_path,index=False)
             print(f'DataFrame saved to Parquet')
         return df_final    
-new_ex = YoutubeLoader()
-res = new_ex.fetch_comment('neYVUCDg100' )
-print(res)
