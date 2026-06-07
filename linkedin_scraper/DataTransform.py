@@ -36,13 +36,29 @@ class DataTransformer:
     def _preparation_data(self):
         self.df['likes'] = self.df['likes'].fillna(0).astype(int)
         self.df['published_at'] = pd.to_datetime(self.df['published_at'])
-        self.df['updated_at'] = pd.to_datetime(self.df['updated_at'])      
-        self.df['is_edited'] = self.df['published_at'] != self.df['updated_at']
+        if 'updated_at' in self.df.columns:
+            self.df['updated_at'] = pd.to_datetime(self.df['updated_at'])      
+            self.df['is_edited'] = self.df['published_at'] != self.df['updated_at']
+        else:
+            self.df['is_edited'] = False
     def _mood_set(self):
         texts = self.df['text'].astype(str).tolist()
         results = sentiment_pipeline(texts, truncation=True, max_length=512, batch_size=8)
         self.df['mood'] = [res['label'] for res in results]
         
-    def print_df_head(self):
-           print(self.df.columns)
-          
+    def get_aggregated_stats(self):
+        if self.df.empty:
+            return {'pos': 0, 'neg': 0, 'neu': 0, 'likes': 0, 'new_last_date': "1900-01-01T00:00:00Z"}
+        mood_counts = self.df['mood'].value_counts()
+        stats = {
+        'pos': int(mood_counts.get('positive', mood_counts.get('LABEL_2', 0))),
+        'neg': int(mood_counts.get('negative', mood_counts.get('LABEL_0', 0))),
+        'neu': int(mood_counts.get('neutral', mood_counts.get('LABEL_1', 0))),
+        'likes': int(self.df['likes'].sum())
+    }
+        return stats
+    def get_latest_comment_date(self):
+        if self.df.empty:
+            return "1900-01-01T00:00:00Z"
+        latest_date = self.df['published_at'].max()
+        return latest_date.strftime('%Y-%m-%dT%H:%M:%SZ')
