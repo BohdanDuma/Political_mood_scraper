@@ -1,17 +1,14 @@
 
-import requests
 from parsel import Selector 
 import pandas as pd
-import sys
 import logging 
-import json
 from tenacity import retry, wait_random, stop_after_attempt
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
-import os
 from pathlib import Path
-import jmespath
+
 from transformers import pipeline
+from datetime import datetime, timezone
 
 model_name = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
 sentiment_pipeline = pipeline('sentiment-analysis', model=model_name, device=-1)
@@ -59,6 +56,15 @@ class DataTransformer:
         return stats
     def get_latest_comment_date(self):
         if self.df.empty:
-            return "1900-01-01T00:00:00Z"
+            return datetime(1900, 1, 1, tzinfo=timezone.utc)
         latest_date = self.df['published_at'].max()
-        return latest_date.strftime('%Y-%m-%dT%H:%M:%SZ')
+        # convert pandas Timestamp to python datetime
+        if isinstance(latest_date, pd.Timestamp):
+            dt = latest_date.to_pydatetime()
+        else:
+            dt = latest_date
+        if dt is None:
+            return datetime(1900, 1, 1, tzinfo=timezone.utc)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt

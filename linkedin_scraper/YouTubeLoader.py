@@ -6,6 +6,7 @@ import os
 from pathlib import Path
 import pandas as pd
 import json
+from datetime import datetime, timezone
  
 class YoutubeLoader:
     def __init__(self):
@@ -23,7 +24,26 @@ class YoutubeLoader:
         except Exception as e:
             print(e)
             logging.error(f'{e} YouTube not connection ')
-        
+    def get_actual_comment_counts(self, video_ids: list) -> dict:
+        if not self.service or not video_ids:
+            return {}
+        results = {}
+        for i in range(0, len(video_ids),50):
+            batch =video_ids[i:i+50]
+            try:
+                request = self.service.videos().list(
+                    part="statistics",
+                    id =",".join(batch)
+                )
+                response = request.execute()
+                for item in response.get("items", []):
+                    vid_id = item["id"]
+                    comment_count = int(item["statistics"].get("commentCount", 0))
+                    results[vid_id] = comment_count
+            except Exception as e:
+                logging.error(f"Batch stats fetching error: {e}")
+                
+        return results
     def discover_videos_by_keyword(self, query_text='Зеленський', max_results = 5):
         if not self.service:
             return []
@@ -39,7 +59,8 @@ class YoutubeLoader:
             response=request.execute()
             discovered = []
             for item in response.get('items', []):
-                discovered.append({
+                if item['id'].get('kind') == 'youtube#video':
+                    discovered.append({
                     'video_id': item['id']['videoId'],
                     'title': item['snippet']['title'],
                     'channel_id': item['snippet']['channelId'],
@@ -79,29 +100,35 @@ class YoutubeLoader:
     )
                 response = request.execute()
                 
-                items = response.get('items',[])
-
-                if not items: break
+                items = response.get('items', [])
+                if not items:
+                    break
                 stop_fetching = False
                 for item in items:
-                    snippet = item['snippet']['topLevelComment']['snippet']
-                    published_at = snippet['publishedAt']
+                    snippet = item.get('snippet', {}).get('topLevelComment', {}).get('snippet', {})
+                    published_at_str = snippet.get('publishedAt')
+                    if not published_at_str:
+                        continue
+                    try:
+                        published_at = datetime.fromisoformat(published_at_str.replace('Z', '+00:00'))
+                    except Exception:
+                        # skip unparsable timestamps
+                        continue
                     if published_at > last_fetched:
                         new_comments.append({
-                            'comment_id': item['id'],
-                            'text': snippet['textDisplay'],
-                            'likes': snippet['likeCount'],
+                            'comment_id': item.get('id'),
+                            'text': snippet.get('textDisplay', ''),
+                            'likes': int(snippet.get('likeCount', 0)),
                             'published_at': published_at
                         })
                     else:
                         stop_fetching = True
                         break
                 if stop_fetching:
-                    break        
-                next_page_token= response.get('nextPageToken')
+                    break
+                next_page_token = response.get('nextPageToken')
                 if not next_page_token:
                     break
-                #add count to processed pages
                 pages_processed += 1
             except Exception as e:
                 print(f'API Error: {e}')
