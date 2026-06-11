@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 import pandas as pd
 import json
-logging 
+ 
 class YoutubeLoader:
     def __init__(self):
         self.env_file = Path(__file__).resolve().parent.parent / '.env'
@@ -23,7 +23,7 @@ class YoutubeLoader:
         except Exception as e:
             print(e)
             logging.error(f'{e} YouTube not connection ')
-            logging.info('Youtube service connected')
+        
     def discover_videos_by_keyword(self, query_text='Зеленський', max_results = 5):
         if not self.service:
             return []
@@ -52,13 +52,15 @@ class YoutubeLoader:
             return []
     def fetch_comment(self, video_id, last_fetched=None, max_pages=3):
         #if there are no comments from this video in the database
-        cache_path = Path(f'cache_{video_id}.parquet')
+        '''cache_path = Path(f'cache_{video_id}.parquet')
         if cache_path.exists():
             print(f"Download Paruet-cache to: {cache_path}")
-            return pd.read_parquet(cache_path)
+            return pd.read_parquet(cache_path)'''
         if last_fetched is None:
-            last_fetched = "1900-01-01T00:00:00Z"
-        #if there are no response from API 
+            last_fetched = datetime(1900, 1, 1, tzinfo=timezone.utc)
+        elif isinstance(last_fetched, str):
+            last_fetched = datetime.fromisoformat(last_fetched.replace('Z', '+00:00'))
+        #if there are no response from API
         if not self.service:
             logging.error("YouTube service not connected")
             return pd.DataFrame()
@@ -104,7 +106,7 @@ class YoutubeLoader:
             except Exception as e:
                 print(f'API Error: {e}')
         df_final = pd.DataFrame(new_comments)
-        if not df_final.empty:
+        '''if not df_final.empty:
             df_final.to_parquet(cache_path,index=False)
-            print(f'DataFrame saved to Parquet')
+            print(f'DataFrame saved to Parquet')'''
         return df_final    
