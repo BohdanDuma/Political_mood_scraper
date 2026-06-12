@@ -1,7 +1,7 @@
 
 from sqlalchemy import create_engine, text
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional
 
 logger = logging.getLogger(__name__)
@@ -67,6 +67,9 @@ class Database:
         - Upserts `video_info` (updates title/is_active/last_checked_at/date_publication when provided).
         """
         try:
+            # default last_checked_at to now (UTC) when not provided
+            if last_checked_at is None:
+                last_checked_at = datetime.now(timezone.utc)
             with self.engine.connect() as conn:
                 # upsert channel_info
                 conn.execute(text(
