@@ -9,7 +9,8 @@ logger = logging.getLogger(__name__)
 class Database:
     def __init__(self,df,db_path):
         self.df = df
-        self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=True)
+        # turn off SQL echo in production-like runs; use logging for visibility
+        self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=False)
         self.create_tables()
     def create_tables(self):
         query_channel_table = """

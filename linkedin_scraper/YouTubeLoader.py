@@ -1,5 +1,5 @@
 
-import logging 
+import logging
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 import os
@@ -7,6 +7,7 @@ from pathlib import Path
 import pandas as pd
 import json
 from datetime import datetime, timezone
+from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
  
 class YoutubeLoader:
     def __init__(self):
@@ -24,16 +25,17 @@ class YoutubeLoader:
         except Exception as e:
             print(e)
             logging.error(f'{e} YouTube not connection ')
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=60), stop=stop_after_attempt(5), retry=retry_if_exception_type(Exception), reraise=True)
     def get_actual_comment_counts(self, video_ids: list) -> dict:
         if not self.service or not video_ids:
             return {}
         results = {}
-        for i in range(0, len(video_ids),50):
-            batch =video_ids[i:i+50]
+        for i in range(0, len(video_ids), 50):
+            batch = video_ids[i:i+50]
             try:
                 request = self.service.videos().list(
                     part="statistics",
-                    id =",".join(batch)
+                    id=",".join(batch)
                 )
                 response = request.execute()
                 for item in response.get("items", []):
@@ -42,35 +44,34 @@ class YoutubeLoader:
                     results[vid_id] = comment_count
             except Exception as e:
                 logging.error(f"Batch stats fetching error: {e}")
-                
+                raise
+
         return results
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=60), stop=stop_after_attempt(5), retry=retry_if_exception_type(Exception), reraise=True)
     def discover_videos_by_keyword(self, query_text='Зеленський', max_results = 5):
         if not self.service:
             return []
-        try:
-            request = self.service.search().list(
-                part="snippet",
-                q=query_text,
-                maxResults=max_results,
-                order="date",
-                type="video",
-                relevanceLanguage="uk"
-            )
-            response=request.execute()
-            discovered = []
-            for item in response.get('items', []):
-                if item['id'].get('kind') == 'youtube#video':
-                    discovered.append({
+        request = self.service.search().list(
+            part="snippet",
+            q=query_text,
+            maxResults=max_results,
+            order="date",
+            type="video",
+            relevanceLanguage="uk"
+        )
+        response = request.execute()
+        discovered = []
+        for item in response.get('items', []):
+            if item['id'].get('kind') == 'youtube#video':
+                discovered.append({
                     'video_id': item['id']['videoId'],
                     'title': item['snippet']['title'],
                     'channel_id': item['snippet']['channelId'],
                     'channel_name': item['snippet']['channelTitle'],
                     'published_at': item['snippet']['publishedAt']
                 })
-            return discovered
-        except Exception as e:
-            logging.error(f"Search error:{e}")
-            return []
+        return discovered
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=60), stop=stop_after_attempt(5), retry=retry_if_exception_type(Exception), reraise=True)
     def fetch_comment(self, video_id, last_fetched=None, max_pages=3):
         #if there are no comments from this video in the database
         '''cache_path = Path(f'cache_{video_id}.parquet')
@@ -131,7 +132,8 @@ class YoutubeLoader:
                     break
                 pages_processed += 1
             except Exception as e:
-                print(f'API Error: {e}')
+                logging.error(f'API Error while fetching comments for {video_id}: {e}')
+                raise
         df_final = pd.DataFrame(new_comments)
         '''if not df_final.empty:
             df_final.to_parquet(cache_path,index=False)
