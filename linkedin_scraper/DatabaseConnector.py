@@ -13,12 +13,22 @@ class Database:
         self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=False)
         self.create_tables()
     def create_tables(self):
+        query_create_raw_comm_table = """
+        CREATE TABLE IF NOT EXISTS raw_comments(
+        comment_id TEXT PRIMARY KEY,
+        video_id TEXT,
+        comment_text TEXT,
+        likes INTEGER DEFAULT 0,
+        published_at DATETIME,
+        sentiment_label TEXT,
+        FOREIGN KEY (video_id) REFERENCES video_info(video_id)
+        );
+"""
         query_channel_table = """
         CREATE TABLE IF NOT EXISTS channel_info (
             channel_id VARCHAR(20) PRIMARY KEY,
-            channel_ident TEXT,
             channel_name TEXT
-        )
+        );
 """
         query_video_info = """
         CREATE TABLE IF NOT EXISTS video_info (
@@ -32,7 +42,7 @@ class Database:
         );
         """
         
-        # 2. Довідник моделей (інформація про моделі)
+              # 2. Довідник моделей (інформація про моделі)можливо добавлю в майбутньому 
         query_model_info = """
         CREATE TABLE IF NOT EXISTS model_info (
             model_id TEXT PRIMARY KEY,
@@ -40,7 +50,6 @@ class Database:
             date_first_connection DATETIME
         );
         """
-        
         # 3. Агрегована статистика (зв'язує відео та модель через складений ключ)
         query_video_stats = """
         CREATE TABLE IF NOT EXISTS video_stats (
@@ -52,11 +61,13 @@ class Database:
             total_likes INTEGER DEFAULT 0,
             total_comments INTEGER DEFAULT 0,
             last_sync_date DATETIME,
+            checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (video_id, model_id),
-            FOREIGN KEY (video_id) REFERENCES video_info(video_id)
+            FOREIGN KEY (video_id) REFERENCES video_info(video_id),
+            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
         );
         """
-        query = [query_channel_table,query_video_info,query_model_info,query_video_stats]
+        query = [query_create_raw_comm_table, query_channel_table,query_video_info,query_video_stats]
         with self.engine.connect() as conn:
             for q in query: 
                 conn.execute(text(q))
@@ -107,6 +118,21 @@ ON CONFLICT(video_id) DO UPDATE SET
     def _parse_datetime(self, value: Optional[str]) -> Optional[datetime]:
         if not value:
             return None
+        # if a datetime object is passed, return as-is (ensure tz-aware)
+        if isinstance(value, datetime):
+            dt = value
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt
+        # handle pandas Timestamp-like objects (have to_pydatetime)
+        if hasattr(value, 'to_pydatetime'):
+            try:
+                dt = value.to_pydatetime()
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt
+            except Exception:
+                pass
         try:
             # normalize Z timezone
             v = value
@@ -180,13 +206,113 @@ WHERE v.is_active = 1
             query = text(f"UPDATE video_info SET is_active = 0 WHERE video_id = :vid")
             conn.execute(query,{"vid": video_id})
             conn.commit()
+    def add_comment(self,comment_id,
+        video_id,comment_text, likes,published_at,sentiment_label):
+        """
+        Insert or update a comment into `raw_comments`.
+
+        - Parses `published_at` using `_parse_datetime`.
+        - On conflict of `comment_id` updates text/likes/published_at/sentiment.
+        """
+        try:
+            parsed_dt = self._parse_datetime(published_at)
+            # store as ISO string if parsed, else None
+            pub_val = parsed_dt.isoformat() if parsed_dt is not None else None
+
+            query = text(
+                """
+INSERT INTO raw_comments(comment_id, video_id, comment_text, likes, published_at, sentiment_label)
+VALUES(:cid, :vid, :ctext, :likes, :pub, :slabel)
+ON CONFLICT(comment_id) DO UPDATE SET
+    comment_text = excluded.comment_text,
+    likes = excluded.likes,
+    published_at = COALESCE(excluded.published_at, raw_comments.published_at),
+    sentiment_label = excluded.sentiment_label
+                """
+            )
+
+            with self.engine.connect() as conn:
+                conn.execute(query, {
+                    "cid": comment_id,
+                    "vid": video_id,
+                    "ctext": comment_text,
+                    "likes": int(likes) if likes is not None else 0,
+                    "pub": pub_val,
+                    "slabel": sentiment_label,
+                })
+                conn.commit()
+        except Exception as e:
+            logger.exception('Failed to add/update comment %s: %s', comment_id, e)
     def update_check_timestamps(self, video_ids):
         if not video_ids:
             return 
         with self.engine.connect() as conn:
             placeholders = ', '.join([f':v{i}' for i in range(len(video_ids))])
             query = text(f"UPDATE video_info SET last_checked_at = CURRENT_TIMESTAMP WHERE video_id IN ({placeholders})")
-
             params = {f"v{i}": vid for i, vid in enumerate(video_ids)}
             conn.execute(query, params)
             conn.commit()
+
+    def save_raw_comments(self, df, sentiment_labels=None):
+        """
+        Bulk insert/update comments from a pandas DataFrame.
+
+        Parameters:
+        - df: DataFrame with at least columns `comment_id`, `text` (or `textDisplay`), `likes`, `published_at`.
+        - sentiment_labels: optional list of sentiment labels aligned with df rows. If omitted,
+          will try to read `mood` or `sentiment_label` column from df.
+        """
+        try:
+            if df is None or df.empty:
+                return
+
+            # Determine sentiment per-row
+            if sentiment_labels is None:
+                if 'mood' in df.columns:
+                    sentiment_labels = df['mood'].astype(str).tolist()
+                elif 'sentiment_label' in df.columns:
+                    sentiment_labels = df['sentiment_label'].astype(str).tolist()
+                else:
+                    sentiment_labels = [None] * len(df)
+
+            params_list = []
+            for i, (_, row) in enumerate(df.iterrows()):
+                cid = row.get('comment_id') or row.get('id')
+                if cid is None:
+                    continue
+                text_val = row.get('text') or row.get('textDisplay') or ''
+                likes = int(row.get('likes') or 0)
+                pub_raw = row.get('published_at')
+                parsed = self._parse_datetime(pub_raw)
+                pub_val = parsed.isoformat() if parsed is not None else None
+                slabel = sentiment_labels[i] if i < len(sentiment_labels) else None
+
+                params_list.append({
+                    'cid': cid,
+                    'vid': row.get('video_id') or None,
+                    'ctext': text_val,
+                    'likes': likes,
+                    'pub': pub_val,
+                    'slabel': slabel,
+                })
+
+            if not params_list:
+                return
+
+            query = text(
+                """
+INSERT INTO raw_comments(comment_id, video_id, comment_text, likes, published_at, sentiment_label)
+VALUES(:cid, :vid, :ctext, :likes, :pub, :slabel)
+ON CONFLICT(comment_id) DO UPDATE SET
+    comment_text = excluded.comment_text,
+    likes = excluded.likes,
+    published_at = COALESCE(excluded.published_at, raw_comments.published_at),
+    sentiment_label = excluded.sentiment_label
+                """
+            )
+
+            with self.engine.connect() as conn:
+                conn.execute(query, params_list)
+                conn.commit()
+        except Exception as e:
+            logger.exception('Failed bulk save raw comments: %s', e)
