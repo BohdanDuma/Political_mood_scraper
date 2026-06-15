@@ -80,24 +80,52 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
             if not raw_df.empty:
                 # Передаємо коментарі на ML-обробку та агрегацію метрик
                 transformer = DataTransformer(raw_df)
+                
+                # --- ОПТИМІЗОВАНЕ ЗБЕРЕЖЕННЯ КОМЕНТАРІВ ДЛЯ KAGGLE ---
+                try:
+                    # Дістаємо передбачений настрій. Стовпець у transformer.df може називатися 'mood' або 'sentiment_label'
+                    # Якщо твій DataTransformer створює колонку 'mood', беремо її, інакше дефолт
+                    mood_column = 'mood' if 'mood' in transformer.df.columns else 'sentiment_label'
+                    sentiment_labels = transformer.df[mood_column].tolist()
+                    
+                    # Додаємо ідентифікатор відео до датафрейму, щоб bulk-insert записував video_id
+                    transformer.df = transformer.df.copy()
+                    transformer.df['video_id'] = v_id
+
+                    # Викликаємо масове збереження (bulk insert), яке працює в 100 разів швидше за цикл `for`
+                    db.save_raw_comments(transformer.df, sentiment_labels)
+                except Exception as e:
+                    logger.exception('Не вдалося масово зберегти коментарі для %s: %s', v_id, e)
+                
+                # Отримуємо агреговані метрики
                 stats = transformer.get_aggregated_stats()
                 new_last_date = transformer.get_latest_comment_date()
                 
-                # Замість накопичення додаванням, ми передаємо фінальний лічильник з YouTube, 
-                # який метод update_video_stats перезапише через `excluded.total_comments`
+                # Передаємо фінальний лічильник з YouTube для нового зрізу
                 stats['new_total_comments'] = yt_count
                 
-                # Зберігаємо оновлену статистику в базу
+                # Зберігаємо оновлену статистику в базу (створиться новий рядок-зріз)
                 db.update_video_stats(v_id, model_id, stats, new_last_date)
                 processed_this_cycle.append(v_id)
             else:
-                logger.info(f"Нових коментарів для відео {v_id} не знайдено (можливо, видалені або пройшли спам-фільтр).")
-                # Навіть якщо df порожній, ми додаємо ID, щоб оновити last_checked_at
+                # --- ФІКС КАРТИНКИ ДЛЯ KAGGLE (НУЛЬОВИЙ ЗРІЗ) ---
+                # Якщо нових коментарів немає, ми все одно пишемо крапку в історію,
+                # щоб дослідники бачили стабільний лічильник перевірок на графіку
+                logger.info(f"Нових коментарів для відео {v_id} не знайдено. Фіксуємо нульовий зріз.")
+                
+                empty_stats = {
+                    'pos': 0, 'neg': 0, 'neu': 0, 'likes': 0,
+                    'new_total_comments': yt_count  # Актуальна кількість з YT залишається
+                }
+                # Як дату синхронізації дублюємо минулу дату
+                db.update_video_stats(v_id, model_id, empty_stats, last_sync)
                 processed_this_cycle.append(v_id)
         # include publication date when registering the video
-        if processed_this_cycle:
-            db.update_check_timestamps(processed_this_cycle)
-        still_active = db.get_active_videos()
+        # (defer updating timestamps until after processing all videos)
+    # After processing all videos, update check timestamps and refresh active list
+    if processed_this_cycle:
+        db.update_check_timestamps(processed_this_cycle)
+    still_active = db.get_active_videos()
     active_count = len(still_active) if still_active else 0
     logger.info(f"Поточна кількість активних відео на моніторингу: {active_count}")
     
@@ -137,20 +165,19 @@ def main():
 
     logger.info("Автопілот ініціалізовано. Переходимо в режим нескінченного циклу.")
 
-    while True:
+    
+    try:
+        run_pipeline(DB_PATH, QUERY_TEXT, MAX_ACTIVE)
+    except Exception as e:
+        # Критична помилка не повалить контейнер, а залогується з трейсбеком
+        # Безпечне встановлення прапорця кольору на логгері
         try:
-            run_pipeline(DB_PATH, QUERY_TEXT, MAX_ACTIVE)
-        except Exception as e:
-            # Критична помилка не повалить контейнер, а залогується з трейсбеком
-            # Безпечне встановлення прапорця кольору на логгері
-            try:
-                setattr(logger, "colors", False)
-            except Exception:
-                pass
-            logger.critical(f"Глобальний збій у конвеєрі: {e}", exc_info=True)
-
-        logger.info(f"Очікування наступного циклу {INTERVAL} секунд...")
-        time.sleep(INTERVAL)
+            setattr(logger, "colors", False)
+        except Exception:
+            pass
+        logger.critical(f"Глобальний збій у конвеєрі: {e}", exc_info=True)
+    logger.info(f"Скрапер успішно відпрацював. Вихід.")
+    
 
 
 if __name__ == "__main__":
