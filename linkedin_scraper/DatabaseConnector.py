@@ -13,6 +13,19 @@ class Database:
         self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=False)
         self.create_tables()
     def create_tables(self):
+        query_global_stat = """
+    CREATE TABLE IF NOT EXISTS global_stats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    model_id TEXT,
+    snapshot_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+    total_positive INTEGER,
+    total_negative INTEGER,
+    total_neutral INTEGER,
+    total_likes INTEGER,
+    total_videos INTEGER,
+    total_comments INTEGER
+);
+"""
         query_create_raw_comm_table = """
         CREATE TABLE IF NOT EXISTS raw_comments(
         comment_id TEXT PRIMARY KEY,
@@ -63,11 +76,10 @@ class Database:
             last_sync_date DATETIME,
             checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (video_id, model_id),
-            FOREIGN KEY (video_id) REFERENCES video_info(video_id),
-            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
+            FOREIGN KEY (video_id) REFERENCES video_info(video_id)
         );
         """
-        query = [query_create_raw_comm_table, query_channel_table,query_video_info,query_video_stats]
+        query = [query_global_stat, query_create_raw_comm_table, query_channel_table,query_video_info,query_video_stats]
         with self.engine.connect() as conn:
             for q in query: 
                 conn.execute(text(q))
@@ -148,7 +160,6 @@ ON CONFLICT(video_id) DO UPDATE SET
             except Exception:
                 logger.debug('Unable to parse datetime: %s', value)
                 return None
-
     def get_last_sync(self, video_id) -> Optional[datetime]:
         query = text('SELECT last_sync_date FROM video_stats WHERE video_id=:vid;')
         try:
@@ -252,7 +263,69 @@ ON CONFLICT(comment_id) DO UPDATE SET
             params = {f"v{i}": vid for i, vid in enumerate(video_ids)}
             conn.execute(query, params)
             conn.commit()
-
+    def global_stats_sentiment(self,model_id: str):
+        query_aggregate = text("""
+            WITH latest_video_stats AS (
+                SELECT 
+                    video_id,
+                    pos_count,
+                    neg_count,
+                    neu_count,
+                    total_likes,
+                    total_comments,
+                    ROW_NUMBER() OVER (PARTITION BY video_id ORDER BY checked_at DESC) as rn
+                FROM video_stats
+                WHERE model_id = :mid
+            )
+            SELECT 
+                COUNT(video_id) as total_v,
+                SUM(pos_count) as pos,
+                SUM(neg_count) as neg,
+                SUM(neu_count) as neu,
+                SUM(total_likes) as likes,
+                SUM(total_comments) as total_c              
+            FROM latest_video_stats
+            WHERE rn = 1;
+        """)
+        
+        query_insert = text("""
+            INSERT INTO global_stats (model_id, total_positive, total_negative, total_neutral, total_likes, total_videos, total_comments)
+            VALUES (:mid, :pos, :neg, :neu, :likes, :videos, :comments)
+        """)
+        
+        try:
+            with self.engine.connect() as conn:
+                # 1. Агрегуємо актуальні цифри з бази
+                result = conn.execute(query_aggregate, {"mid": model_id}).fetchone()
+                
+                # Перевіряємо, чи повернулися дані і чи вони не NULL
+                if result and result[0] is not None:
+                    videos = int(result[0])
+                    pos = int(result[1] or 0)
+                    neg = int(result[2] or 0)
+                    neu = int(result[3] or 0)
+                    likes = int(result[4] or 0)
+                    comments = int(result[5] or 0)
+                else:
+                    # Якщо база ще порожня, логуємо нулі
+                    videos, pos, neg, neu, likes, comments = 0, 0, 0, 0, 0, 0
+                
+                # 2. Робимо запис у таблицю інкрементів
+                conn.execute(query_insert, {
+                    "mid": model_id,
+                    "pos": pos,
+                    "neg": neg,
+                    "neu": neu,
+                    "likes": likes,
+                    "videos": videos, 
+                    "comments": comments
+                })
+                conn.commit()
+                
+                return pos, neg, neu, likes, videos, comments
+        except Exception as e:
+            logger.exception("Failed to log global sentiment for model %s: %s", model_id, e)
+            raise e
     def save_raw_comments(self, df, sentiment_labels=None):
         """
         Bulk insert/update comments from a pandas DataFrame.
