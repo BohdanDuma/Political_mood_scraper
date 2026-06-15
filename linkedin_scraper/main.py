@@ -74,6 +74,19 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
             # Отримуємо дату останнього успішного збору коментарів
             last_sync = db.get_last_sync(v_id)
             
+            # Витягуємо нову пачку коментів з YouTube із захистом від вимкнених коментарів
+            try:
+                raw_df = yt.fetch_comment(v_id, last_fetched=last_sync)
+            except Exception as e:
+                # Перевіряємо, чи це помилка вимкнених коментарів від YouTube API
+                if "commentsDisabled" in str(e):
+                    logger.warning(f"На відео {v_id} вимкнено коментарі автором. Деактивація відео.")
+                    db.deactivate_video(v_id)
+                    continue
+                else:
+                    # Якщо якась інша помилка — прокидаємо її далі, щоб не маскувати баги
+                    raise e
+            
             # Витягуємо нову пачку коментів з YouTube
             raw_df = yt.fetch_comment(v_id, last_fetched=last_sync)
             
@@ -148,7 +161,13 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
                 is_active=1
             )
             logger.info(f"Зареєстровано нове відео: {item['title']} (ID: {item['video_id']})")
-            
+    logger.info("Фіксуємо глобальний стан настрою для цього запуску...")
+    try:
+        # Передаємо назву твоєї ML моделі (наприклад, MODEL_ID)
+        p, n, nu, l, v, c = db.global_stats_sentiment(model_id)
+        logger.info(f"Глобальний інкремент записано! Разом у базі -> Позитив: {p}, Негатив: {n}, Нейтральні: {nu}, Лайки: {l}, Всього коментів: {c}, Всього відео: {v}")
+    except Exception as e:
+        logger.error(f"Не вдалося записати глобальний лог настрою: {e}")        
     logger.info("--- Цикл моніторингу успішно завершено ---")
 def main():
     # load environment variables from .env (so os.getenv reads them)
@@ -158,7 +177,7 @@ def main():
     DB_PATH = os.getenv("DB_PATH", "data/youtube_analytics.db")
     QUERY_TEXT = os.getenv("MONITORING_QUERY", "Зеленський")
     MAX_ACTIVE = int(os.getenv("MAX_ACTIVE_VIDEOS", "15"))
-    INTERVAL = int(os.getenv("CHECK_INTERVAL_SECONDS", "3600"))  # За замовчуванням 1 година
+    
 
     # Автоматично створюємо папку для БД (необхідно для Docker volumes)
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
@@ -168,6 +187,7 @@ def main():
     
     try:
         run_pipeline(DB_PATH, QUERY_TEXT, MAX_ACTIVE)
+
     except Exception as e:
         # Критична помилка не повалить контейнер, а залогується з трейсбеком
         # Безпечне встановлення прапорця кольору на логгері
