@@ -8,7 +8,7 @@ try:
     
     import logging
 except ModuleNotFoundError:
-    # allow running as a script (python linkedin_scraper/main.py)
+    # Дозволяє запускати пакет як скрипт (python linkedin_scraper/main.py)
     from DataTransform import DataTransformer
     from YouTubeLoader import YoutubeLoader
     from DatabaseConnector import Database
@@ -20,22 +20,26 @@ from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)
 def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
-    logger.info('---begin new cycle---')
-    #create obj YouTubeLoader class
-    db = Database(None,db_path=db_path)
+    logger.info('Початок нового моніторингового циклу.')
+    # Ініціалізація підсистем: база даних та завантажувач YouTube
+    db = Database(None, db_path=db_path)
     yt = YoutubeLoader()
     model_id = 'cardiffnlp/twitter-xlm-roberta-base-sentiment'
     active_videos = db.get_active_videos()
     if not active_videos:
-        logger.info("in base no active video")
+        logger.info("У базі відсутні активні відео для опрацювання.")
         video_ids = []
         actual_counts = {}
     else:
         video_ids = [v[0] for v in active_videos]
-        logger.info(f'searched {len(video_ids)} videos')
+        logger.info(f'Знайдено {len(video_ids)} відео для перевірки.')
         actual_counts = yt.get_actual_comment_counts(video_ids)
     processed_this_cycle = []
-
+    try:
+        transformer_title = DataTransformer()
+        db.backfill_title_sentiments(transformer_title)
+    except Exception as e:
+        logger.exception('Помилка під час заповнення пропущених міток настрою для заголовків: %s', e)
 
 
     for video in active_videos:
@@ -45,7 +49,7 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
 
         dpub = db._parse_datetime(dpub_raw)
         if not dpub:
-            logger.warning(f"Відео {v_id} має некоректну дату публікації. Пропускаємо.")
+            logger.warning(f"Відео {v_id} має некоректну дату публікації — пропускаємо.")
             continue
             
         # Якщо дата в базі була без часового поясу, робимо її timezone-aware (UTC)
@@ -53,23 +57,24 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
             dpub = dpub.replace(tzinfo=timezone.utc)
         age_days = (datetime.now(timezone.utc) - dpub).days
         if age_days > 14:
-            logger.info(f"Відео {v_id} старше 14 днів ({age_days} дн.). Деактивація.")
+            logger.info(f"Відео {v_id} старше за 14 днів ({age_days} дн.) — деактивація.")
             db.deactivate_video(v_id)
             continue
         yt_count = actual_counts.get(v_id)
         
         # Якщо YouTube взагалі не повернув статистику по відео (наприклад, видалене або приватне)
         if yt_count is None:
-            logger.warning(f"Не вдалося отримати лічильник для {v_id} з API. Пропускаємо.")
+            logger.warning(f"Не отримано статистики з API для відео {v_id} — пропускаємо.")
             continue
         if age_days > 3 and yt_count <= db_total_comments:
-            logger.info(f"Відео {v_id} перебуває в буферній зоні ({age_days} дн.), але активність нульова. Деактивація.")
+            logger.info(f"Відео {v_id} у буферній зоні ({age_days} дн.) без зростання активності — деактивація.")
             db.deactivate_video(v_id)
             continue
-            
+        
+
         # ЕТАП 4: Збір даних (якщо відео свіже АБО є реальний приріст коментарів)
         if yt_count > db_total_comments or age_days <= 3:
-            logger.info(f"Відео {v_id} активне (БД: {db_total_comments}, YT: {yt_count}). Завантажуємо нові коментарі...")
+            logger.info(f"Відео {v_id} позначено як активне (БД: {db_total_comments}, YT: {yt_count}) — початок завантаження коментарів.")
             
             # Отримуємо дату останнього успішного збору коментарів
             last_sync = db.get_last_sync(v_id)
@@ -78,17 +83,14 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
             try:
                 raw_df = yt.fetch_comment(v_id, last_fetched=last_sync)
             except Exception as e:
-                # Перевіряємо, чи це помилка вимкнених коментарів від YouTube API
+                # Якщо коментарі вимкнені на стороні YouTube — деактивуємо відео
                 if "commentsDisabled" in str(e):
-                    logger.warning(f"На відео {v_id} вимкнено коментарі автором. Деактивація відео.")
+                    logger.warning(f"Коментарі вимкнені для відео {v_id} — деактивація.")
                     db.deactivate_video(v_id)
                     continue
-                else:
-                    # Якщо якась інша помилка — прокидаємо її далі, щоб не маскувати баги
-                    raise e
+                # Для інших помилок піднімаємо виключення далі
+                raise
             
-            # Витягуємо нову пачку коментів з YouTube
-            raw_df = yt.fetch_comment(v_id, last_fetched=last_sync)
             
             if not raw_df.empty:
                 # Передаємо коментарі на ML-обробку та агрегацію метрик
@@ -96,19 +98,18 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
                 
                 # --- ОПТИМІЗОВАНЕ ЗБЕРЕЖЕННЯ КОМЕНТАРІВ ДЛЯ KAGGLE ---
                 try:
-                    # Дістаємо передбачений настрій. Стовпець у transformer.df може називатися 'mood' або 'sentiment_label'
-                    # Якщо твій DataTransformer створює колонку 'mood', беремо її, інакше дефолт
+                    # Отримуємо мітки настрою (колонка 'mood' або 'sentiment_label')
                     mood_column = 'mood' if 'mood' in transformer.df.columns else 'sentiment_label'
                     sentiment_labels = transformer.df[mood_column].tolist()
-                    
-                    # Додаємо ідентифікатор відео до датафрейму, щоб bulk-insert записував video_id
+
+                    # Додаємо `video_id` перед масовим збереженням
                     transformer.df = transformer.df.copy()
                     transformer.df['video_id'] = v_id
 
-                    # Викликаємо масове збереження (bulk insert), яке працює в 100 разів швидше за цикл `for`
+                    # Масове збереження коментарів (bulk insert)
                     db.save_raw_comments(transformer.df, sentiment_labels)
                 except Exception as e:
-                    logger.exception('Не вдалося масово зберегти коментарі для %s: %s', v_id, e)
+                    logger.exception('Помилка масового збереження коментарів для відео %s: %s', v_id, e)
                 
                 # Отримуємо агреговані метрики
                 stats = transformer.get_aggregated_stats()
@@ -124,7 +125,7 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
                 # --- ФІКС КАРТИНКИ ДЛЯ KAGGLE (НУЛЬОВИЙ ЗРІЗ) ---
                 # Якщо нових коментарів немає, ми все одно пишемо крапку в історію,
                 # щоб дослідники бачили стабільний лічильник перевірок на графіку
-                logger.info(f"Нових коментарів для відео {v_id} не знайдено. Фіксуємо нульовий зріз.")
+                logger.info(f"Для відео {v_id} не виявлено нових коментарів — фіксуємо нульовий зріз.")
                 
                 empty_stats = {
                     'pos': 0, 'neg': 0, 'neu': 0, 'likes': 0,
@@ -144,12 +145,12 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
     
     if active_count < max_active_limit:
         slots_available = max_active_limit - active_count
-        logger.info(f"Кількість активних відео менша за ліміт ({max_active_limit}). Шукаємо ще {slots_available} відео...")
+        logger.info(f"Кількість активних відео нижча за ліміт ({max_active_limit}) — шукаємо ще {slots_available} відео.")
         
         discovered_videos = yt.discover_videos_by_keyword(query_text=query_text, max_results=slots_available)
         
         for item in discovered_videos:
-            # Конвертуємо published_at з рядка YouTube в об'єкт datetime для register_video
+            # Конвертуємо `published_at` з рядка YouTube у datetime для `register_video`
             pub_date = db._parse_datetime(item['published_at'])
             
             db.register_video(
@@ -161,13 +162,13 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int):
                 is_active=1
             )
             logger.info(f"Зареєстровано нове відео: {item['title']} (ID: {item['video_id']})")
-    logger.info("Фіксуємо глобальний стан настрою для цього запуску...")
+    logger.info("Запис глобальних метрик настрою для поточного запуску...")
     try:
         # Передаємо назву твоєї ML моделі (наприклад, MODEL_ID)
         p, n, nu, l, v, c = db.global_stats_sentiment(model_id)
-        logger.info(f"Глобальний інкремент записано! Разом у базі -> Позитив: {p}, Негатив: {n}, Нейтральні: {nu}, Лайки: {l}, Всього коментів: {c}, Всього відео: {v}")
+        logger.info(f"Глобальні метрики збережено — Позитив: {p}, Негатив: {n}, Нейтральні: {nu}, Лайки: {l}, Коментарів: {c}, Відео: {v}")
     except Exception as e:
-        logger.error(f"Не вдалося записати глобальний лог настрою: {e}")        
+        logger.error(f"Не вдалося записати глобальні метрики настрою: {e}")        
     logger.info("--- Цикл моніторингу успішно завершено ---")
 def main():
     # load environment variables from .env (so os.getenv reads them)
@@ -182,21 +183,20 @@ def main():
     # Автоматично створюємо папку для БД (необхідно для Docker volumes)
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
 
-    logger.info("Автопілот ініціалізовано. Переходимо в режим нескінченного циклу.")
+    logger.info("Ініціалізація завершена — запуск конвеєру.")
 
     
     try:
         run_pipeline(DB_PATH, QUERY_TEXT, MAX_ACTIVE)
 
     except Exception as e:
-        # Критична помилка не повалить контейнер, а залогується з трейсбеком
-        # Безпечне встановлення прапорця кольору на логгері
+        # Критична помилка логуватиметься з трейбеком; контейнер залишиться запущеним
         try:
             setattr(logger, "colors", False)
         except Exception:
             pass
-        logger.critical(f"Глобальний збій у конвеєрі: {e}", exc_info=True)
-    logger.info(f"Скрапер успішно відпрацював. Вихід.")
+        logger.critical(f"Критична помилка конвеєру: {e}", exc_info=True)
+    logger.info("Скрапер завершив роботу.")
     
 
 

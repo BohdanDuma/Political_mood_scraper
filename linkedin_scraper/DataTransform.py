@@ -20,15 +20,16 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
+logger = logging.getLogger(__name__)
 class DataTransformer:
     
-    def __init__(self, raw_data):
+    def __init__(self, raw_data=pd.DataFrame()):
         self.df = raw_data
         if not self.df.empty:
             self._preparation_data()
             self._mood_set()
         else:
-            logging.warning('empty dataframe from youtube')
+            logger.warning('Отримано порожній DataFrame з YouTube — обробка пропущена')
  
     def _preparation_data(self):
         self.df['likes'] = self.df['likes'].fillna(0).astype(int)
@@ -38,8 +39,10 @@ class DataTransformer:
             self.df['is_edited'] = self.df['published_at'] != self.df['updated_at']
         else:
             self.df['is_edited'] = False
+    
     def _mood_set(self):
         texts = self.df['text'].astype(str).tolist()
+        
         results = sentiment_pipeline(texts, truncation=True, max_length=512, batch_size=8)
         self.df['mood'] = [res['label'] for res in results]
         
@@ -68,3 +71,33 @@ class DataTransformer:
         if dt.tzinfo is None:
             dt = dt.replace(tzinfo=timezone.utc)
         return dt
+    def mood_title(self, video_title):
+        if not video_title:
+            return 'neutral'
+
+        # Підтримуємо як одиночні заголовки, так і списки заголовків (батч)
+        is_single_string = isinstance(video_title, str)
+        titles_list = [video_title] if is_single_string else list(video_title)
+
+        # Гарантуємо строковий тип для кожного елементу
+        titles_list = [str(t) for t in titles_list]
+
+        try:
+            # Оцінюємо тональність заголовків пачкою
+            results = sentiment_pipeline(titles_list, truncation=True, max_length=512, batch_size=8)
+
+            # Мапінг міток до уніфікованого формату бази
+            label_mapping = {
+                'LABEL_0': 'negative', 'negative': 'negative',
+                'LABEL_1': 'neutral',  'neutral': 'neutral',
+                'LABEL_2': 'positive', 'positive': 'positive'
+            }
+
+            cleaned_labels = [label_mapping.get(res['label'], res['label']) for res in results]
+
+            # Повертаємо рядок для одиночного запиту або список для батчу
+            return cleaned_labels[0] if is_single_string else cleaned_labels
+
+        except Exception as e:
+            logger.exception('Помилка під час оцінки настрою заголовку: %s', e)
+            return 'neutral' if is_single_string else ['neutral'] * len(titles_list)

@@ -71,7 +71,7 @@ class YoutubeLoader:
                     'published_at': item['snippet']['publishedAt']
                 })
         return discovered
-    @retry(wait=wait_exponential(multiplier=1, min=2, max=60), stop=stop_after_attempt(5), retry=retry_if_exception_type(Exception), reraise=True)
+    @retry(wait=wait_exponential(multiplier=1, min=2, max=60), stop=stop_after_attempt(3), retry=retry_if_exception_type(Exception), reraise=True)
     def fetch_comment(self, video_id, last_fetched=None, max_pages=3):
         #if there are no comments from this video in the database
         '''cache_path = Path(f'cache_{video_id}.parquet')
@@ -132,8 +132,17 @@ class YoutubeLoader:
                     break
                 pages_processed += 1
             except Exception as e:
-                logging.error(f'API Error while fetching comments for {video_id}: {e}')
-                raise
+            # Перетворюємо помилку в рядок лише для внутрішньої перевірки
+                err_str = str(e)
+            
+                if "commentsDisabled" in err_str:
+                # Це звичайна ситуація, пишемо спокійне попередження без деталей
+                    logging.warning(f"Коментарі вимкнено для відео {video_id} (перевірка в Loader)")
+                else:
+                # Це реальна проблема (інтернет, квота тощо). 
+                # Пишемо ERROR, але САМ КЛЮЧ НЕ ВИВОДИМО (прибрали {e})
+                    logging.error(f"API Error while fetching comments for {video_id} (Перевірте квоту або мережу)")
+                raise e
         df_final = pd.DataFrame(new_comments)
         '''if not df_final.empty:
             df_final.to_parquet(cache_path,index=False)

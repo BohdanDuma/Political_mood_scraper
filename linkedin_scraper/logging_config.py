@@ -2,9 +2,9 @@ import logging
 
 
 def configure_logging(log_file: str = "YT_project.log", level: int = logging.INFO):
-    """Configure a centralized root logger with file+stream handlers.
+    """Налаштовує кореневий логер з файловим та консольним хендлерами.
 
-    Safe to call multiple times; subsequent calls are no-ops if handlers exist.
+    Можна викликати багато разів — повторні виклики не дублюють хендлери.
     """
     root = logging.getLogger()
     root.setLevel(level)
@@ -24,8 +24,8 @@ def configure_logging(log_file: str = "YT_project.log", level: int = logging.INF
     sh.setFormatter(formatter)
     root.addHandler(sh)
 
-    # provide an explicit attribute for colorized logging flags used elsewhere
-    # some code expects `logger.colors` to exist; default to True
+    # Додаємо явний атрибут `colors`, який використовується в інших модулях.
+    # Деякий код очікує наявність `logger.colors`; за замовчуванням — True
     try:
         setattr(root, "colors", True)
     except Exception:
@@ -33,4 +33,5 @@ def configure_logging(log_file: str = "YT_project.log", level: int = logging.INF
 
 
 def get_logger(name: str):
+    """Повертає логер з вказаним іменем (зручний обгортковий хелпер)."""
     return logging.getLogger(name)
