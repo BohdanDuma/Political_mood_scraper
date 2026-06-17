@@ -1,4 +1,3 @@
-
 from sqlalchemy import create_engine, text
 import logging
 from datetime import datetime, timezone
@@ -6,12 +5,14 @@ from typing import Optional
 
 logger = logging.getLogger(__name__)
 
+
 class Database:
-    def __init__(self,df,db_path):
+    def __init__(self, df, db_path):
         self.df = df
         # turn off SQL echo in production-like runs; use logging for visibility
         self.engine = create_engine(f"sqlite+pysqlite:///{db_path}", echo=False)
         self.create_tables()
+
     def create_tables(self):
         query_global_stat = """
     CREATE TABLE IF NOT EXISTS global_stats (
@@ -48,14 +49,15 @@ class Database:
             video_id TEXT PRIMARY KEY,
             channel_id TEXT,
             video_title TEXT,
+            video_title_sentiment TEXT,
             date_publication DATETIME,
             is_active INTEGER DEFAULT 1,
             last_checked_at TIMESTAMP,
             FOREIGN KEY (channel_id) REFERENCES channel_info(channel_id)
         );
         """
-        
-              # 2. Довідник моделей (інформація про моделі)можливо добавлю в майбутньому 
+
+        # 2. Model registry (reserved for future use)
         query_model_info = """
         CREATE TABLE IF NOT EXISTS model_info (
             model_id TEXT PRIMARY KEY,
@@ -63,7 +65,8 @@ class Database:
             date_first_connection DATETIME
         );
         """
-        # 3. Агрегована статистика (зв'язує відео та модель через складений ключ)
+
+        # 3. Aggregated stats (video + model)
         query_video_stats = """
         CREATE TABLE IF NOT EXISTS video_stats (
             video_id TEXT,
@@ -79,11 +82,13 @@ class Database:
             FOREIGN KEY (video_id) REFERENCES video_info(video_id)
         );
         """
-        query = [query_global_stat, query_create_raw_comm_table, query_channel_table,query_video_info,query_video_stats]
+
+        query = [query_global_stat, query_create_raw_comm_table, query_channel_table, query_video_info, query_video_stats]
         with self.engine.connect() as conn:
-            for q in query: 
+            for q in query:
                 conn.execute(text(q))
                 conn.commit()
+
     def register_video(self, video_id, channel_id, title, channel_name, date_publication=None, is_active=1, last_checked_at=None):
         """Insert or update channel and video metadata.
 
@@ -126,7 +131,8 @@ ON CONFLICT(video_id) DO UPDATE SET
                 })
                 conn.commit()
         except Exception as e:
-            logger.exception("Failed to register video %s: %s", video_id, e)
+            logger.exception("Не вдалося зареєструвати відео %s: %s", video_id, e)
+
     def _parse_datetime(self, value: Optional[str]) -> Optional[datetime]:
         if not value:
             return None
@@ -158,8 +164,9 @@ ON CONFLICT(video_id) DO UPDATE SET
                 # fallback common formats
                 return datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
             except Exception:
-                logger.debug('Unable to parse datetime: %s', value)
+                logger.debug('Не вдалося розпізнати datetime: %s', value)
                 return None
+
     def get_last_sync(self, video_id) -> Optional[datetime]:
         query = text('SELECT last_sync_date FROM video_stats WHERE video_id=:vid;')
         try:
@@ -169,8 +176,9 @@ ON CONFLICT(video_id) DO UPDATE SET
                     return None
                 return self._parse_datetime(result[0])
         except Exception as e:
-            logger.exception('Failed to get last_sync for %s: %s', video_id, e)
+            logger.exception('Не вдалося отримати last_sync для %s: %s', video_id, e)
             return None
+
     def update_video_stats(self, TARGET_VIDEO_ID, MODEL_ID, stats: dict, new_last_date):
         """Atomically insert or increment aggregated stats for a video+model.
 
@@ -201,7 +209,8 @@ ON CONFLICT(video_id) DO UPDATE SET
                 })
                 conn.commit()
         except Exception as e:
-            logger.exception('Failed to update stats for %s/%s: %s', TARGET_VIDEO_ID, MODEL_ID, e)
+            logger.exception('Не вдалося оновити статистику для %s/%s: %s', TARGET_VIDEO_ID, MODEL_ID, e)
+
     def get_active_videos(self):
         query = text("""
 SELECT v.video_id,v.date_publication, COALESCE(s.total_comments, 0) as total_comments
@@ -211,16 +220,16 @@ WHERE v.is_active = 1
                      """)
         with self.engine.connect() as conn:
             result = conn.execute(query).fetchall()
-            return result 
-    def deactivate_video(self,video_id):
-         with self.engine.connect() as conn:
+            return result
+
+    def deactivate_video(self, video_id):
+        with self.engine.connect() as conn:
             query = text(f"UPDATE video_info SET is_active = 0 WHERE video_id = :vid")
-            conn.execute(query,{"vid": video_id})
+            conn.execute(query, {"vid": video_id})
             conn.commit()
-    def add_comment(self,comment_id,
-        video_id,comment_text, likes,published_at,sentiment_label):
-        """
-        Insert or update a comment into `raw_comments`.
+
+    def add_comment(self, comment_id, video_id, comment_text, likes, published_at, sentiment_label):
+        """Insert or update a comment into `raw_comments`.
 
         - Parses `published_at` using `_parse_datetime`.
         - On conflict of `comment_id` updates text/likes/published_at/sentiment.
@@ -253,17 +262,19 @@ ON CONFLICT(comment_id) DO UPDATE SET
                 })
                 conn.commit()
         except Exception as e:
-            logger.exception('Failed to add/update comment %s: %s', comment_id, e)
+            logger.exception('Не вдалося додати/оновити коментар %s: %s', comment_id, e)
+
     def update_check_timestamps(self, video_ids):
         if not video_ids:
-            return 
+            return
         with self.engine.connect() as conn:
             placeholders = ', '.join([f':v{i}' for i in range(len(video_ids))])
             query = text(f"UPDATE video_info SET last_checked_at = CURRENT_TIMESTAMP WHERE video_id IN ({placeholders})")
             params = {f"v{i}": vid for i, vid in enumerate(video_ids)}
             conn.execute(query, params)
             conn.commit()
-    def global_stats_sentiment(self,model_id: str):
+
+    def global_stats_sentiment(self, model_id: str):
         query_aggregate = text("""
             WITH latest_video_stats AS (
                 SELECT 
@@ -287,18 +298,17 @@ ON CONFLICT(comment_id) DO UPDATE SET
             FROM latest_video_stats
             WHERE rn = 1;
         """)
-        
+
         query_insert = text("""
             INSERT INTO global_stats (model_id, total_positive, total_negative, total_neutral, total_likes, total_videos, total_comments)
             VALUES (:mid, :pos, :neg, :neu, :likes, :videos, :comments)
         """)
-        
+
         try:
             with self.engine.connect() as conn:
-                # 1. Агрегуємо актуальні цифри з бази
+                # 1. Aggregate current numbers
                 result = conn.execute(query_aggregate, {"mid": model_id}).fetchone()
-                
-                # Перевіряємо, чи повернулися дані і чи вони не NULL
+
                 if result and result[0] is not None:
                     videos = int(result[0])
                     pos = int(result[1] or 0)
@@ -307,28 +317,27 @@ ON CONFLICT(comment_id) DO UPDATE SET
                     likes = int(result[4] or 0)
                     comments = int(result[5] or 0)
                 else:
-                    # Якщо база ще порожня, логуємо нулі
                     videos, pos, neg, neu, likes, comments = 0, 0, 0, 0, 0, 0
-                
-                # 2. Робимо запис у таблицю інкрементів
+
+                # 2. Insert snapshot into global_stats
                 conn.execute(query_insert, {
                     "mid": model_id,
                     "pos": pos,
                     "neg": neg,
                     "neu": neu,
                     "likes": likes,
-                    "videos": videos, 
+                    "videos": videos,
                     "comments": comments
                 })
                 conn.commit()
-                
+
                 return pos, neg, neu, likes, videos, comments
         except Exception as e:
-            logger.exception("Failed to log global sentiment for model %s: %s", model_id, e)
+            logger.exception("Не вдалося зберегти глобальні метрики настрою для моделі %s: %s", model_id, e)
             raise e
+
     def save_raw_comments(self, df, sentiment_labels=None):
-        """
-        Bulk insert/update comments from a pandas DataFrame.
+        """Bulk insert/update comments from a pandas DataFrame.
 
         Parameters:
         - df: DataFrame with at least columns `comment_id`, `text` (or `textDisplay`), `likes`, `published_at`.
@@ -388,4 +397,42 @@ ON CONFLICT(comment_id) DO UPDATE SET
                 conn.execute(query, params_list)
                 conn.commit()
         except Exception as e:
-            logger.exception('Failed bulk save raw comments: %s', e)
+            logger.exception('Не вдалося масово зберегти сирі коментарі: %s', e)
+
+    def _get_videos_without_sentiment(self):
+        """Return list of videos (id, title) that have no computed title sentiment yet."""
+        try:
+            query = text("SELECT video_id, video_title FROM video_info WHERE video_title_sentiment IS NULL;")
+            with self.engine.connect() as conn:
+                return conn.execute(query).fetchall()
+        except Exception as e:
+            logger.exception("Не вдалося отримати відео без мітки настрою: %s", e)
+
+    def backfill_title_sentiments(self, transformer):
+        """
+        Автоматично знаходить у базі відео без проаналізованих заголовків,
+        оцінює їх через `transformer.mood_title` і оновлює записи.
+        """
+        logger.info("Перевірка відео без проаналізованих заголовків...")
+
+        missing_videos = self._get_videos_without_sentiment()
+        if not missing_videos:
+            logger.info("Усі відео вже мають аналіз назви.")
+            return
+
+        logger.info(f"Знайдено {len(missing_videos)} відео для дозаповнення. Початок обробки...")
+        for row in missing_videos:
+            v_id = row[0]
+            v_title = row[1]
+            title_label = transformer.mood_title(v_title)
+            try:
+                with self.engine.connect() as conn:
+                    conn.execute(
+                        text("UPDATE video_info SET video_title_sentiment = :sent WHERE video_id = :vid;"),
+                        {"sent": title_label, "vid": v_id}
+                    )
+                    conn.commit()
+            except Exception as e:
+                logger.error(f"Не вдалося оновити мітку для відео {v_id}: {e}")
+
+        logger.info("Дозаповнення міток назв завершено.")
