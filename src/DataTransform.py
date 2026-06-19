@@ -1,5 +1,4 @@
 
-from parsel import Selector 
 import pandas as pd
 import logging 
 from tenacity import retry, wait_random, stop_after_attempt
