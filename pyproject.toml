@@ -5,7 +5,7 @@ description = "YouTube comment monitoring and analytics"
 authors = [
     {name = "BohdanDuma", email = "duma-bohdan@ukr.net"}
 ]
-requires-python = ">=3.10, <3.13"
+requires-python = ">=3.11,<3.15"
 dependencies = [
     "requests>=2.34.2,<3.0.0",
     "sqlalchemy>=1.4,<2.2",

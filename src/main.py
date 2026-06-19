@@ -1,18 +1,18 @@
 
 from dotenv import load_dotenv
 try:
-    from linkedin_scraper.DataTransform import DataTransformer
-    from linkedin_scraper.YouTubeLoader import YoutubeLoader
-    from linkedin_scraper.DatabaseConnector import Database
-    from linkedin_scraper.logging_config import configure_logging
+    from src.DataTransform import DataTransformer
+    from src.YouTubeLoader import YoutubeLoader
+    from src.DatabaseConnector import Database
+    from src.logging_config import configure_logging
     
     import logging
 except ModuleNotFoundError:
-    # Дозволяє запускати пакет як скрипт (python linkedin_scraper/main.py)
-    from DataTransform import DataTransformer
-    from YouTubeLoader import YoutubeLoader
-    from DatabaseConnector import Database
-    from logging_config import configure_logging
+    # Дозволяє запускати пакет як скрипт (python src/main.py)
+    from src.DataTransform import DataTransformer
+    from src.YouTubeLoader import YoutubeLoader
+    from src.DatabaseConnector import Database
+    from src.logging_config import configure_logging
     import logging
 import os
 import time
