@@ -1,16 +1,10 @@
 
 import pandas as pd
 import logging 
-from tenacity import retry, wait_random, stop_after_attempt
 from googleapiclient.discovery import build
-from dotenv import load_dotenv
-from pathlib import Path
 
-from transformers import pipeline
 from datetime import datetime, timezone
 
-model_name = "cardiffnlp/twitter-xlm-roberta-base-sentiment"
-sentiment_pipeline = pipeline('sentiment-analysis', model=model_name, device=-1)
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s%(levelname)s%(message)s',
@@ -22,8 +16,21 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 class DataTransformer:
     
-    def __init__(self, raw_data=pd.DataFrame()):
+    def __init__(self, raw_data=pd.DataFrame(), model=None):
+        """
+        Args:
+            raw_data: DataFrame з коментарями
+            model: об'єкт SentimentModel (адаптер). Якщо None, буде використана дефолтна модель
+        """
         self.df = raw_data
+        
+        # Якщо модель не передана, завантажити дефолтну
+        if model is None:
+            from src.ModelManager import ModelFactory
+            model = ModelFactory.get_model("cardiffnlp/twitter-xlm-roberta-base-sentiment")
+        
+        self.model = model
+        
         if not self.df.empty:
             self._preparation_data()
             self._mood_set()
@@ -42,8 +49,8 @@ class DataTransformer:
     def _mood_set(self):
         texts = self.df['text'].astype(str).tolist()
         
-        results = sentiment_pipeline(texts, truncation=True, max_length=512, batch_size=8)
-        self.df['mood'] = [res['label'] for res in results]
+        results = self.model.predict(texts, batch_size=8)
+        self.df['mood'] = results
         
     def get_aggregated_stats(self):
         if self.df.empty:
@@ -82,20 +89,11 @@ class DataTransformer:
         titles_list = [str(t) for t in titles_list]
 
         try:
-            # Оцінюємо тональність заголовків пачкою
-            results = sentiment_pipeline(titles_list, truncation=True, max_length=512, batch_size=8)
-
-            # Мапінг міток до уніфікованого формату бази
-            label_mapping = {
-                'LABEL_0': 'negative', 'negative': 'negative',
-                'LABEL_1': 'neutral',  'neutral': 'neutral',
-                'LABEL_2': 'positive', 'positive': 'positive'
-            }
-
-            cleaned_labels = [label_mapping.get(res['label'], res['label']) for res in results]
+            # Оцінюємо тональність заголовків пачкою через адаптер
+            results = self.model.predict(titles_list, batch_size=8)
 
             # Повертаємо рядок для одиночного запиту або список для батчу
-            return cleaned_labels[0] if is_single_string else cleaned_labels
+            return results[0] if is_single_string else results
 
         except Exception as e:
             logger.exception('Помилка під час оцінки настрою заголовку: %s', e)

@@ -14,63 +14,56 @@ class Database:
         self.create_tables()
 
     def create_tables(self):
-        query_global_stat = """
-    CREATE TABLE IF NOT EXISTS global_stats (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    model_id TEXT,
-    snapshot_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-    total_positive INTEGER,
-    total_negative INTEGER,
-    total_neutral INTEGER,
-    total_likes INTEGER,
-    total_videos INTEGER,
-    total_comments INTEGER
-);
-"""
-        query_create_raw_comm_table = """
-        CREATE TABLE IF NOT EXISTS raw_comments(
-        comment_id TEXT PRIMARY KEY,
-        video_id TEXT,
-        comment_text TEXT,
-        likes INTEGER DEFAULT 0,
-        published_at DATETIME,
-        sentiment_label TEXT,
-        FOREIGN KEY (video_id) REFERENCES video_info(video_id)
+        model_table = """
+        CREATE TABLE IF NOT EXISTS model_info (
+            model_id INTEGER PRIMARY KEY AUTOINCREMENT,
+            model_name TEXT UNIQUE,
+            date_from DATETIME DEFAULT CURRENT_TIMESTAMP
         );
-"""
+        """
+
+        # 2. Інформація про канали
         query_channel_table = """
         CREATE TABLE IF NOT EXISTS channel_info (
             channel_id VARCHAR(20) PRIMARY KEY,
             channel_name TEXT
         );
-"""
+        """
+
+        # 3. Інформація про відео (Складений ключ, бо заголовок оцінюється різними моделями)
         query_video_info = """
         CREATE TABLE IF NOT EXISTS video_info (
-            video_id TEXT PRIMARY KEY,
+            video_id TEXT PRIMARY KEY ,
             channel_id TEXT,
             video_title TEXT,
-            video_title_sentiment TEXT,
             date_publication DATETIME,
             is_active INTEGER DEFAULT 1,
             last_checked_at TIMESTAMP,
-            FOREIGN KEY (channel_id) REFERENCES channel_info(channel_id)
+            FOREIGN KEY (channel_id) REFERENCES channel_info(channel_id));
+        """
+
+        # 4. Сирі коментарі (Складений ключ)
+        query_create_raw_comm_table = """
+        CREATE TABLE IF NOT EXISTS raw_comments(
+            comment_id TEXT,
+            model_id INTEGER, 
+            video_id TEXT,
+            comment_text TEXT,
+            likes INTEGER DEFAULT 0,
+            published_at DATETIME,
+            sentiment_label TEXT,
+            PRIMARY KEY (comment_id, model_id), 
+            FOREIGN KEY (video_id) REFERENCES video_info(video_id),
+            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
         );
         """
 
-        # 2. Model registry (reserved for future use)
-        query_model_info = """
-        CREATE TABLE IF NOT EXISTS model_info (
-            model_id TEXT PRIMARY KEY,
-            model_name TEXT,
-            date_first_connection DATETIME
-        );
-        """
-
-        # 3. Aggregated stats (video + model)
+        # 5. Агрегована статистика по відео та моделях
         query_video_stats = """
         CREATE TABLE IF NOT EXISTS video_stats (
             video_id TEXT,
-            model_id TEXT,
+            model_id INTEGER,
+            video_title_sentiment TEXT,
             pos_count INTEGER DEFAULT 0,
             neg_count INTEGER DEFAULT 0,
             neu_count INTEGER DEFAULT 0,
@@ -79,15 +72,204 @@ class Database:
             last_sync_date DATETIME,
             checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
             PRIMARY KEY (video_id, model_id),
-            FOREIGN KEY (video_id) REFERENCES video_info(video_id)
+            FOREIGN KEY (video_id) REFERENCES video_info(video_id),
+            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
         );
         """
 
-        query = [query_global_stat, query_create_raw_comm_table, query_channel_table, query_video_info, query_video_stats]
+        # 6. Глобальна статистика
+        query_global_stat = """
+        CREATE TABLE IF NOT EXISTS global_stats (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            model_id INTEGER,
+            snapshot_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+            total_positive INTEGER,
+            total_negative INTEGER,
+            total_neutral INTEGER,
+            total_likes INTEGER,
+            total_videos INTEGER,
+            total_comments INTEGER,
+            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
+        );
+        """
+        query = [model_table, query_global_stat, query_create_raw_comm_table, query_channel_table, query_video_info, query_video_stats]
         with self.engine.connect() as conn:
             for q in query:
                 conn.execute(text(q))
                 conn.commit()
+            # Migration: ensure video_title_sentiment column exists (older DBs may miss it)
+            try:
+                cols = conn.execute(text("PRAGMA table_info('video_stats');")).fetchall()
+                col_names = [c[1] for c in cols]
+                if 'video_title_sentiment' not in col_names:
+                    conn.execute(text("ALTER TABLE video_stats ADD COLUMN video_title_sentiment TEXT;"))
+                    conn.commit()
+                    logger.info('Міграція: додано колонку video_title_sentiment у video_stats')
+            except Exception as e:
+                logger.debug('Міграція video_stats пропущена або не вдалася: %s', e)
+            # Migration: ensure video_info has video_title_sentiment (older DBs may miss it)
+            try:
+                vinfo_cols = conn.execute(text("PRAGMA table_info('video_info');")).fetchall()
+                vinfo_names = [c[1] for c in vinfo_cols]
+                if 'video_title_sentiment' not in vinfo_names:
+                    conn.execute(text("ALTER TABLE video_info ADD COLUMN video_title_sentiment TEXT;"))
+                    conn.commit()
+                    logger.info('Міграція: додано колонку video_title_sentiment у video_info')
+            except Exception as e:
+                logger.debug('Міграція video_info пропущена або не вдалася: %s', e)
+            # Migration: ensure global_stats.model_id is INTEGER (not TEXT). If old schema used TEXT model identifiers, migrate rows.
+            try:
+                gcols = conn.execute(text("PRAGMA table_info('global_stats');")).fetchall()
+                gcol_map = {c[1]: c[2].upper() for c in gcols}
+                need_migrate = False
+                if 'model_id' in gcol_map and gcol_map['model_id'] != 'INTEGER':
+                    need_migrate = True
+                if need_migrate:
+                    logger.info('Міграція global_stats: приводимо model_id до INTEGER')
+                    # read existing rows
+                    rows = conn.execute(text('SELECT id, model_id, snapshot_date, total_positive, total_negative, total_neutral, total_likes, total_videos, total_comments FROM global_stats')).fetchall()
+                    # create new table
+                    conn.execute(text('''CREATE TABLE IF NOT EXISTS global_stats_new (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        model_id INTEGER,
+                        snapshot_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+                        total_positive INTEGER,
+                        total_negative INTEGER,
+                        total_neutral INTEGER,
+                        total_likes INTEGER,
+                        total_videos INTEGER,
+                        total_comments INTEGER
+                    );'''))
+                    conn.commit()
+                    # migrate rows, resolving model_id to numeric via _get_or_create_model_id
+                    for r in rows:
+                        old_mid = r[1]
+                        try:
+                            numeric_mid = self._get_or_create_model_id(old_mid)
+                        except Exception:
+                            numeric_mid = None
+                        conn.execute(text('''INSERT INTO global_stats_new(id, model_id, snapshot_date, total_positive, total_negative, total_neutral, total_likes, total_videos, total_comments)
+                            VALUES(:id, :mid, :snap, :pos, :neg, :neu, :likes, :videos, :comments)
+                        '''), {
+                            'id': r[0], 'mid': numeric_mid, 'snap': r[2], 'pos': r[3], 'neg': r[4], 'neu': r[5], 'likes': r[6], 'videos': r[7], 'comments': r[8]
+                        })
+                    conn.commit()
+                    # swap tables
+                    conn.execute(text('DROP TABLE global_stats;'))
+                    conn.execute(text('ALTER TABLE global_stats_new RENAME TO global_stats;'))
+                    conn.commit()
+                    logger.info('Міграція global_stats завершена')
+            except Exception as e:
+                logger.debug('Міграція global_stats пропущена або не вдалася: %s', e)
+            # Migration: ensure raw_comments has model_id column and composite PK (comment_id, model_id)
+            try:
+                rcols = conn.execute(text("PRAGMA table_info('raw_comments');")).fetchall()
+                rcol_names = [c[1] for c in rcols]
+                if 'model_id' not in rcol_names:
+                    logger.info('Міграція raw_comments: додаємо колонку model_id і оновлюємо PK')
+                    # create new table with desired schema
+                    conn.execute(text('''
+                        CREATE TABLE IF NOT EXISTS raw_comments_new(
+                            comment_id TEXT,
+                            model_id INTEGER,
+                            video_id TEXT,
+                            comment_text TEXT,
+                            likes INTEGER DEFAULT 0,
+                            published_at DATETIME,
+                            sentiment_label TEXT,
+                            PRIMARY KEY (comment_id, model_id),
+                            FOREIGN KEY (video_id) REFERENCES video_info(video_id),
+                            FOREIGN KEY (model_id) REFERENCES model_info(model_id)
+                        );
+                    '''))
+                    conn.commit()
+                    # copy existing rows, set model_id NULL
+                    existing = conn.execute(text('SELECT comment_id, video_id, comment_text, likes, published_at, sentiment_label FROM raw_comments')).fetchall()
+                    for row in existing:
+                        conn.execute(text('''INSERT INTO raw_comments_new(comment_id, model_id, video_id, comment_text, likes, published_at, sentiment_label)
+                                            VALUES(:cid, :mid, :vid, :ctext, :likes, :pub, :slabel)'''), {
+                            'cid': row[0], 'mid': None, 'vid': row[1], 'ctext': row[2], 'likes': row[3], 'pub': row[4], 'slabel': row[5]
+                        })
+                    conn.commit()
+                    # drop old and rename
+                    conn.execute(text('DROP TABLE raw_comments;'))
+                    conn.execute(text('ALTER TABLE raw_comments_new RENAME TO raw_comments;'))
+                    conn.commit()
+                    logger.info('Міграція raw_comments завершена')
+            except Exception as e:
+                logger.debug('Міграція raw_comments пропущена або не вдалася: %s', e)
+            # Migration: ensure video_stats.model_id is INTEGER (not TEXT). Migrate if needed.
+            try:
+                vcols = conn.execute(text("PRAGMA table_info('video_stats');")).fetchall()
+                vcol_map = {c[1]: c[2].upper() for c in vcols}
+                need_migrate_vs = False
+                if 'model_id' in vcol_map and vcol_map['model_id'] != 'INTEGER':
+                    need_migrate_vs = True
+                if need_migrate_vs:
+                    logger.info('Міграція video_stats: приводимо model_id до INTEGER')
+                    rows = conn.execute(text('SELECT video_id, model_id, video_title_sentiment, pos_count, neg_count, neu_count, total_likes, total_comments, last_sync_date, checked_at FROM video_stats')).fetchall()
+                    conn.execute(text('''CREATE TABLE IF NOT EXISTS video_stats_new (
+                        video_id TEXT,
+                        model_id INTEGER,
+                        video_title_sentiment TEXT,
+                        pos_count INTEGER DEFAULT 0,
+                        neg_count INTEGER DEFAULT 0,
+                        neu_count INTEGER DEFAULT 0,
+                        total_likes INTEGER DEFAULT 0,
+                        total_comments INTEGER DEFAULT 0,
+                        last_sync_date DATETIME,
+                        checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                        PRIMARY KEY (video_id, model_id),
+                        FOREIGN KEY (video_id) REFERENCES video_info(video_id),
+                        FOREIGN KEY (model_id) REFERENCES model_info(model_id)
+                    );'''))
+                    conn.commit()
+                    for r in rows:
+                        old_mid = r[1]
+                        try:
+                            numeric_mid = self._get_or_create_model_id(old_mid)
+                        except Exception:
+                            numeric_mid = None
+                        conn.execute(text('''INSERT OR REPLACE INTO video_stats_new(video_id, model_id, video_title_sentiment, pos_count, neg_count, neu_count, total_likes, total_comments, last_sync_date, checked_at)
+                                            VALUES(:vid, :mid, :vtitle, :pos, :neg, :neu, :likes, :comments, :last_sync, :checked)'''), {
+                            'vid': r[0], 'mid': numeric_mid, 'vtitle': r[2], 'pos': r[3], 'neg': r[4], 'neu': r[5], 'likes': r[6], 'comments': r[7], 'last_sync': r[8], 'checked': r[9]
+                        })
+                    conn.commit()
+                    conn.execute(text('DROP TABLE video_stats;'))
+                    conn.execute(text('ALTER TABLE video_stats_new RENAME TO video_stats;'))
+                    conn.commit()
+                    logger.info('Міграція video_stats завершена')
+            except Exception as e:
+                logger.debug('Міграція video_stats пропущена або не вдалася: %s', e)
+
+    def _get_or_create_model_id(self, model_identifier):
+        """Return numeric model_id for given identifier (int or str). If str, insert into model_info if missing."""
+        if model_identifier is None:
+            return None
+        # if already numeric, return as-is
+        try:
+            if isinstance(model_identifier, int):
+                return model_identifier
+            # if string containing digits only, try int
+            if isinstance(model_identifier, str) and model_identifier.isdigit():
+                return int(model_identifier)
+        except Exception:
+            pass
+
+        # treat as model name (string)
+        model_name = str(model_identifier)
+        query_sel = text("SELECT model_id FROM model_info WHERE model_name = :mname;")
+        with self.engine.connect() as conn:
+            res = conn.execute(query_sel, {"mname": model_name}).fetchone()
+            if res and res[0] is not None:
+                return int(res[0])
+            # insert new model record
+            ins = text("INSERT INTO model_info(model_name) VALUES (:mname);")
+            conn.execute(ins, {"mname": model_name})
+            conn.commit()
+            # fetch id
+            res2 = conn.execute(query_sel, {"mname": model_name}).fetchone()
+            return int(res2[0]) if res2 and res2[0] is not None else None
 
     def register_video(self, video_id, channel_id, title, channel_name, date_publication=None, is_active=1, last_checked_at=None):
         """Insert or update channel and video metadata.
@@ -184,26 +366,39 @@ ON CONFLICT(video_id) DO UPDATE SET
 
         `stats` should include keys: pos, neg, neu, likes, new_total_comments
         """
-        query = text("""INSERT INTO video_stats(video_id, model_id, pos_count, neg_count, neu_count, total_likes, total_comments, last_sync_date)
-            VALUES(:vid, :mid, :pos, :neg, :neu, :likes, :comm, :ldate)
-            ON CONFLICT(video_id, model_id) DO UPDATE SET
-                pos_count = video_stats.pos_count + excluded.pos_count,
-                neg_count = video_stats.neg_count + excluded.neg_count,
-                neu_count = video_stats.neu_count + excluded.neu_count,
-                total_comments = excluded.total_comments,
-                total_likes = video_stats.total_likes + excluded.total_likes,
-                last_sync_date = excluded.last_sync_date
-        """)
+        # Ensure numeric defaults
+        pos_v = int(stats.get('pos', 0))
+        neg_v = int(stats.get('neg', 0))
+        neu_v = int(stats.get('neu', 0))
+        likes_v = int(stats.get('likes', 0))
         comm = int(stats.get('new_total_comments', 0))
+        title_sent = stats.get('video_title_sentiment')
+
+        query = text("""
+INSERT INTO video_stats(video_id, model_id, video_title_sentiment, pos_count, neg_count, neu_count, total_likes, total_comments, last_sync_date)
+VALUES(:vid, :mid, :tit_sent, :pos, :neg, :neu, :likes, :comm, :ldate)
+ON CONFLICT(video_id, model_id) DO UPDATE SET
+    video_title_sentiment = COALESCE(excluded.video_title_sentiment, video_stats.video_title_sentiment),
+    pos_count = video_stats.pos_count + excluded.pos_count,
+    neg_count = video_stats.neg_count + excluded.neg_count,
+    neu_count = video_stats.neu_count + excluded.neu_count,
+    total_comments = excluded.total_comments,
+    total_likes = video_stats.total_likes + excluded.total_likes,
+    last_sync_date = excluded.last_sync_date
+""")
+
         try:
+            # resolve numeric model id if a name was provided
+            numeric_mid = self._get_or_create_model_id(MODEL_ID)
             with self.engine.connect() as conn:
                 conn.execute(query, {
                     "vid": TARGET_VIDEO_ID,
-                    "mid": MODEL_ID,
-                    "pos": int(stats.get('pos', 0)),
-                    "neg": int(stats.get('neg', 0)),
-                    "neu": int(stats.get('neu', 0)),
-                    "likes": int(stats.get('likes', 0)),
+                    "mid": numeric_mid,
+                    "tit_sent": title_sent,
+                    "pos": pos_v,
+                    "neg": neg_v,
+                    "neu": neu_v,
+                    "likes": likes_v,
                     "comm": comm,
                     "ldate": new_last_date
                 })
@@ -305,9 +500,11 @@ ON CONFLICT(comment_id) DO UPDATE SET
         """)
 
         try:
+            # resolve numeric model id to query the integer column
+            numeric_mid = self._get_or_create_model_id(model_id)
             with self.engine.connect() as conn:
                 # 1. Aggregate current numbers
-                result = conn.execute(query_aggregate, {"mid": model_id}).fetchone()
+                result = conn.execute(query_aggregate, {"mid": numeric_mid}).fetchone()
 
                 if result and result[0] is not None:
                     videos = int(result[0])
@@ -319,9 +516,9 @@ ON CONFLICT(comment_id) DO UPDATE SET
                 else:
                     videos, pos, neg, neu, likes, comments = 0, 0, 0, 0, 0, 0
 
-                # 2. Insert snapshot into global_stats
+                # 2. Insert snapshot into global_stats (use numeric id)
                 conn.execute(query_insert, {
-                    "mid": model_id,
+                    "mid": numeric_mid,
                     "pos": pos,
                     "neg": neg,
                     "neu": neu,
@@ -336,7 +533,7 @@ ON CONFLICT(comment_id) DO UPDATE SET
             logger.exception("Не вдалося зберегти глобальні метрики настрою для моделі %s: %s", model_id, e)
             raise e
 
-    def save_raw_comments(self, df, sentiment_labels=None):
+    def save_raw_comments(self, df, sentiment_labels=None, model_identifier=None):
         """Bulk insert/update comments from a pandas DataFrame.
 
         Parameters:
@@ -357,6 +554,8 @@ ON CONFLICT(comment_id) DO UPDATE SET
                 else:
                     sentiment_labels = [None] * len(df)
 
+            # resolve numeric model id (may insert into model_info)
+            numeric_mid = self._get_or_create_model_id(model_identifier) if model_identifier is not None else None
             params_list = []
             for i, (_, row) in enumerate(df.iterrows()):
                 cid = row.get('comment_id') or row.get('id')
@@ -369,23 +568,25 @@ ON CONFLICT(comment_id) DO UPDATE SET
                 pub_val = parsed.isoformat() if parsed is not None else None
                 slabel = sentiment_labels[i] if i < len(sentiment_labels) else None
 
-                params_list.append({
+                params = {
                     'cid': cid,
                     'vid': row.get('video_id') or None,
                     'ctext': text_val,
                     'likes': likes,
                     'pub': pub_val,
                     'slabel': slabel,
-                })
+                    'mid': numeric_mid,
+                }
+                params_list.append(params)
 
             if not params_list:
                 return
 
             query = text(
                 """
-INSERT INTO raw_comments(comment_id, video_id, comment_text, likes, published_at, sentiment_label)
-VALUES(:cid, :vid, :ctext, :likes, :pub, :slabel)
-ON CONFLICT(comment_id) DO UPDATE SET
+INSERT INTO raw_comments(comment_id, model_id, video_id, comment_text, likes, published_at, sentiment_label)
+VALUES(:cid, :mid, :vid, :ctext, :likes, :pub, :slabel)
+ON CONFLICT(comment_id, model_id) DO UPDATE SET
     comment_text = excluded.comment_text,
     likes = excluded.likes,
     published_at = COALESCE(excluded.published_at, raw_comments.published_at),
