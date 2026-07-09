@@ -28,7 +28,8 @@ def main():
         shutil.rmtree(EXPORT_DIR)
     os.makedirs(EXPORT_DIR, exist_ok=True)
     
-
+    
+   
     conn = sqlite3.connect(DB_PATH)
     try:
         print("Експорт обов'язкових таблиць у CSV...")
@@ -55,6 +56,10 @@ def main():
             print(f"Попередження: Пропущено model_info ({e})")
        
         print("Експорт таблиць завершено успішно.")
+        try:
+            shutil.copy(DB_PATH, os.path.join(EXPORT_DIR, os.path.basename(DB_PATH)))
+        except Exception as e:
+            print("Не можу додати базу даних" )
     except Exception as e:
         print(f"Критична помилка при експорті основних даних: {e}")
         return
