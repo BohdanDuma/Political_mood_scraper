@@ -47,7 +47,11 @@ def main():
             print("-> global_stats експортовано.")
         except Exception as e:
             print(f"Попередження: Пропущено global_stats ({e})")
-            
+        try:
+            shutil.copy("/home/bohdan/Стільниця/POLIT_SCARPER/data/manual_annotation_2026-07-14.csv", os.path.join(EXPORT_DIR, "manual_annotation_2026-07-14.csv"))
+            print("-> manual_annotation_2026-07-14.csv успішно додано до експорту.")
+        except Exception as e:
+            print(f"Помилка копіювання золотого стандарту: {e}")    
         try:
             df_model = pd.read_sql_query("SELECT * FROM model_info", conn)
             df_model.to_csv(os.path.join(EXPORT_DIR, "model_info.csv"), index=False)

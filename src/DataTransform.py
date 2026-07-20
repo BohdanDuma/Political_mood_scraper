@@ -26,7 +26,7 @@ class DataTransformer:
         
         # Якщо модель не передана, завантажити дефолтну
         if model is None:
-            from src.ModelManager import ModelFactory
+            from .ModelManager import ModelFactory
             model = ModelFactory.get_model("cardiffnlp/twitter-xlm-roberta-base-sentiment")
         
         self.model = model
