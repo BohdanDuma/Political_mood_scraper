@@ -1,3 +1,4 @@
+```mermaid
 graph TD
     %% Планувальник
     Anacron[Anacron / ОС] -->|Щодня запускає| Main[main.py / run_pipeline]
@@ -11,7 +12,7 @@ graph TD
     %% Основні компоненти (Моноліт)
     subgraph Monolith [Поточний Монолітний Скрипт]
         Main -->|1. Перевіряє активні відео| DB[(Database / SQLite)]
-        Main -->|2. Отримує нову статистику/коментарі| YT[YouTubeLoader]
+        Main -->|2. Отримує нову статистику та коментарі| YT[YouTubeLoader]
         
         YT -->|Запитує API| YTAPI
 
@@ -19,7 +20,7 @@ graph TD
         MM -->|Завантажує ваги| HHF
 
         Main -->|4. Передає сирий текст і модель| DT[DataTransformer]
-        DT -->|Інференс (PyTorch / Transformers)| DT
+        DT -->|Інференс PyTorch / Transformers| DT
 
         DT -->|5. Повертає результати та статистику| DB
     end
