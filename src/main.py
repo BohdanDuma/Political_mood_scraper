@@ -202,3 +202,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+#cd /home/bohdan/Стільниця/POLIT_SCARPER && PYTHONPATH=. /home/bohdan/miniconda3/bin/python src/main.py >> /home/bohdan/Стільниця/POLIT_SCARPER/YT_project.log 2>&1

@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 import pandas as pd
-import json
+from typing import Optional, Dict, Any, List, Union
 from datetime import datetime, timezone
 from tenacity import retry, wait_exponential, stop_after_attempt, retry_if_exception_type
  
@@ -112,10 +112,21 @@ class YoutubeLoader:
                         continue
                     try:
                         published_at = datetime.fromisoformat(published_at_str.replace('Z', '+00:00'))
+                        # Видаляємо часовий пояс для безпечного порівняння
+                        if published_at.tzinfo is not None:
+                            published_at = published_at.replace(tzinfo=None)
                     except Exception:
                         # skip unparsable timestamps
                         continue
-                    if published_at > last_fetched:
+                    
+                    # Переконуємося, що last_fetched також без tzinfo, якщо він існує
+                    clean_last_fetched = (
+                        last_fetched.replace(tzinfo=None) 
+                        if (last_fetched and getattr(last_fetched, 'tzinfo', None) is not None) 
+                        else last_fetched
+                    )
+
+                    if clean_last_fetched is None or published_at > clean_last_fetched:
                         new_comments.append({
                             'comment_id': item.get('id'),
                             'text': snippet.get('textDisplay', ''),
@@ -126,6 +137,9 @@ class YoutubeLoader:
                         stop_fetching = True
                         break
                 if stop_fetching:
+                    break
+                next_page_token = response.get('nextPageToken')
+                if not next_page_token:
                     break
                 next_page_token = response.get('nextPageToken')
                 if not next_page_token:
@@ -148,3 +162,37 @@ class YoutubeLoader:
             df_final.to_parquet(cache_path,index=False)
             print(f'DataFrame saved to Parquet')'''
         return df_final    
+    def _parse_datetime(self, value: Optional[str]) -> Optional[datetime]:
+            if not value:
+                return None
+            # if a datetime object is passed, return as-is (ensure tz-aware)
+            if isinstance(value, datetime):
+                dt = value
+                if dt.tzinfo is None:
+                    dt = dt.replace(tzinfo=timezone.utc)
+                return dt
+            # handle pandas Timestamp-like objects (have to_pydatetime)
+            if hasattr(value, 'to_pydatetime'):
+                try:
+                    dt = value.to_pydatetime()
+                    if dt.tzinfo is None:
+                        dt = dt.replace(tzinfo=timezone.utc)
+                    return dt
+                except Exception:
+                    pass
+            try:
+                # normalize Z timezone
+                v = value
+                if isinstance(v, bytes):
+                    v = v.decode()
+                if v.endswith('Z'):
+                    v = v[:-1] + '+00:00'
+                return datetime.fromisoformat(v)
+            except Exception:
+                try:
+                    # fallback common formats
+                    return datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
+                except Exception:
+                    logger.debug('Не вдалося розпізнати datetime: %s', value)
+                    return None
+    

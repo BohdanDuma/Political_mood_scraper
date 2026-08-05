@@ -1,0 +1,8 @@
+pymongo[srv]>=4.6.0
+google-api-python-client>=2.197.0
+pandas>=2.3.0
+python-dotenv>=1.2.0
+requests>=2.34.0
+python-dateutil>=2.9.0
+pytz>=2026.1
+tenacity
