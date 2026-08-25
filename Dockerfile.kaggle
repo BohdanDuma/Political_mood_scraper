@@ -1,0 +1,18 @@
+FROM python:3.13-slim
+
+WORKDIR /app
+
+# Копіюємо файл залежностей з кореня проєкту
+COPY requirements-kaggle.txt requirements.txt
+
+# Встановлюємо залежності
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Копіюємо код проєкту в /app/src
+COPY src/ ./src/
+
+ENV PYTHONPATH=/app/src
+ENV PYTHONUNBUFFERED=1
+
+# Запуск скрипта як модуля (найкраща практика)
+CMD ["python", "-m", "kaggle_loader.kaggle_connection"]

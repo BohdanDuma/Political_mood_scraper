@@ -11,6 +11,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Копіюємо код проєкту
 COPY src/ ./src/
 
+ENV PYTHONPATH=/app/src
 ENV PYTHONUNBUFFERED=1
 
 CMD ["python", "src/scraper/scraper_worker.py"]

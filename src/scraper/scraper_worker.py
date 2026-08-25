@@ -16,8 +16,9 @@ def run_scraper_pipeline(query_text: str, max_active_limit: int):
     logger.info('Початок циклу легкого скрапера (MongoDB).')
     
     # Підключення до MongoDB Atlas / локального MongoDB
-    MONGO_URI = os.getenv("MONGO_URL", "mongodb+srv://musclesoulb_db_user:llathe23@cluster0.hwerv3r.mongodb.net/?appName=Cluster0")
-
+    MONGO_URI = os.getenv("MONGO_URL")
+    if not MONGO_URI:
+        raise ValueError("CRITICAL ERROR: Змінна оточення MONGO_URL не встановлена!")
     mongo_client = MongoClient(MONGO_URI)
     mongo_db = mongo_client["youtube_sentiment_db"]
     raw_comments_collection = mongo_db["raw_comments"]

@@ -68,7 +68,7 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int, model_ids
         dpub_raw = video[1]
         db_total_comments = video[2]
 
-        dpub = db._parse_datetime(dpub_raw)
+        dpub: datetime = yt._parse_datetime(dpub_raw)
         if not dpub:
             logger.warning(f"Відео {v_id} має некоректну дату публікації — пропускаємо.")
             continue
@@ -154,7 +154,7 @@ def run_pipeline(db_path: str, query_text: str, max_active_limit: int, model_ids
         discovered_videos = yt.discover_videos_by_keyword(query_text=query_text, max_results=slots_available)
         
         for item in discovered_videos:
-            pub_date = db._parse_datetime(item['published_at'])
+            pub_date = yt._parse_datetime(item['published_at'])
             
             db.register_video(
                 video_id=item['video_id'],
