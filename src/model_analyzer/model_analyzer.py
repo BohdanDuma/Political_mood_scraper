@@ -159,7 +159,7 @@ def main():
     load_dotenv()
     configure_logging()
     
-    DB_PATH = os.getenv("DB_PATH", "data/youtube_analytics.db")
+    DB_PATH ="/home/bohdan/Стільниця/POLIT_SCARPER/data/youtube_analytics.db"
     
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
     logger.info("Ініціалізація heavy worker завершена — запуск ML конвеєру.")
