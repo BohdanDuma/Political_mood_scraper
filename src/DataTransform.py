@@ -5,14 +5,14 @@ from googleapiclient.discovery import build
 
 from datetime import datetime, timezone
 
-logging.basicConfig(
+'''logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s%(levelname)s%(message)s',
     handlers=[
         logging.FileHandler("YT_project.log"),
         logging.StreamHandler()
     ]
-)
+)'''
 logger = logging.getLogger(__name__)
 class DataTransformer:
     

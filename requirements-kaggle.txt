@@ -1,0 +1,3 @@
+pandas
+kagglehub
+python-dotenv

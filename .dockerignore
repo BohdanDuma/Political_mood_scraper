@@ -28,3 +28,30 @@ env/
 
 # Ігноруємо документацію (якщо є)
 README.md
+# Віртуальні середовища
+venv/
+.venv/
+env/
+
+# Кеш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git та конфіги
+.git/
+.gitignore
+.env
+
+# Важкі дані та баз даних
+*.db
+*.sqlite
+*.sqlite3
+*.json
+data/
+logs/
+
+# Моделі та кеш
+models/
+.cache/

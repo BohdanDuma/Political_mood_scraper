@@ -315,40 +315,7 @@ ON CONFLICT(video_id) DO UPDATE SET
         except Exception as e:
             logger.exception("Не вдалося зареєструвати відео %s: %s", video_id, e)
 
-    def _parse_datetime(self, value: Optional[str]) -> Optional[datetime]:
-        if not value:
-            return None
-        # if a datetime object is passed, return as-is (ensure tz-aware)
-        if isinstance(value, datetime):
-            dt = value
-            if dt.tzinfo is None:
-                dt = dt.replace(tzinfo=timezone.utc)
-            return dt
-        # handle pandas Timestamp-like objects (have to_pydatetime)
-        if hasattr(value, 'to_pydatetime'):
-            try:
-                dt = value.to_pydatetime()
-                if dt.tzinfo is None:
-                    dt = dt.replace(tzinfo=timezone.utc)
-                return dt
-            except Exception:
-                pass
-        try:
-            # normalize Z timezone
-            v = value
-            if isinstance(v, bytes):
-                v = v.decode()
-            if v.endswith('Z'):
-                v = v[:-1] + '+00:00'
-            return datetime.fromisoformat(v)
-        except Exception:
-            try:
-                # fallback common formats
-                return datetime.strptime(value, '%Y-%m-%d %H:%M:%S')
-            except Exception:
-                logger.debug('Не вдалося розпізнати datetime: %s', value)
-                return None
-
+    
     def get_last_sync(self, video_id) -> Optional[datetime]:
         query = text('SELECT last_sync_date FROM video_stats WHERE video_id=:vid;')
         try:
